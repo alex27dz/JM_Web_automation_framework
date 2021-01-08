@@ -23,7 +23,6 @@ from JM_Elem_Config import *
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-
 def navbar_validation(driver):
     print('verifying Navbar')
     try:
@@ -91,7 +90,6 @@ def navbar_validation(driver):
     except:
         return False
 
-
 def footer_validation(driver):
     print('verifying Footer')
     try:
@@ -120,16 +118,16 @@ def footer_validation(driver):
     except:
         return False
 
-
-driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-driver.get("https://stage.jewelersmutual.com/jewelry-engagement-ring-insurance-quote")
-time.sleep(3)
-WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
-print(driver.find_element_by_xpath("//a[contains(text(),'What will it cost me?')]").text)
-
-time.sleep(1)
-print('Body passed')
-
+#def Personal_insurance_Body_validation(driver):
+# driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+# driver.get("https://stage.jewelersmutual.com/jewelry-engagement-ring-insurance-quote")
+# time.sleep(3)
+# WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
+# print(driver.find_element_by_xpath("//a[contains(text(),'What will it cost me?')]").text)
+#
+# time.sleep(1)
+# print('Body passed')
+#
 
 
 
