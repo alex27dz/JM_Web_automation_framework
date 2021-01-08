@@ -25,20 +25,42 @@ from JM_Generic_functions import *
 def test_01_HomePageToPersonalInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
-    print('I access HomePage')
+    print('Access HomePage')
     time.sleep(3)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    print('Personal Insurance')
+    print('Access Personal Insurance')
     url = '/jewelry-engagement-ring-insurance-quote'
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
+    time.sleep(2)
     driver.find_element_by_link_text('Personal Insurance').click()
     time.sleep(3)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(Personal_insurance_Body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found '
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.back()
+    time.sleep(3)
+    print('SCENARIO - 01 - PASSED')
+    driver.close()
 
-
+def test_02_HomePageToGetaQuote():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(3)
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    print('Access GetaQuote')
+    url = '/jewelry-engagement-ring-insurance-quote'
+    driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Get a Quote').click()
+    time.sleep(3)
+    assert str(Get_A_Quote_Body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found '
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 02 - PASSED')
+    driver.close()
 
 
 
