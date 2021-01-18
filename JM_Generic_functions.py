@@ -41,7 +41,6 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Blog').text)
         time.sleep(1)
         print('Navbar Personal passed')
-
         print('Navbar Business')
         url = '/jewelry-business-jewelers-block-bop-insurance'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -52,12 +51,11 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Zing Platform').text)
         print(driver.find_element_by_link_text('JM Shipping Solution').text)
         print(driver.find_element_by_link_text('JM Care Plan').text)
-        print(driver.find_element_by_link_text('Appraisal Solution').text)
+        # print(driver.find_element_by_link_text('Appraisal Solution').text)
         print(driver.find_element_by_link_text('Jeweler Programs').text)
         print(driver.find_element_by_link_text('Pawnbrokers').text)
         time.sleep(1)
         print('Navbar Business passed')
-
         print('Navbar Answers')
         url = '/jewelry-insurance-101'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -66,7 +64,6 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('FAQ').text)
         time.sleep(1)
         print('Navbar Answers passed')
-
         print('Navbar About Us')
         url = '/about-us'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -77,7 +74,6 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Newsroom').text)
         time.sleep(1)
         print('Navbar About Us passed')
-
         print('Navbar Log In')
         driver.find_element_by_xpath('//a[contains(@href,"https://my.jewelersmutual.com/PLPortal/Security/")]').click()
         time.sleep(1)
@@ -96,24 +92,24 @@ def footer_validation(driver):
     try:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'block-footerplmenu')))
         print('Footer Personal')
+        element = driver.find_element_by_id('block-footerplmenu')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
         print(driver.find_element_by_id('block-footerplmenu').text)
         print('Footer Personal passed')
-
         print('Footer Business')
         print(driver.find_element_by_id('block-footerclmenu').text)
         print('Footer Business passed')
-
         print('Footer About')
         print(driver.find_element_by_id('block-footerinfomenu').text)
         print('Footer About passed')
-
         print('Footer Contact')
         print(driver.find_element_by_id('block-footercontactmenu').text)
         print('Contact passed')
-
         print('Footer BLOG')
         print(driver.find_element_by_id('block-footerrecommendedcontentlinks').text)
         print('Footer BLOG passed')
+        time.sleep(2)
         print('Footer - verifyied')
         return True
     except:
@@ -124,6 +120,9 @@ def Personal_insurance_Body_validation(driver):
     try:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
         print(driver.find_element_by_xpath("//a[contains(text(),'What will it cost me?')]").text)
+        element = driver.find_element_by_id('title-4366')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
         print(driver.find_element_by_id('title-4366').text)
         print(driver.find_element_by_class_name('comparison-table__center').text)
         print(driver.find_element_by_class_name('table-footer').text)
@@ -134,9 +133,12 @@ def Personal_insurance_Body_validation(driver):
         print(driver.find_element_by_id('title-4361').text)
         print(driver.find_element_by_id('image-container-8271').text)
         print(driver.find_element_by_id('feature-row-6476').text)
+        element = driver.find_element_by_id('feature-row-4396')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
         print(driver.find_element_by_id('feature-row-4396').text)
         time.sleep(1)
-        print('Personal_insurance_Body verifyied')
+        print('Personal_insurance_Body - verifyied')
         return True
     except:
         return False
@@ -146,12 +148,26 @@ def Get_A_Quote_Body_validation(driver):
     try:
         time.sleep(3)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "appHeaderContainer")))
-        print(driver.find_element_by_id('appHeaderContainer').text)
-        print(driver.find_element_by_id('left-panel').text)
+        print(driver.find_element_by_id('HeaderImages').text)
+        print(driver.find_element_by_id('QuestionsContainer').text)
+        element = driver.find_element_by_id('quoteContainer')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_id('quoteContainer').text)
         print(driver.find_element_by_id('quoteInfoNext').text)
+        print(driver.find_element_by_id('right-panel').text)
+        element = driver.find_element_by_id('left-panel')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_id('left-panel').text)
+        print(driver.find_element_by_id('appHeaderContainer').text)
         print(driver.find_element_by_id('TermsAndPrivacyFooterContainer').text)
-        time.sleep(1)
-        print('Get_A_Quote_Body verifyied')
+        element = driver.find_element_by_id('TermsAndPrivacyFooterContainer')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        time.sleep(3)
+        print('Get_A_Quote_Body - verifyied')
         return True
     except:
         return False
+

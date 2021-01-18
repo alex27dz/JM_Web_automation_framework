@@ -22,6 +22,22 @@ from selenium import webdriver
 from JM_Generic_functions import *
 
 
+# def test_00_redirection_links_status():
+#     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+#     driver.get(Redirect_url)
+#     #print('Access HomePage')
+#     time.sleep(3)
+#
+#     text_area = driver.find_element_by_class_name('textarea')
+#     text_area.click()
+#     time.sleep(1)
+#     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
+#     'stage.jewelersmutual.com/jewelry-box/settings\n'
+#     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
+#     'stage.jewelersmutual.com/jewelry-box/tips\n')
+#     time.sleep(60)
+
+
 def test_01_HomePageToPersonalInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -32,9 +48,9 @@ def test_01_HomePageToPersonalInsurance():
     print('Access Personal Insurance')
     url = '/jewelry-engagement-ring-insurance-quote'
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
-    time.sleep(2)
-    driver.find_element_by_link_text('Personal Insurance').click()
     time.sleep(3)
+    driver.find_element_by_link_text('Personal Insurance').click()
+    time.sleep(7)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(Personal_insurance_Body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found '
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -42,6 +58,7 @@ def test_01_HomePageToPersonalInsurance():
     time.sleep(3)
     print('SCENARIO - 01 - PASSED')
     driver.close()
+
 
 def test_02_HomePageToGetaQuote():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
@@ -55,13 +72,9 @@ def test_02_HomePageToGetaQuote():
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
     time.sleep(3)
     driver.find_element_by_link_text('Get a Quote').click()
-    time.sleep(3)
+    time.sleep(7)
     assert str(Get_A_Quote_Body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found '
     driver.back()
     time.sleep(3)
     print('SCENARIO - 02 - PASSED')
     driver.close()
-
-
-
-
