@@ -102,7 +102,7 @@ def test_03_HomePageToPayMyBill():
     time.sleep(3)
     driver.find_element_by_link_text('Pay My Bill').click()
     time.sleep(7)
-    assert str(pay_my_bill_body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found'
+    assert str(pay_my_bill_body_validation(driver)) == 'True', 'Body elements of pay my bill - not found'
     driver.back()
     time.sleep(3)
     print('SCENARIO - 03 - PASSED')
@@ -125,9 +125,12 @@ def test_04_HomePageToClaims():
     driver.find_element_by_link_text('Claims').click()
     time.sleep(7)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(claims_body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found'
+    assert str(claims_body_validation(driver)) == 'True', 'Body elements of claims - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.back()
     time.sleep(3)
     print('SCENARIO - 04 - PASSED')
     driver.close()
+
+
+# def test_05_
