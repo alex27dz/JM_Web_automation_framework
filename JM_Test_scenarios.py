@@ -43,16 +43,19 @@ def test_01_HomePageToPersonalInsurance():
     driver.get(JM_url)
     print('Access HomePage')
     time.sleep(3)
+    print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
     print('Access Personal Insurance')
+    time.sleep(2)
     url = '/jewelry-engagement-ring-insurance-quote'
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
     time.sleep(3)
     driver.find_element_by_link_text('Personal Insurance').click()
     time.sleep(7)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(Personal_insurance_Body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found '
+    assert str(personal_insurance_body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.back()
     time.sleep(3)
@@ -65,16 +68,66 @@ def test_02_HomePageToGetaQuote():
     driver.get(JM_url)
     print('Access HomePage')
     time.sleep(3)
+    print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
     print('Access GetaQuote')
+    time.sleep(2)
     url = '/jewelry-engagement-ring-insurance-quote'
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
     time.sleep(3)
     driver.find_element_by_link_text('Get a Quote').click()
     time.sleep(7)
-    assert str(Get_A_Quote_Body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found '
+    assert str(get_a_quote_body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found'
     driver.back()
     time.sleep(3)
     print('SCENARIO - 02 - PASSED')
+    driver.close()
+
+
+def test_03_HomePageToPayMyBill():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(3)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access PayMyBill')
+    time.sleep(2)
+    url = '/jewelry-engagement-ring-insurance-quote'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Pay My Bill').click()
+    time.sleep(7)
+    assert str(pay_my_bill_body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 03 - PASSED')
+    driver.close()
+
+def test_04_HomePageToClaims():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(3)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access PayMyBill')
+    time.sleep(2)
+    url = '/jewelry-engagement-ring-insurance-quote'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Claims').click()
+    time.sleep(7)
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(claims_body_validation(driver)) == 'True', 'Body elements of Get a Quote - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 04 - PASSED')
     driver.close()

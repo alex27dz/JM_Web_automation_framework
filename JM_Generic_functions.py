@@ -24,8 +24,13 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
 
+# print(driver.find_element_by_xpath("//div[contains(@class, '')]").text)
+# print(driver.find_element_by_id('').text)
+# print(driver.find_element_by_class_name('').text)
+
+
 def navbar_validation(driver):
-    print('verifying Navbar')
+    print('verifying Navbar containers')
     try:
         url = '/jewelry-engagement-ring-insurance-quote'
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@href="'+url+'"]')))
@@ -87,8 +92,9 @@ def navbar_validation(driver):
     except:
         return False
 
+
 def footer_validation(driver):
-    print('verifying Footer')
+    print('verifying Footer containers')
     try:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'block-footerplmenu')))
         print('Footer Personal')
@@ -115,8 +121,9 @@ def footer_validation(driver):
     except:
         return False
 
-def Personal_insurance_Body_validation(driver):
-    print('verifying Personal_insurance_Body')
+
+def personal_insurance_body_validation(driver):
+    print('verifying Personal_insurance_Body containers')
     try:
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
         print(driver.find_element_by_xpath("//a[contains(text(),'What will it cost me?')]").text)
@@ -143,8 +150,9 @@ def Personal_insurance_Body_validation(driver):
     except:
         return False
 
-def Get_A_Quote_Body_validation(driver):
-    print('verifying Get_A_Quote_Body')
+
+def get_a_quote_body_validation(driver):
+    print('verifying Get_A_Quote_Body containers')
     try:
         time.sleep(3)
         WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "appHeaderContainer")))
@@ -170,4 +178,75 @@ def Get_A_Quote_Body_validation(driver):
         return True
     except:
         return False
+
+
+def pay_my_bill_body_validation(driver):
+    print('verifying Get_A_Quote_Body containers')
+    try:
+        time.sleep(3)
+        WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "jm-logo")))
+        print(driver.find_element_by_class_name('jm-logo').text)
+        element = driver.find_element_by_id('lookupForm')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_id('lookupForm').text)
+        print(driver.find_element_by_id('continueButton').text)
+        print(driver.find_element_by_id('recaptcha').text)
+        print(driver.find_element_by_class_name('navbar').text)
+        element = driver.find_element_by_xpath("//div[contains(@class, 'col-md-8 col-sm-6 col-xs-12')]")
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_xpath("//div[contains(@class, 'container')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'row')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'col-md-8 col-sm-6 col-xs-12')]").text)
+        time.sleep(3)
+        print('Pay_My_Bill_Body - verifyied')
+        return True
+    except:
+        return False
+
+
+def claims_body_validation(driver):
+    print('verifying claims_Body containers')
+    try:
+        time.sleep(3)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'hero__image-container hero__image-container--no-mobile-image')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--content')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'content-lg text-center')]").text)
+        print(driver.find_element_by_id('title-2801').text)
+        print(driver.find_element_by_id('info-grid-2826').text)
+        print(driver.find_element_by_id('feature-row-6726').text)
+        print(driver.find_element_by_id('title-8256').text)
+        print(driver.find_element_by_id('text-image-row-2841').text)
+        print(driver.find_element_by_id('text-image-row-2856').text)
+        print(driver.find_element_by_id('text-image-row-2851').text)
+        print(driver.find_element_by_id('image-container-8276').text)
+        element = driver.find_element_by_id('feature-row-2861')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_id('feature-row-2861').text)
+        print(driver.find_element_by_id('image-container-8281').text)
+        print(driver.find_element_by_id('feature-row-8261').text)
+        print(driver.find_element_by_id('info-grid-2921').text)
+        print(driver.find_element_by_id('title-4196').text)
+        print(driver.find_element_by_id('accordion').text)
+        print(driver.find_element_by_id('feature-row-8916').text)
+        element = driver.find_element_by_id('text-image-row-2846')
+        actions = ActionChains(driver)
+        actions.move_to_element(element).perform()
+        print(driver.find_element_by_id('text-image-row-2846').text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blocktext-image-row')]").text)
+        print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blocktext-image-row')]").text)
+        time.sleep(3)
+        print('claims_Body - verifyied')
+        return True
+    except:
+        return False
+
+
+# driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+# driver.get('https://stage.jewelersmutual.com/jewelry-insurance-claims')
+# claims_body_validation(driver)
+
 
