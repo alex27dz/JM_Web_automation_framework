@@ -117,7 +117,7 @@ def test_04_HomePageToClaims():
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.execute_script("window.scrollTo(0,0)")
-    print('Access PayMyBill')
+    print('Access Claims')
     time.sleep(2)
     url = '/jewelry-engagement-ring-insurance-quote'
     driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
@@ -133,4 +133,51 @@ def test_04_HomePageToClaims():
     driver.close()
 
 
-# def test_05_
+def test_05_HomePageToManagePolicy():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(3)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Manage my policy')
+    time.sleep(2)
+    url = '/jewelry-engagement-ring-insurance-quote'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Manage My Policy').click()
+    time.sleep(7)
+    assert str(manage_my_policy_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 05 - PASSED')
+    driver.close()
+
+def test_06_HomePageToBlog():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(3)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Blog')
+    time.sleep(2)
+    url = '/jewelry-engagement-ring-insurance-quote'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Blog').click()
+    time.sleep(7)
+    assert str(blog_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 06 - PASSED')
+    driver.close()
+
+
+
