@@ -33,3 +33,10 @@ https://docs.pytest.org/en/reorganize-docs/new-docs/user/assert_statements.html
 
 
 For any questions / issues please contact - Alex Dzhoharidze, technical consultant (QAC)
+
+Pytests structure 
+<img src="https://usaupload.com/cache/plugins/filepreviewer/5962/ee183589d1b6f804d874a245c9d52499eb1e86d39e20a4ed3cb9c2c0f4dc4468/1100x800_cropped.jpg">
+Test cases / Scenarios
+<img src="https://usaupload.com/cache/plugins/filepreviewer/5961/b7964374bb96297ff24a8fff3cb814effcb6c4ab4646c18836a77bf16410d720/1100x800_cropped.jpg">
+Generic Validation / navigation functions
+<img src="https://usaupload.com/cache/plugins/filepreviewer/5963/371a4a956843a7700ced46401157c7d60ebfe702df492d5fc837c4db2a041d88/1100x800_cropped.jpg">
