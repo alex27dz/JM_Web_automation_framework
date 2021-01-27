@@ -14,6 +14,8 @@ Pycharm - Go to https://www.jetbrains.com/pycharm/download/ download the latest 
 
 Set up framework:
 
+0 - Crate a new project using Virtual environment - you will be asked at first what python version to use and what environment - choose virtual.
+
 1 - Download chromeDriver, make sure it matches our chrome browser version: https://chromedriver.chromium.org/downloads
 
 2 - Go to settings, preferences, project, project interpreter - and choose our downloaded version of python to be the project interpreter. 
