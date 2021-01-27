@@ -443,8 +443,3 @@ def test_66_redirection_links_status():
 def test_67_FullPageScenario():
     assert 'alex' == 'alex'
 
-
-def test_68_footerToBlog():
-    assert 'alex' == 'alex'
-
-

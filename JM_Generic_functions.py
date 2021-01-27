@@ -28,7 +28,7 @@ def navbar_validation(driver):
     print('verifying Navbar containers')
     url = '/jewelry-engagement-ring-insurance-quote'
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@href="'+url+'"]')))
-    time.sleep(2)
+    time.sleep(5)
     print('Navbar Personal')
     driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
     time.sleep(2)
