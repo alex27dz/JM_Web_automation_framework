@@ -22,27 +22,11 @@ from selenium import webdriver
 from JM_Generic_functions import *
 
 
-# def test_00_redirection_links_status():
-#     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-#     driver.get(Redirect_url)
-#     #print('Access HomePage')
-#     time.sleep(3)
-#
-#     text_area = driver.find_element_by_class_name('textarea')
-#     text_area.click()
-#     time.sleep(1)
-#     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
-#     'stage.jewelersmutual.com/jewelry-box/settings\n'
-#     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
-#     'stage.jewelersmutual.com/jewelry-box/tips\n')
-#     time.sleep(60)
-
-
 def test_01_HomePageToPersonalInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -67,7 +51,7 @@ def test_02_HomePageToGetaQuote():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -90,7 +74,7 @@ def test_03_HomePageToPayMyBill():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -108,11 +92,12 @@ def test_03_HomePageToPayMyBill():
     print('SCENARIO - 03 - PASSED')
     driver.close()
 
+
 def test_04_HomePageToClaims():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -137,7 +122,7 @@ def test_05_HomePageToManagePolicy():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -155,11 +140,12 @@ def test_05_HomePageToManagePolicy():
     print('SCENARIO - 05 - PASSED')
     driver.close()
 
+
 def test_06_HomePageToBlog():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -184,7 +170,7 @@ def test_07_BusinessToBusinessInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(3)
+    time.sleep(5)
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
@@ -205,98 +191,260 @@ def test_07_BusinessToBusinessInsurance():
     driver.close()
 
 
-# stopped on copying JM Shipping Solution elements names
+def test_08_BusinessToClaims():
+    assert 'alex' == 'alex'
 
 
+def test_09_BusinessToPayMyBill():
+    assert 'alex' == 'alex'
 
 
+def test_10_BusinessToZingPlatform():
+    assert 'alex' == 'alex'
 
 
-# 	And I select the business:claims on homepage
-# 	#Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:pay my bill on homepage
-# 	#Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:zing platform on homepage
-# 	#Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:shipping solution on homepage
-# 	Then I Verify all the elements in the Shipping solution page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:jm care plan on homepage
-# 	#Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:jeweler programs on homepage
-# 	Then I Verify all the elements in the Jeweler Programs page are displayed
-# 	And I navigate back to the home page
-# 	And I select the business:pawnbrokers on homepage
-# 	Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-#
-# 	# about us
-# 	And I select the about us:newsroom on homepage
-# 	#Then I Verify all the elements in the Careers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the about us:about us on homepage
-# 	Then I Verify all the elements in the about us page are displayed
-# 	And I navigate back to the home page
-# 	And I select the about us:social responsibility on homepage
-# 	Then I Verify all the elements in the SocialResponsibility page are displayed
-# 	And I navigate back to the home page
-# 	And I select the about us:careers on homepage
-# 	Then I Verify all the elements in the Careers page are displayed
-# 	And I navigate back to the home page
+def test_11_BusinessToShippingSolution():
+    assert 'alex' == 'alex'
 
 
-# 	And I select the answers:faq on homepage
-# 	#Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	And I navigate back to the home page
-# 	# And I select the answers:jewelry insurance 101 on homepage
-# 	# Then I Verify all the elements in the Pawn Brokers page are displayed
-# 	# And I navigate back to the home page
-#
-# # log in
-# 	And I select the login:personal jewelry on homepage
-# 	Then I Verify all the elements in the ManageMyPolicy page are displayed
-# 	And I navigate back to the home page
-# 	And I select the login:zing platform on homepage
-# 	#Then I Verify all the elements in the Agent Portal page are displayed
-# 	And I navigate back to the home page
-# 	And I select the login:agent on homepage
-# 	Then I Verify all the elements in the Agent Portal page are displayed
-# 	And I navigate back to the home page
-#
-# # footer
-# 	And I select the contact on homepage
-# 	Then I Verify all the elements in the Contact page are displayed
-# 	And I navigate back to the home page
-# 	And I select the privacy policy on homepage
-# 	Then I Verify all the elements in the privacy policy page are displayed
-# 	And I navigate back to the home page
-# 	And I select the terms of use on homepage
-# 	Then I Verify all the elements in the terms of use page are displayed
-# 	And I navigate back to the home page
-# 	And I select the share your concerns on homepage
-# 	Then I Verify all the elements in the share your concerns page are displayed
-# 	And I navigate back to the home page
-# 	And I select the careers on homepage
-# 	Then I Verify all the elements in the Careers page are displayed
-# 	And I navigate back to the home page
-# 	And I select the newsroom on homepage
-# 	Then I Verify all the elements in the Newsroom page are displayed
-# 	And I navigate back to the home page
-# 	And I select the explore personal jewelry insurance on homepage
-# 	# Then I Verify all the elements in the Newsroom page are displayed
-# 	And I navigate back to the home page
-# 	And I select the trust:explore personal jewelry insurance on homepage
-# 	# Then I Verify all the elements in the Newsroom page are displayed
-# 	Then I navigate back to the home page
-#
-#
-# Examples:
-# 	| Test Case #   | applicationType | target  | browser | Capability |
-# 	| HomePageLinks | DRUPAL          | Desktop | Chrome  | IPhoneX    |
-#
+def test_12_BusinessToJmCarePlan():
+    assert 'alex' == 'alex'
+
+
+def test_13_BusinessToAppraisalSolution():
+    assert 'alex' == 'alex'
+
+
+def test_14_BusinessToJewelerPrograms():
+    assert 'alex' == 'alex'
+
+
+def test_15_BusinessToPawnbrokers():
+    assert 'alex' == 'alex'
+
+
+def test_16_AnswersToJewelryInsurance101():
+    assert 'alex' == 'alex'
+
+
+def test_17_AnswersToFAQ():
+    assert 'alex' == 'alex'
+
+
+def test_18_AboutUsToAboutUs():
+    assert 'alex' == 'alex'
+
+
+def test_19_AboutUsToSocialResponsibility():
+    assert 'alex' == 'alex'
+
+
+def test_20_AboutUsToCareers():
+    assert 'alex' == 'alex'
+
+
+def test_21_AboutUsToNewsroom():
+    assert 'alex' == 'alex'
+
+
+def test_22_LogInToPersonalJewelry():
+    assert 'alex' == 'alex'
+
+
+def test_23_LogInToAgent():
+    assert 'alex' == 'alex'
+
+
+def test_24_LogInToZingPlatform():
+    assert 'alex' == 'alex'
+
+
+def test_25_BodyToPersonalInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_26_BodyToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_27_BodyToLogIn():
+    assert 'alex' == 'alex'
+
+
+def test_28_BodyToRegisterForAnOnlineAccount():
+    assert 'alex' == 'alex'
+
+
+def test_29_BodyToAddanitemtomyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_30_BodyToStartAClaim():
+    assert 'alex' == 'alex'
+
+
+def test_31_BodyToLearnaboutclaims():
+    assert 'alex' == 'alex'
+
+
+def test_32_BodyToGetaquoteformultipleItems():
+    assert 'alex' == 'alex'
+
+
+def test_33_BodyToEstimateMyRate():
+    assert 'alex' == 'alex'
+
+
+def test_34_BodyToExplorePersonalJewelryInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_35_footerToPrivacyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_36_footerToTermsofUse():
+    assert 'alex' == 'alex'
+
+
+def test_37_footerToPersonalJewelryInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_38_footerToGetaQuote():
+    assert 'alex' == 'alex'
+
+
+def test_39_footerToFAQ():
+    assert 'alex' == 'alex'
+
+
+def test_40_footerToManageMyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_41_footerToClaims():
+    assert 'alex' == 'alex'
+
+
+def test_42_footerToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_43_footerToReferalFriend():
+    assert 'alex' == 'alex'
+
+
+def test_44_footerToBusinessInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_45_footerToZingPlatform():
+    assert 'alex' == 'alex'
+
+
+def test_46_footerToJMShippingSolution():
+    assert 'alex' == 'alex'
+
+
+def test_47_footerToJMCarePlan():
+    assert 'alex' == 'alex'
+
+
+def test_48_footerToJewelryAppraisalSolution():
+    assert 'alex' == 'alex'
+
+
+def test_49_footerToJMUniversity():
+    assert 'alex' == 'alex'
+
+
+def test_50_footerToJewelerPrograms():
+    assert 'alex' == 'alex'
+
+
+def test_51_footerToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_52_footerToBusinessClaims():
+    assert 'alex' == 'alex'
+
+
+def test_53_footerToBlog():
+    assert 'alex' == 'alex'
+
+
+def test_54_footerToAboutUs():
+    assert 'alex' == 'alex'
+
+
+def test_55_footerToCareers():
+    assert 'alex' == 'alex'
+
+
+def test_56_footerToNewsroom():
+    assert 'alex' == 'alex'
+
+
+def test_57_footerToSocialResponsibility():
+    assert 'alex' == 'alex'
+
+
+def test_58_footerToCOVIDResources():
+    assert 'alex' == 'alex'
+
+
+def test_59_footerToContactUs():
+    assert 'alex' == 'alex'
+
+
+def test_60_footerToShareYourConcerns():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerHomuchdoesitcosttoresizearing():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerHowtocleangoldjewelry():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerHowmuchshouldcost():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerHowtomakearing():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerMoreblogarticles():
+    assert 'alex' == 'alex'
+
+
+def test_61_redirection_links_status():
+    #     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    #     driver.get(Redirect_url)
+    #     #print('Access HomePage')
+    #     time.sleep(3)
+    #
+    #     text_area = driver.find_element_by_class_name('textarea')
+    #     text_area.click()
+    #     time.sleep(1)
+    #     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
+    #     'stage.jewelersmutual.com/jewelry-box/settings\n'
+    #     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
+    #     'stage.jewelersmutual.com/jewelry-box/tips\n')
+    #     time.sleep(60)
+    assert 'alex' == 'alex'
+
+
+def test_61_FullPageScenario():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerToBlog():
+    assert 'alex' == 'alex'
 
 

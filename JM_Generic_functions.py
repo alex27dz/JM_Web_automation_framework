@@ -189,6 +189,7 @@ def pay_my_bill_body_validation(driver):
 def claims_body_validation(driver):
     print('verifying claims_Body containers')
     time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-2801")))
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__image-container hero__image-container--no-mobile-image')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--content')]").text)
@@ -225,6 +226,7 @@ def claims_body_validation(driver):
 def manage_my_policy_body_validation(driver):
     print('verifying manage_my_policy containers')
     time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "jm-logo")))
     print(driver.find_element_by_xpath("//div[contains(@class, 'jm-apps')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'field-container')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'login-right-col')]").text)
@@ -244,6 +246,7 @@ def manage_my_policy_body_validation(driver):
 def blog_body_validation(driver):
     print('verifying blog containers')
     time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "block-jewelers-mutual-content")))
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-personal-popular-posts')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-jewelry-box-topics')]").text)
@@ -256,6 +259,7 @@ def blog_body_validation(driver):
 def business_insurance_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4416")))
     print(driver.find_element_by_id('title-4416').text)
     print(driver.find_element_by_id('info-grid-4436').text)
     print(driver.find_element_by_id('title-4441').text)
@@ -285,6 +289,7 @@ def business_insurance_body_validation(driver):
 def business_claims_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4416")))
     print(driver.find_element_by_id('title-4416').text)
     print(driver.find_element_by_id('info-grid-4436').text)
     print(driver.find_element_by_id('title-4441').text)
@@ -309,6 +314,8 @@ def business_claims_body_validation(driver):
     time.sleep(3)
     print('claims_Body - verifyied')
     return True
+
+
 # driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
 # driver.get('https://stage.jewelersmutual.com/jewelry-business-jewelers-block-bop-insurance')
 # business_insurance_validation(driver)
