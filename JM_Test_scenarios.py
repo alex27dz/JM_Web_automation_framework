@@ -407,23 +407,23 @@ def test_61_footerHomuchdoesitcosttoresizearing():
     assert 'alex' == 'alex'
 
 
-def test_61_footerHowtocleangoldjewelry():
+def test_62_footerHowtocleangoldjewelry():
     assert 'alex' == 'alex'
 
 
-def test_61_footerHowmuchshouldcost():
+def test_63_footerHowmuchshouldcost():
     assert 'alex' == 'alex'
 
 
-def test_61_footerHowtomakearing():
+def test_64_footerHowtomakearing():
     assert 'alex' == 'alex'
 
 
-def test_61_footerMoreblogarticles():
+def test_65_footerMoreblogarticles():
     assert 'alex' == 'alex'
 
 
-def test_61_redirection_links_status():
+def test_66_redirection_links_status():
     #     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     #     driver.get(Redirect_url)
     #     #print('Access HomePage')
@@ -440,11 +440,11 @@ def test_61_redirection_links_status():
     assert 'alex' == 'alex'
 
 
-def test_61_FullPageScenario():
+def test_67_FullPageScenario():
     assert 'alex' == 'alex'
 
 
-def test_61_footerToBlog():
+def test_68_footerToBlog():
     assert 'alex' == 'alex'
 
 
