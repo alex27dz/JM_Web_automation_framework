@@ -7,9 +7,9 @@ Automation framework for JM website, scenarios covering ‘containers validation
 
 Environment:
 
-Python 3 Go to https://www.python.org/downloads/    Download the latest version and install.
+Python 3 - Go to https://www.python.org/downloads/    Download the latest version and install.
 
-Pycharm - Go to https://www.jetbrains.com/pycharm/download/ download the latest version and install
+Pycharm - Go to https://www.jetbrains.com/pycharm/download/ Download the latest version and install.
 
 
 Set up framework:
