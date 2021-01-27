@@ -35,7 +35,7 @@ Also must include ‘Assert statements’ - for data input comparison -
 https://docs.pytest.org/en/reorganize-docs/new-docs/user/assert_statements.html
 
 Pytests structure  example 
-<img src="https://usaupload.com/cache/plugins/filepreviewer/5962/ee183589d1b6f804d874a245c9d52499eb1e86d39e20a4ed3cb9c2c0f4dc4468/1100x800_cropped.jpg">
+<img src="https://usaupload.com/cache/plugins/filepreviewer/6554/7a01e47ea9b6ad052e4db31176fc9cd5386325b5bd621414fdd10fe9b87a93cb/1100x800_cropped.jpg">
 Test cases / Scenarios example 
 <img src="https://usaupload.com/cache/plugins/filepreviewer/5961/b7964374bb96297ff24a8fff3cb814effcb6c4ab4646c18836a77bf16410d720/1100x800_cropped.jpg">
 Generic Validation / navigation functions example 
