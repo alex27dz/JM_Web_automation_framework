@@ -633,7 +633,7 @@ def aboutus_socialresponsibility_body_validation(driver):
 
 
 def aboutus_careers_body_validation(driver):
-    print('verifying business_insurance_Body containers')
+    print('verifying careers_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "feature-row-1716")))
     print(driver.find_element_by_id('feature-row-1716').text)
@@ -656,86 +656,99 @@ def aboutus_careers_body_validation(driver):
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
     time.sleep(3)
-    print('claims_Body - verifyied')
+    print('careers_Body - verifyied')
+    return True
+
+
+
+def aboutus_newsroom_body_validation(driver):
+    print('verifying newsroom_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "block-newsheroblock")))
+    print(driver.find_element_by_id('block-newsheroblock').text)
+    print(driver.find_element_by_id('block-jewelers-mutual-content').text)
+    print(driver.find_element_by_id('text-block-8921').text)
+    print(driver.find_element_by_id('text-block-8931').text)
+    print(driver.find_element_by_id('text-block-8926').text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'js-view-dom-id-c5e81c709443158963530345a162f16a5ef9c71e634add7585dedbc44cf8c5b3')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'js-view-dom-id-ca4d61ec14828bb8ded1a0bb3e31bb30b04bb7ec7ea8c4bf015b7f1a24db2efb')]").text)
+    element = driver.find_element_by_id('text-block-8926')
+    actions = ActionChains(driver)
+    actions.move_to_element(element).perform()
+    time.sleep(3)
+    print('newsroom_Body - verifyied')
+    return True
+
+
+
+def login_Personal_Jewelry_body_validation(driver):
+    print('verifying Personal_Jewelry_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "jm-logo")))
+    print(driver.find_element_by_id('jm-logo').text)
+    print(driver.find_element_by_id('utility').text)
+    print(driver.find_element_by_id('utility-nav-contain').text)
+    print(driver.find_element_by_id('page-body').text)
+    print(driver.find_element_by_id('body').text)
+    print(driver.find_element_by_id('AppForm').text)
+    print(driver.find_element_by_id('login-container').text)
+    print(driver.find_element_by_id('footer-utility-links').text)
+    time.sleep(3)
+    print('Personal_Jewelry_Body - verifyied')
+    return True
+
+
+def login_agent_body_validation(driver):
+    print('verifying agent_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "utility")))
+    print(driver.find_element_by_id('utility').text)
+    print(driver.find_element_by_id('utility-nav-contain').text)
+    print(driver.find_element_by_id('site-nav').text)
+    print(driver.find_element_by_id('page-body').text)
+    print(driver.find_element_by_id('body').text)
+    print(driver.find_element_by_id('AppForm').text)
+    print(driver.find_element_by_id('ForgotPassword').text)
+    print(driver.find_element_by_id('footer-utility-links').text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'ForgotPassword')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'fn org')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'adr')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'social-icons')]").text)
+    element = driver.find_element_by_id('footer-utility-links')
+    actions = ActionChains(driver)
+    actions.move_to_element(element).perform()
+    time.sleep(3)
+    print('agent_Body - verifyied')
+    return True
+
+
+
+def login_ZingPlatform_body_validation(driver):
+    print('verifying Zing Platform_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "register-btn")))
+    print(driver.find_element_by_id('register-btn').text)
+    print(driver.find_element_by_id('sign-in').text)
+    print(driver.find_element_by_id('prog-ind001').text)
+    print(driver.find_element_by_id('bgVideo').text)
+    print(driver.find_element_by_id('animate001').text)
+    print(driver.find_element_by_id('prog-ind002').text)
+    print(driver.find_element_by_id('prog-ind003').text)
+    print(driver.find_element_by_id('prog-ind004').text)
+    print(driver.find_element_by_id('prog-ind005').text)
+    print(driver.find_element_by_id('prog-ind006').text)
+    print(driver.find_element_by_id('myiFrameForSilentRenew').text)
+    element = driver.find_element_by_id('prog-ind006')
+    actions = ActionChains(driver)
+    actions.move_to_element(element).perform()
+    time.sleep(3)
+    print('Zing Platform_Body - verifyied')
     return True
 
 #############################################################################
 
 
 
-
-
-
-#
-#
-#
-#
-
-#
-#
-#
-
-#
-#
-# def business_claims_body_validation(driver):
-#     print('verifying business_insurance_Body containers')
-#     time.sleep(3)
-#     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4416")))
-#     print(driver.find_element_by_id('title-4416').text)
-#     print(driver.find_element_by_id('info-grid-4436').text)
-#     print(driver.find_element_by_id('title-4441').text)
-#     print(driver.find_element_by_id('info-grid-4481').text)
-#     print(driver.find_element_by_id('image-container-8286').text)
-#     print(driver.find_element_by_id('image-container-8311').text)
-#     print(driver.find_element_by_id('info-grid-8306').text)
-#     print(driver.find_element_by_id('text-block-4406').text)
-#     print(driver.find_element_by_id('video-modal-4411').text)
-#     print(driver.find_element_by_id('feature-row-4486').text)
-#     print(driver.find_element_by_id('title-8321').text)
-#     print(driver.find_element_by_id('related-content-9086').text)
-#     print(driver.find_element_by_id('title-8316').text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blocksalesforce-form')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodecore-pagefield-hero')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__image-container hero__image-container--no-mobile-image')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
-#     element = driver.find_element_by_id('title-8316')
-#     actions = ActionChains(driver)
-#     actions.move_to_element(element).perform()
-#     time.sleep(3)
-#     print('claims_Body - verifyied')
-#     return True
-#
-#
-#
-# def business_claims_body_validation(driver):
-#     print('verifying business_insurance_Body containers')
-#     time.sleep(3)
-#     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4416")))
-#     print(driver.find_element_by_id('title-4416').text)
-#     print(driver.find_element_by_id('info-grid-4436').text)
-#     print(driver.find_element_by_id('title-4441').text)
-#     print(driver.find_element_by_id('info-grid-4481').text)
-#     print(driver.find_element_by_id('image-container-8286').text)
-#     print(driver.find_element_by_id('image-container-8311').text)
-#     print(driver.find_element_by_id('info-grid-8306').text)
-#     print(driver.find_element_by_id('text-block-4406').text)
-#     print(driver.find_element_by_id('video-modal-4411').text)
-#     print(driver.find_element_by_id('feature-row-4486').text)
-#     print(driver.find_element_by_id('title-8321').text)
-#     print(driver.find_element_by_id('related-content-9086').text)
-#     print(driver.find_element_by_id('title-8316').text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blocksalesforce-form')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodecore-pagefield-hero')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__image-container hero__image-container--no-mobile-image')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]").text)
-#     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
-#     element = driver.find_element_by_id('title-8316')
-#     actions = ActionChains(driver)
-#     actions.move_to_element(element).perform()
-#     time.sleep(3)
-#     print('claims_Body - verifyied')
-#     return True
 
 
 
