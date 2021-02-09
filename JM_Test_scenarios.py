@@ -109,9 +109,9 @@ def test_04_HomePageToClaims():
     time.sleep(3)
     driver.find_element_by_link_text('Claims').click()
     time.sleep(10)
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(claims_body_validation(driver)) == 'True', 'Body elements of claims - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     driver.back()
     time.sleep(3)
     print('SCENARIO - 04 - PASSED')
@@ -192,254 +192,530 @@ def test_07_BusinessToBusinessInsurance():
 
 
 def test_08_BusinessToClaims():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Businessclaims')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Claims').click()
+    time.sleep(10)
+    assert str(business_claims_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 08 - PASSED')
+    driver.close()
+
 
 
 def test_09_BusinessToPayMyBill():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access PayMyBill')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Pay My Bill').click()
+    time.sleep(10)
+    assert str(business_paymybill_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    # assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    # assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 09 - PASSED')
+    driver.close()
 
 
 def test_10_BusinessToZingPlatform():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Zing Platform')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Zing Platform').click()
+    time.sleep(10)
+    assert str(business_zingplatform_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 10 - PASSED')
+    driver.close()
 
-
+#
+#
 def test_11_BusinessToShippingSolution():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access JM Shipping Solution')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('JM Shipping Solution').click()
+    time.sleep(10)
+    assert str(business_jm_shippin_gsolution_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 11 - PASSED')
+    driver.close()
+#
+#
 def test_12_BusinessToJmCarePlan():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access JM Care Plan')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('JM Care Plan').click()
+    time.sleep(10)
+    assert str(business_jmcareplan_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 12 - PASSED')
+    driver.close()
+#
+#
 def test_13_BusinessToAppraisalSolution():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Appraisal Solution')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Appraisal Solution').click()
+    time.sleep(10)
+    assert str(business_appraisalsolution_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 13 - PASSED')
+    driver.close()
 
-
+#
+#
 def test_14_BusinessToJewelerPrograms():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access JewelerPrograms')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Jeweler Programs').click()
+    time.sleep(10)
+    assert str(business_jewelerprograms_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 14 - PASSED')
+    driver.close()
+#
+#
 def test_15_BusinessToPawnbrokers():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Pawnbrokers')
+    time.sleep(2)
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Pawnbrokers').click()
+    time.sleep(10)
+    assert str(business_pawnbrokers_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 15 - PASSED')
+    driver.close()
+#
+#
 def test_16_AnswersToJewelryInsurance101():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Jewelry Insurance 101')
+    time.sleep(2)
+    url = '/jewelry-insurance-101'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Jewelry Insurance 101').click()
+    time.sleep(10)
+    assert str(answers_JewelryInsurance101_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 16 - PASSED')
+    driver.close()
+#
+#
 def test_17_AnswersToFAQ():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access FAQ')
+    time.sleep(2)
+    url = '/jewelry-insurance-101'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('FAQ').click()
+    time.sleep(10)
+    assert str(answers_FAQ_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 17 - PASSED')
+    driver.close()
 
-
+#
+#
 def test_18_AboutUsToAboutUs():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access About Us')
+    time.sleep(2)
+    url = '/jewelry-insurance-101'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('About Us').click()
+    time.sleep(10)
+    assert str(aboutus_aboutus_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 18 - PASSED')
+    driver.close()
+#
+#
 def test_19_AboutUsToSocialResponsibility():
-    assert 'alex' == 'alex'
-
-
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access SocialResponsibility')
+    time.sleep(2)
+    url = '/jewelry-insurance-101'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Social Responsibility').click()
+    time.sleep(10)
+    assert str(aboutus_socialresponsibility_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 19 - PASSED')
+    driver.close()
+#
+#
 def test_20_AboutUsToCareers():
-    assert 'alex' == 'alex'
-
-
-def test_21_AboutUsToNewsroom():
-    assert 'alex' == 'alex'
-
-
-def test_22_LogInToPersonalJewelry():
-    assert 'alex' == 'alex'
-
-
-def test_23_LogInToAgent():
-    assert 'alex' == 'alex'
-
-
-def test_24_LogInToZingPlatform():
-    assert 'alex' == 'alex'
-
-
-def test_25_BodyToPersonalInsurance():
-    assert 'alex' == 'alex'
-
-
-def test_26_BodyToPayMyBill():
-    assert 'alex' == 'alex'
-
-
-def test_27_BodyToLogIn():
-    assert 'alex' == 'alex'
-
-
-def test_28_BodyToRegisterForAnOnlineAccount():
-    assert 'alex' == 'alex'
-
-
-def test_29_BodyToAddanitemtomyPolicy():
-    assert 'alex' == 'alex'
-
-
-def test_30_BodyToStartAClaim():
-    assert 'alex' == 'alex'
-
-
-def test_31_BodyToLearnaboutclaims():
-    assert 'alex' == 'alex'
-
-
-def test_32_BodyToGetaquoteformultipleItems():
-    assert 'alex' == 'alex'
-
-
-def test_33_BodyToEstimateMyRate():
-    assert 'alex' == 'alex'
-
-
-def test_34_BodyToExplorePersonalJewelryInsurance():
-    assert 'alex' == 'alex'
-
-
-def test_35_footerToPrivacyPolicy():
-    assert 'alex' == 'alex'
-
-
-def test_36_footerToTermsofUse():
-    assert 'alex' == 'alex'
-
-
-def test_37_footerToPersonalJewelryInsurance():
-    assert 'alex' == 'alex'
-
-
-def test_38_footerToGetaQuote():
-    assert 'alex' == 'alex'
-
-
-def test_39_footerToFAQ():
-    assert 'alex' == 'alex'
-
-
-def test_40_footerToManageMyPolicy():
-    assert 'alex' == 'alex'
-
-
-def test_41_footerToClaims():
-    assert 'alex' == 'alex'
-
-
-def test_42_footerToPayMyBill():
-    assert 'alex' == 'alex'
-
-
-def test_43_footerToReferalFriend():
-    assert 'alex' == 'alex'
-
-
-def test_44_footerToBusinessInsurance():
-    assert 'alex' == 'alex'
-
-
-def test_45_footerToZingPlatform():
-    assert 'alex' == 'alex'
-
-
-def test_46_footerToJMShippingSolution():
-    assert 'alex' == 'alex'
-
-
-def test_47_footerToJMCarePlan():
-    assert 'alex' == 'alex'
-
-
-def test_48_footerToJewelryAppraisalSolution():
-    assert 'alex' == 'alex'
-
-
-def test_49_footerToJMUniversity():
-    assert 'alex' == 'alex'
-
-
-def test_50_footerToJewelerPrograms():
-    assert 'alex' == 'alex'
-
-
-def test_51_footerToPayMyBill():
-    assert 'alex' == 'alex'
-
-
-def test_52_footerToBusinessClaims():
-    assert 'alex' == 'alex'
-
-
-def test_53_footerToBlog():
-    assert 'alex' == 'alex'
-
-
-def test_54_footerToAboutUs():
-    assert 'alex' == 'alex'
-
-
-def test_55_footerToCareers():
-    assert 'alex' == 'alex'
-
-
-def test_56_footerToNewsroom():
-    assert 'alex' == 'alex'
-
-
-def test_57_footerToSocialResponsibility():
-    assert 'alex' == 'alex'
-
-
-def test_58_footerToCOVIDResources():
-    assert 'alex' == 'alex'
-
-
-def test_59_footerToContactUs():
-    assert 'alex' == 'alex'
-
-
-def test_60_footerToShareYourConcerns():
-    assert 'alex' == 'alex'
-
-
-def test_61_footerHomuchdoesitcosttoresizearing():
-    assert 'alex' == 'alex'
-
-
-def test_62_footerHowtocleangoldjewelry():
-    assert 'alex' == 'alex'
-
-
-def test_63_footerHowmuchshouldcost():
-    assert 'alex' == 'alex'
-
-
-def test_64_footerHowtomakearing():
-    assert 'alex' == 'alex'
-
-
-def test_65_footerMoreblogarticles():
-    assert 'alex' == 'alex'
-
-
-def test_66_redirection_links_status():
-    #     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    #     driver.get(Redirect_url)
-    #     #print('Access HomePage')
-    #     time.sleep(3)
-    #
-    #     text_area = driver.find_element_by_class_name('textarea')
-    #     text_area.click()
-    #     time.sleep(1)
-    #     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
-    #     'stage.jewelersmutual.com/jewelry-box/settings\n'
-    #     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
-    #     'stage.jewelersmutual.com/jewelry-box/tips\n')
-    #     time.sleep(60)
-    assert 'alex' == 'alex'
-
-
-def test_67_FullPageScenario():
-    assert 'alex' == 'alex'
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
+    print('Access Careers')
+    time.sleep(2)
+    url = '/jewelry-insurance-101'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Careers').click()
+    time.sleep(10)
+    assert str(aboutus_careers_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 20 - PASSED')
+    driver.close()
+
+
+# def test_21_AboutUsToNewsroom():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_22_LogInToPersonalJewelry():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_23_LogInToAgent():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_24_LogInToZingPlatform():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_25_BodyToPersonalInsurance():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_26_BodyToPayMyBill():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_27_BodyToLogIn():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_28_BodyToRegisterForAnOnlineAccount():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_29_BodyToAddanitemtomyPolicy():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_30_BodyToStartAClaim():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_31_BodyToLearnaboutclaims():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_32_BodyToGetaquoteformultipleItems():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_33_BodyToEstimateMyRate():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_34_BodyToExplorePersonalJewelryInsurance():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_35_footerToPrivacyPolicy():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_36_footerToTermsofUse():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_37_footerToPersonalJewelryInsurance():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_38_footerToGetaQuote():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_39_footerToFAQ():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_40_footerToManageMyPolicy():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_41_footerToClaims():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_42_footerToPayMyBill():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_43_footerToReferalFriend():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_44_footerToBusinessInsurance():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_45_footerToZingPlatform():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_46_footerToJMShippingSolution():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_47_footerToJMCarePlan():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_48_footerToJewelryAppraisalSolution():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_49_footerToJMUniversity():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_50_footerToJewelerPrograms():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_51_footerToPayMyBill():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_52_footerToBusinessClaims():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_53_footerToBlog():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_54_footerToAboutUs():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_55_footerToCareers():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_56_footerToNewsroom():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_57_footerToSocialResponsibility():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_58_footerToCOVIDResources():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_59_footerToContactUs():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_60_footerToShareYourConcerns():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_61_footerHomuchdoesitcosttoresizearing():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_62_footerHowtocleangoldjewelry():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_63_footerHowmuchshouldcost():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_64_footerHowtomakearing():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_65_footerMoreblogarticles():
+#     assert 'alex' == 'alex'
+#
+#
+# def test_66_redirection_links_status():
+#     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+#     driver.get(Redirect_url)
+#     #print('Access HomePage')
+#     time.sleep(3)
+#
+#     text_area = driver.find_element_by_class_name('textarea')
+#     text_area.click()
+#     time.sleep(1)
+#     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
+#     'stage.jewelersmutual.com/jewelry-box/settings\n'
+#     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
+#     'stage.jewelersmutual.com/jewelry-box/tips\n')
+#     time.sleep(60)
+#     assert 'alex' == 'alex'
+#
+#
+# def test_67_FullPageScenario():
+#     assert 'alex' == 'alex'
 
