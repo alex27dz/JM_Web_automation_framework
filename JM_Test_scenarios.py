@@ -216,7 +216,6 @@ def test_08_BusinessToClaims():
     driver.close()
 
 
-
 def test_09_BusinessToPayMyBill():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -266,8 +265,7 @@ def test_10_BusinessToZingPlatform():
     print('SCENARIO - 10 - PASSED')
     driver.close()
 
-#
-#
+
 def test_11_BusinessToShippingSolution():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -291,8 +289,8 @@ def test_11_BusinessToShippingSolution():
     time.sleep(3)
     print('SCENARIO - 11 - PASSED')
     driver.close()
-#
-#
+
+
 def test_12_BusinessToJmCarePlan():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -316,8 +314,8 @@ def test_12_BusinessToJmCarePlan():
     time.sleep(3)
     print('SCENARIO - 12 - PASSED')
     driver.close()
-#
-#
+
+
 def test_13_BusinessToAppraisalSolution():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -342,8 +340,7 @@ def test_13_BusinessToAppraisalSolution():
     print('SCENARIO - 13 - PASSED')
     driver.close()
 
-#
-#
+
 def test_14_BusinessToJewelerPrograms():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -367,8 +364,8 @@ def test_14_BusinessToJewelerPrograms():
     time.sleep(3)
     print('SCENARIO - 14 - PASSED')
     driver.close()
-#
-#
+
+
 def test_15_BusinessToPawnbrokers():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -391,8 +388,8 @@ def test_15_BusinessToPawnbrokers():
     time.sleep(3)
     print('SCENARIO - 15 - PASSED')
     driver.close()
-#
-#
+
+
 def test_16_AnswersToJewelryInsurance101():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -416,8 +413,8 @@ def test_16_AnswersToJewelryInsurance101():
     time.sleep(3)
     print('SCENARIO - 16 - PASSED')
     driver.close()
-#
-#
+
+
 def test_17_AnswersToFAQ():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -442,8 +439,7 @@ def test_17_AnswersToFAQ():
     print('SCENARIO - 17 - PASSED')
     driver.close()
 
-#
-#
+
 def test_18_AboutUsToAboutUs():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -467,8 +463,8 @@ def test_18_AboutUsToAboutUs():
     time.sleep(3)
     print('SCENARIO - 18 - PASSED')
     driver.close()
-#
-#
+
+
 def test_19_AboutUsToSocialResponsibility():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -492,8 +488,8 @@ def test_19_AboutUsToSocialResponsibility():
     time.sleep(3)
     print('SCENARIO - 19 - PASSED')
     driver.close()
-#
-#
+
+
 def test_20_AboutUsToCareers():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -542,8 +538,8 @@ def test_21_AboutUsToNewsroom():
     time.sleep(3)
     print('SCENARIO - 21 - PASSED')
     driver.close()
-#
-#
+
+
 def test_22_LogInToPersonalJewelry():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -565,8 +561,8 @@ def test_22_LogInToPersonalJewelry():
     time.sleep(3)
     print('SCENARIO - 22 - PASSED')
     driver.close()
-#
-#
+
+
 def test_23_LogInToAgent():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -588,8 +584,8 @@ def test_23_LogInToAgent():
     time.sleep(3)
     print('SCENARIO - 23 - PASSED')
     driver.close()
-#
-#
+
+
 def test_24_LogInToZingPlatform():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -611,15 +607,6 @@ def test_24_LogInToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 24 - PASSED')
     driver.close()
-#
-#
-
-
-
-
-
-
-
 
 
 def test_25_BodyToPersonalInsurance():
@@ -628,8 +615,8 @@ def test_25_BodyToPersonalInsurance():
     print('Access HomePage')
     time.sleep(5)
     print('verify navbar and footer')
-    # assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    # assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.execute_script("window.scrollTo(0,3200)")
     time.sleep(3)
     print('Access Personal Insurance')
@@ -824,4 +811,79 @@ def test_25_BodyToPersonalInsurance():
 #
 # def test_67_FullPageScenario():
 #     assert 'alex' == 'alex'
-
+#
+# def test_68_Additional_link_ContactUs():
+#     assert 'alex' == 'alex'
+#
+# def test_69_Additional_link_ShareYourConcern():
+#     assert 'alex' == 'alex'
+#
+# def test_70_Additional_link_PrivacyPolicy():
+#     assert 'alex' == 'alex'
+#
+# def test_71_Additional_link_TermsofUse():
+#     assert 'alex' == 'alex'
+#
+# def test_72_Additional_link_engagementringinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_73_Additional_link_comparejewelryinsurancetohomeowners():
+#     assert 'alex' == 'alex'
+#
+# def test_74_Additional_link_personaljewelryinsurancecollections():
+#     assert 'alex' == 'alex'
+#
+# def test_75_Additional_link_crownandcaliber():
+#     assert 'alex' == 'alex'
+#
+# def test_76_Additional_link_adiamor():
+#     assert 'alex' == 'alex'
+#
+# def test_77_Additional_link_briangavindiamonds():
+#     assert 'alex' == 'alex'
+#
+# def test_78_Additional_link_jamesallen():
+#     assert 'alex' == 'alex'
+#
+# def test_79_Additional_link_bluenile():
+#     assert 'alex' == 'alex'
+#
+# def test_80_Additional_link_whiteflash():
+#     assert 'alex' == 'alex'
+#
+# def test_81_Additional_link_earringinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_82_Additional_link_watchinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_83_Additional_link_necklaceinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_84_Additional_link_braceletinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_85_Additional_link_smartwatchinsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_86_Additional_link_howtocleanandcareforyourdiamondring():
+#     assert 'alex' == 'alex'
+#
+# def test_87_Additional_link_weinsurejewelry():
+#     assert 'alex' == 'alex'
+#
+# def test_88_Additional_link_coronavirus():
+#     assert 'alex' == 'alex'
+#
+# def test_89_Additional_link_coronavirusBusiness():
+#     assert 'alex' == 'alex'
+#
+# def test_90_Additional_link_GuidetoJewelryInsurance():
+#     assert 'alex' == 'alex'
+#
+# def test_91_Additional_link_JMUniversity():
+#     assert 'alex' == 'alex'
+#
+# def test_92_Additional_link_ReferaFriend():
+#     assert 'alex' == 'alex'
+#
