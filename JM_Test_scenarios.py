@@ -631,259 +631,259 @@ def test_25_BodyToPersonalInsurance():
     driver.close()
 
 # Personal Jewelry Insurance
-#
-# def test_26_BodyToPayMyBill():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_27_BodyToLogIn():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_28_BodyToRegisterForAnOnlineAccount():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_29_BodyToAddanitemtomyPolicy():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_30_BodyToStartAClaim():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_31_BodyToLearnaboutclaims():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_32_BodyToGetaquoteformultipleItems():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_33_BodyToEstimateMyRate():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_34_BodyToExplorePersonalJewelryInsurance():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_35_footerToPrivacyPolicy():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_36_footerToTermsofUse():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_37_footerToPersonalJewelryInsurance():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_38_footerToGetaQuote():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_39_footerToFAQ():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_40_footerToManageMyPolicy():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_41_footerToClaims():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_42_footerToPayMyBill():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_43_footerToReferalFriend():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_44_footerToBusinessInsurance():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_45_footerToZingPlatform():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_46_footerToJMShippingSolution():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_47_footerToJMCarePlan():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_48_footerToJewelryAppraisalSolution():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_49_footerToJMUniversity():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_50_footerToJewelerPrograms():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_51_footerToPayMyBill():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_52_footerToBusinessClaims():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_53_footerToBlog():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_54_footerToAboutUs():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_55_footerToCareers():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_56_footerToNewsroom():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_57_footerToSocialResponsibility():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_58_footerToCOVIDResources():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_59_footerToContactUs():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_60_footerToShareYourConcerns():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_61_footerHomuchdoesitcosttoresizearing():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_62_footerHowtocleangoldjewelry():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_63_footerHowmuchshouldcost():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_64_footerHowtomakearing():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_65_footerMoreblogarticles():
-#     assert 'alex' == 'alex'
-#
-#
-# def test_66_redirection_links_status():
-#     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-#     driver.get(Redirect_url)
-#     #print('Access HomePage')
-#     time.sleep(3)
-#
-#     text_area = driver.find_element_by_class_name('textarea')
-#     text_area.click()
-#     time.sleep(1)
-#     text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
-#     'stage.jewelersmutual.com/jewelry-box/settings\n'
-#     'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
-#     'stage.jewelersmutual.com/jewelry-box/tips\n')
-#     time.sleep(60)
-#     assert 'alex' == 'alex'
-#
-#
-# def test_67_FullPageScenario():
-#     assert 'alex' == 'alex'
-#
-# def test_68_Additional_link_ContactUs():
-#     assert 'alex' == 'alex'
-#
-# def test_69_Additional_link_ShareYourConcern():
-#     assert 'alex' == 'alex'
-#
-# def test_70_Additional_link_PrivacyPolicy():
-#     assert 'alex' == 'alex'
-#
-# def test_71_Additional_link_TermsofUse():
-#     assert 'alex' == 'alex'
-#
-# def test_72_Additional_link_engagementringinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_73_Additional_link_comparejewelryinsurancetohomeowners():
-#     assert 'alex' == 'alex'
-#
-# def test_74_Additional_link_personaljewelryinsurancecollections():
-#     assert 'alex' == 'alex'
-#
-# def test_75_Additional_link_crownandcaliber():
-#     assert 'alex' == 'alex'
-#
-# def test_76_Additional_link_adiamor():
-#     assert 'alex' == 'alex'
-#
-# def test_77_Additional_link_briangavindiamonds():
-#     assert 'alex' == 'alex'
-#
-# def test_78_Additional_link_jamesallen():
-#     assert 'alex' == 'alex'
-#
-# def test_79_Additional_link_bluenile():
-#     assert 'alex' == 'alex'
-#
-# def test_80_Additional_link_whiteflash():
-#     assert 'alex' == 'alex'
-#
-# def test_81_Additional_link_earringinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_82_Additional_link_watchinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_83_Additional_link_necklaceinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_84_Additional_link_braceletinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_85_Additional_link_smartwatchinsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_86_Additional_link_howtocleanandcareforyourdiamondring():
-#     assert 'alex' == 'alex'
-#
-# def test_87_Additional_link_weinsurejewelry():
-#     assert 'alex' == 'alex'
-#
-# def test_88_Additional_link_coronavirus():
-#     assert 'alex' == 'alex'
-#
-# def test_89_Additional_link_coronavirusBusiness():
-#     assert 'alex' == 'alex'
-#
-# def test_90_Additional_link_GuidetoJewelryInsurance():
-#     assert 'alex' == 'alex'
-#
-# def test_91_Additional_link_JMUniversity():
-#     assert 'alex' == 'alex'
-#
-# def test_92_Additional_link_ReferaFriend():
-#     assert 'alex' == 'alex'
-#
+
+def test_26_BodyToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_27_BodyToLogIn():
+    assert 'alex' == 'alex'
+
+
+def test_28_BodyToRegisterForAnOnlineAccount():
+    assert 'alex' == 'alex'
+
+
+def test_29_BodyToAddanitemtomyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_30_BodyToStartAClaim():
+    assert 'alex' == 'alex'
+
+
+def test_31_BodyToLearnaboutclaims():
+    assert 'alex' == 'alex'
+
+
+def test_32_BodyToGetaquoteformultipleItems():
+    assert 'alex' == 'alex'
+
+
+def test_33_BodyToEstimateMyRate():
+    assert 'alex' == 'alex'
+
+
+def test_34_BodyToExplorePersonalJewelryInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_35_footerToPrivacyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_36_footerToTermsofUse():
+    assert 'alex' == 'alex'
+
+
+def test_37_footerToPersonalJewelryInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_38_footerToGetaQuote():
+    assert 'alex' == 'alex'
+
+
+def test_39_footerToFAQ():
+    assert 'alex' == 'alex'
+
+
+def test_40_footerToManageMyPolicy():
+    assert 'alex' == 'alex'
+
+
+def test_41_footerToClaims():
+    assert 'alex' == 'alex'
+
+
+def test_42_footerToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_43_footerToReferalFriend():
+    assert 'alex' == 'alex'
+
+
+def test_44_footerToBusinessInsurance():
+    assert 'alex' == 'alex'
+
+
+def test_45_footerToZingPlatform():
+    assert 'alex' == 'alex'
+
+
+def test_46_footerToJMShippingSolution():
+    assert 'alex' == 'alex'
+
+
+def test_47_footerToJMCarePlan():
+    assert 'alex' == 'alex'
+
+
+def test_48_footerToJewelryAppraisalSolution():
+    assert 'alex' == 'alex'
+
+
+def test_49_footerToJMUniversity():
+    assert 'alex' == 'alex'
+
+
+def test_50_footerToJewelerPrograms():
+    assert 'alex' == 'alex'
+
+
+def test_51_footerToPayMyBill():
+    assert 'alex' == 'alex'
+
+
+def test_52_footerToBusinessClaims():
+    assert 'alex' == 'alex'
+
+
+def test_53_footerToBlog():
+    assert 'alex' == 'alex'
+
+
+def test_54_footerToAboutUs():
+    assert 'alex' == 'alex'
+
+
+def test_55_footerToCareers():
+    assert 'alex' == 'alex'
+
+
+def test_56_footerToNewsroom():
+    assert 'alex' == 'alex'
+
+
+def test_57_footerToSocialResponsibility():
+    assert 'alex' == 'alex'
+
+
+def test_58_footerToCOVIDResources():
+    assert 'alex' == 'alex'
+
+
+def test_59_footerToContactUs():
+    assert 'alex' == 'alex'
+
+
+def test_60_footerToShareYourConcerns():
+    assert 'alex' == 'alex'
+
+
+def test_61_footerHomuchdoesitcosttoresizearing():
+    assert 'alex' == 'alex'
+
+
+def test_62_footerHowtocleangoldjewelry():
+    assert 'alex' == 'alex'
+
+
+def test_63_footerHowmuchshouldcost():
+    assert 'alex' == 'alex'
+
+
+def test_64_footerHowtomakearing():
+    assert 'alex' == 'alex'
+
+
+def test_65_footerMoreblogarticles():
+    assert 'alex' == 'alex'
+
+
+def test_66_redirection_links_status():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(Redirect_url)
+    #print('Access HomePage')
+    time.sleep(3)
+
+    text_area = driver.find_element_by_class_name('textarea')
+    text_area.click()
+    time.sleep(1)
+    text_area.send_keys('stage.jewelersmutual.com/jewelry-box/safety-security\n'
+    'stage.jewelersmutual.com/jewelry-box/settings\n'
+    'stage.jewelersmutual.com/jewelry-box/smart-jewelry\n'
+    'stage.jewelersmutual.com/jewelry-box/tips\n')
+    time.sleep(60)
+    assert 'alex' == 'alex'
+
+
+def test_67_FullPageScenario():
+    assert 'alex' == 'alex'
+
+def test_68_Additional_link_ContactUs():
+    assert 'alex' == 'alex'
+
+def test_69_Additional_link_ShareYourConcern():
+    assert 'alex' == 'alex'
+
+def test_70_Additional_link_PrivacyPolicy():
+    assert 'alex' == 'alex'
+
+def test_71_Additional_link_TermsofUse():
+    assert 'alex' == 'alex'
+
+def test_72_Additional_link_engagementringinsurance():
+    assert 'alex' == 'alex'
+
+def test_73_Additional_link_comparejewelryinsurancetohomeowners():
+    assert 'alex' == 'alex'
+
+def test_74_Additional_link_personaljewelryinsurancecollections():
+    assert 'alex' == 'alex'
+
+def test_75_Additional_link_crownandcaliber():
+    assert 'alex' == 'alex'
+
+def test_76_Additional_link_adiamor():
+    assert 'alex' == 'alex'
+
+def test_77_Additional_link_briangavindiamonds():
+    assert 'alex' == 'alex'
+
+def test_78_Additional_link_jamesallen():
+    assert 'alex' == 'alex'
+
+def test_79_Additional_link_bluenile():
+    assert 'alex' == 'alex'
+
+def test_80_Additional_link_whiteflash():
+    assert 'alex' == 'alex'
+
+def test_81_Additional_link_earringinsurance():
+    assert 'alex' == 'alex'
+
+def test_82_Additional_link_watchinsurance():
+    assert 'alex' == 'alex'
+
+def test_83_Additional_link_necklaceinsurance():
+    assert 'alex' == 'alex'
+
+def test_84_Additional_link_braceletinsurance():
+    assert 'alex' == 'alex'
+
+def test_85_Additional_link_smartwatchinsurance():
+    assert 'alex' == 'alex'
+
+def test_86_Additional_link_howtocleanandcareforyourdiamondring():
+    assert 'alex' == 'alex'
+
+def test_87_Additional_link_weinsurejewelry():
+    assert 'alex' == 'alex'
+
+def test_88_Additional_link_coronavirus():
+    assert 'alex' == 'alex'
+
+def test_89_Additional_link_coronavirusBusiness():
+    assert 'alex' == 'alex'
+
+def test_90_Additional_link_GuidetoJewelryInsurance():
+    assert 'alex' == 'alex'
+
+def test_91_Additional_link_JMUniversity():
+    assert 'alex' == 'alex'
+
+def test_92_Additional_link_ReferaFriend():
+    assert 'alex' == 'alex'
+
