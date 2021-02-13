@@ -743,6 +743,17 @@ def login_ZingPlatform_body_validation(driver):
     print('Zing Platform_Body - verifyied')
     return True
 
-
+def body_ToRegisterForAnOnlineAccount(driver):
+    print('verifying RegisterForAnOnlineAccount_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "jm-logo")))
+    print(driver.find_element_by_id('jm-logo').text)
+    print(driver.find_element_by_id('utility').text)
+    print(driver.find_element_by_id('utility-nav-contain').text)
+    print(driver.find_element_by_id('header-utility-links').text)
+    print(driver.find_element_by_id('register-step-1').text)
+    time.sleep(3)
+    print('RegisterForAnOnlineAccount_Body - verifyied')
+    return True
 
 

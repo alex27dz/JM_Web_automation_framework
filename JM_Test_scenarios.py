@@ -651,9 +651,6 @@ def test_26_BodyToLogIn():
     driver.close()
 
 
-
-# stopped here
-
 def test_27_BodyToRegisterForAnOnlineAccount():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -662,16 +659,20 @@ def test_27_BodyToRegisterForAnOnlineAccount():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    driver.execute_script("window.scrollTo(0,200)")
     time.sleep(3)
+    print('Access BodyToRegisterForAnOnlineAccount')
+    driver.find_element_by_partial_link_text('Register for an online account').click()
     # stopped here
     time.sleep(10)
-    assert str(login_Personal_Jewelry_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(body_ToRegisterForAnOnlineAccount(driver)) == 'True', 'Body elements of claims - not found'
     driver.back()
     time.sleep(3)
-    print('SCENARIO - 26 - PASSED')
+    print('SCENARIO - 27 - PASSED')
     driver.close()
-def test_29_BodyToAddanitemtomyPolicy():
+
+
+def test_28_BodyToAddanitemtomyPolicy():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
@@ -679,9 +680,38 @@ def test_29_BodyToAddanitemtomyPolicy():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    driver.execute_script("window.scrollTo(0,200)")
     time.sleep(3)
-    assert 'alex' == 'alex'
+    print('Access Add an item to my policy')
+    driver.find_element_by_partial_link_text('Add an item to my policy').click()
+    time.sleep(10)
+    assert str(login_Personal_Jewelry_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 28 - PASSED')
+    driver.close()
+
+
+def test_29_BodyTopaymybill():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(3)
+    print('Access Pay My Bill')
+    driver.find_element_by_partial_link_text('Pay My Bill').click()
+    time.sleep(10)
+    assert str(pay_my_bill_body_validation(driver)) == 'True', 'Body elements of pay my bill - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 29 - PASSED')
+    driver.close()
+
+# stopped here
 def test_30_BodyToStartAClaim():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -693,6 +723,8 @@ def test_30_BodyToStartAClaim():
     driver.execute_script("window.scrollTo(0,3200)")
     time.sleep(3)
     assert 'alex' == 'alex'
+
+
 def test_31_BodyToLearnaboutclaims():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
