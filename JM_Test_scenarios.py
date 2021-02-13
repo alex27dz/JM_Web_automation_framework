@@ -617,10 +617,10 @@ def test_25_BodyToPersonalInsurance():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    driver.execute_script("window.scrollTo(0,0)")
     time.sleep(3)
     print('Access Personal Insurance')
-    driver.find_element_by_partial_link_text('Personal Jewelry Insurance').click()
+    driver.find_element_by_partial_link_text('Explore personal jewelry insurance').click()
     time.sleep(10)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(personal_insurance_body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found'
@@ -630,168 +630,454 @@ def test_25_BodyToPersonalInsurance():
     print('SCENARIO - 25 - PASSED')
     driver.close()
 
-# Personal Jewelry Insurance
 
-def test_26_BodyToPayMyBill():
-    assert 'alex' == 'alex'
+def test_26_BodyToLogIn():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(3)
+    print('Access Log in')
+    driver.find_element_by_partial_link_text('Log in').click()
+    time.sleep(10)
+    assert str(login_Personal_Jewelry_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 26 - PASSED')
+    driver.close()
 
 
-def test_27_BodyToLogIn():
-    assert 'alex' == 'alex'
 
+# stopped here
 
-def test_28_BodyToRegisterForAnOnlineAccount():
-    assert 'alex' == 'alex'
-
-
+def test_27_BodyToRegisterForAnOnlineAccount():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    # stopped here
+    time.sleep(10)
+    assert str(login_Personal_Jewelry_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 26 - PASSED')
+    driver.close()
 def test_29_BodyToAddanitemtomyPolicy():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_30_BodyToStartAClaim():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_31_BodyToLearnaboutclaims():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_32_BodyToGetaquoteformultipleItems():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_33_BodyToEstimateMyRate():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_34_BodyToExplorePersonalJewelryInsurance():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_35_footerToPrivacyPolicy():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_36_footerToTermsofUse():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_37_footerToPersonalJewelryInsurance():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_38_footerToGetaQuote():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_39_footerToFAQ():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_40_footerToManageMyPolicy():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_41_footerToClaims():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_42_footerToPayMyBill():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_43_footerToReferalFriend():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_44_footerToBusinessInsurance():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_45_footerToZingPlatform():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_46_footerToJMShippingSolution():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_47_footerToJMCarePlan():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_48_footerToJewelryAppraisalSolution():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_49_footerToJMUniversity():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_50_footerToJewelerPrograms():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_51_footerToPayMyBill():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_52_footerToBusinessClaims():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_53_footerToBlog():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_54_footerToAboutUs():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_55_footerToCareers():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_56_footerToNewsroom():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_57_footerToSocialResponsibility():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_58_footerToCOVIDResources():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_59_footerToContactUs():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_60_footerToShareYourConcerns():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_61_footerHomuchdoesitcosttoresizearing():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_62_footerHowtocleangoldjewelry():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_63_footerHowmuchshouldcost():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_64_footerHowtomakearing():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_65_footerMoreblogarticles():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
     assert 'alex' == 'alex'
-
-
 def test_66_redirection_links_status():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(Redirect_url)
@@ -807,83 +1093,66 @@ def test_66_redirection_links_status():
     'stage.jewelersmutual.com/jewelry-box/tips\n')
     time.sleep(60)
     assert 'alex' == 'alex'
-
-
 def test_67_FullPageScenario():
     assert 'alex' == 'alex'
-
 def test_68_Additional_link_ContactUs():
     assert 'alex' == 'alex'
-
 def test_69_Additional_link_ShareYourConcern():
     assert 'alex' == 'alex'
-
 def test_70_Additional_link_PrivacyPolicy():
     assert 'alex' == 'alex'
-
 def test_71_Additional_link_TermsofUse():
     assert 'alex' == 'alex'
-
 def test_72_Additional_link_engagementringinsurance():
     assert 'alex' == 'alex'
-
 def test_73_Additional_link_comparejewelryinsurancetohomeowners():
     assert 'alex' == 'alex'
-
 def test_74_Additional_link_personaljewelryinsurancecollections():
     assert 'alex' == 'alex'
-
 def test_75_Additional_link_crownandcaliber():
     assert 'alex' == 'alex'
-
 def test_76_Additional_link_adiamor():
     assert 'alex' == 'alex'
-
 def test_77_Additional_link_briangavindiamonds():
     assert 'alex' == 'alex'
-
 def test_78_Additional_link_jamesallen():
     assert 'alex' == 'alex'
-
 def test_79_Additional_link_bluenile():
     assert 'alex' == 'alex'
-
 def test_80_Additional_link_whiteflash():
     assert 'alex' == 'alex'
-
 def test_81_Additional_link_earringinsurance():
     assert 'alex' == 'alex'
-
 def test_82_Additional_link_watchinsurance():
     assert 'alex' == 'alex'
-
 def test_83_Additional_link_necklaceinsurance():
     assert 'alex' == 'alex'
-
 def test_84_Additional_link_braceletinsurance():
     assert 'alex' == 'alex'
-
 def test_85_Additional_link_smartwatchinsurance():
     assert 'alex' == 'alex'
-
 def test_86_Additional_link_howtocleanandcareforyourdiamondring():
     assert 'alex' == 'alex'
-
 def test_87_Additional_link_weinsurejewelry():
     assert 'alex' == 'alex'
-
 def test_88_Additional_link_coronavirus():
     assert 'alex' == 'alex'
-
 def test_89_Additional_link_coronavirusBusiness():
     assert 'alex' == 'alex'
-
 def test_90_Additional_link_GuidetoJewelryInsurance():
     assert 'alex' == 'alex'
-
 def test_91_Additional_link_JMUniversity():
     assert 'alex' == 'alex'
-
 def test_92_Additional_link_ReferaFriend():
     assert 'alex' == 'alex'
+
+
+
+
+
+
+
+
+
+
 

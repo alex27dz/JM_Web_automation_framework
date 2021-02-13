@@ -571,6 +571,7 @@ def answers_FAQ_body_validation(driver):
     print('FAQ_Body - verifyied')
     return True
 
+
 def aboutus_aboutus_body_validation(driver):
     print('verifying aboutus_Body containers')
     time.sleep(3)
@@ -660,7 +661,6 @@ def aboutus_careers_body_validation(driver):
     return True
 
 
-
 def aboutus_newsroom_body_validation(driver):
     print('verifying newsroom_Body containers')
     time.sleep(3)
@@ -678,7 +678,6 @@ def aboutus_newsroom_body_validation(driver):
     time.sleep(3)
     print('newsroom_Body - verifyied')
     return True
-
 
 
 def login_Personal_Jewelry_body_validation(driver):
@@ -722,7 +721,6 @@ def login_agent_body_validation(driver):
     return True
 
 
-
 def login_ZingPlatform_body_validation(driver):
     print('verifying Zing Platform_Body containers')
     time.sleep(3)
@@ -745,22 +743,6 @@ def login_ZingPlatform_body_validation(driver):
     print('Zing Platform_Body - verifyied')
     return True
 
-#############################################################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-# driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-# driver.get('https://stage.jewelersmutual.com/jewelry-business-jewelers-block-bop-insurance')
-# business_insurance_validation(driver)
 
 
