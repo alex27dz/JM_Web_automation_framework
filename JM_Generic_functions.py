@@ -757,3 +757,21 @@ def body_ToRegisterForAnOnlineAccount(driver):
     return True
 
 
+def body_startaclaim(driver):
+    print('verifying careers_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "lookupForm")))
+    print(driver.find_element_by_id('lookupForm').text)
+    print(driver.find_element_by_id('helpLookupPolicyNumber').text)
+    print(driver.find_element_by_id('EmailOrPolicy').text)
+    print(driver.find_element_by_id('PolicyLastName').text)
+    print(driver.find_element_by_id('PolicyZipCode').text)
+    print(driver.find_element_by_id('recaptcha').text)
+    print(driver.find_element_by_id('continueButton').text)
+    # print(driver.find_element_by_id('Thalyta example').text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'navbar-brand')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'nav navbar-nav navbar-right jm-nav')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'container')]").text)
+    time.sleep(3)
+    print('careers_Body - verifyied')
+    return True

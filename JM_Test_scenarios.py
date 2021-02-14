@@ -45,8 +45,6 @@ def test_01_HomePageToPersonalInsurance():
     time.sleep(3)
     print('SCENARIO - 01 - PASSED')
     driver.close()
-
-
 def test_02_HomePageToGetaQuote():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -68,8 +66,6 @@ def test_02_HomePageToGetaQuote():
     time.sleep(3)
     print('SCENARIO - 02 - PASSED')
     driver.close()
-
-
 def test_03_HomePageToPayMyBill():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -91,8 +87,6 @@ def test_03_HomePageToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 03 - PASSED')
     driver.close()
-
-
 def test_04_HomePageToClaims():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -116,8 +110,6 @@ def test_04_HomePageToClaims():
     time.sleep(3)
     print('SCENARIO - 04 - PASSED')
     driver.close()
-
-
 def test_05_HomePageToManagePolicy():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -139,8 +131,6 @@ def test_05_HomePageToManagePolicy():
     time.sleep(3)
     print('SCENARIO - 05 - PASSED')
     driver.close()
-
-
 def test_06_HomePageToBlog():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -164,8 +154,6 @@ def test_06_HomePageToBlog():
     time.sleep(3)
     print('SCENARIO - 06 - PASSED')
     driver.close()
-
-
 def test_07_BusinessToBusinessInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -189,8 +177,6 @@ def test_07_BusinessToBusinessInsurance():
     time.sleep(3)
     print('SCENARIO - 07 - PASSED')
     driver.close()
-
-
 def test_08_BusinessToClaims():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -214,8 +200,6 @@ def test_08_BusinessToClaims():
     time.sleep(3)
     print('SCENARIO - 08 - PASSED')
     driver.close()
-
-
 def test_09_BusinessToPayMyBill():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -239,8 +223,6 @@ def test_09_BusinessToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 09 - PASSED')
     driver.close()
-
-
 def test_10_BusinessToZingPlatform():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -264,8 +246,6 @@ def test_10_BusinessToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 10 - PASSED')
     driver.close()
-
-
 def test_11_BusinessToShippingSolution():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -289,8 +269,6 @@ def test_11_BusinessToShippingSolution():
     time.sleep(3)
     print('SCENARIO - 11 - PASSED')
     driver.close()
-
-
 def test_12_BusinessToJmCarePlan():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -314,8 +292,6 @@ def test_12_BusinessToJmCarePlan():
     time.sleep(3)
     print('SCENARIO - 12 - PASSED')
     driver.close()
-
-
 def test_13_BusinessToAppraisalSolution():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -339,8 +315,6 @@ def test_13_BusinessToAppraisalSolution():
     time.sleep(3)
     print('SCENARIO - 13 - PASSED')
     driver.close()
-
-
 def test_14_BusinessToJewelerPrograms():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -364,8 +338,6 @@ def test_14_BusinessToJewelerPrograms():
     time.sleep(3)
     print('SCENARIO - 14 - PASSED')
     driver.close()
-
-
 def test_15_BusinessToPawnbrokers():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -388,8 +360,6 @@ def test_15_BusinessToPawnbrokers():
     time.sleep(3)
     print('SCENARIO - 15 - PASSED')
     driver.close()
-
-
 def test_16_AnswersToJewelryInsurance101():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -413,8 +383,6 @@ def test_16_AnswersToJewelryInsurance101():
     time.sleep(3)
     print('SCENARIO - 16 - PASSED')
     driver.close()
-
-
 def test_17_AnswersToFAQ():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -438,8 +406,6 @@ def test_17_AnswersToFAQ():
     time.sleep(3)
     print('SCENARIO - 17 - PASSED')
     driver.close()
-
-
 def test_18_AboutUsToAboutUs():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -463,8 +429,6 @@ def test_18_AboutUsToAboutUs():
     time.sleep(3)
     print('SCENARIO - 18 - PASSED')
     driver.close()
-
-
 def test_19_AboutUsToSocialResponsibility():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -488,8 +452,6 @@ def test_19_AboutUsToSocialResponsibility():
     time.sleep(3)
     print('SCENARIO - 19 - PASSED')
     driver.close()
-
-
 def test_20_AboutUsToCareers():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -513,8 +475,6 @@ def test_20_AboutUsToCareers():
     time.sleep(3)
     print('SCENARIO - 20 - PASSED')
     driver.close()
-
-
 def test_21_AboutUsToNewsroom():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -538,8 +498,6 @@ def test_21_AboutUsToNewsroom():
     time.sleep(3)
     print('SCENARIO - 21 - PASSED')
     driver.close()
-
-
 def test_22_LogInToPersonalJewelry():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -561,8 +519,6 @@ def test_22_LogInToPersonalJewelry():
     time.sleep(3)
     print('SCENARIO - 22 - PASSED')
     driver.close()
-
-
 def test_23_LogInToAgent():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -584,8 +540,6 @@ def test_23_LogInToAgent():
     time.sleep(3)
     print('SCENARIO - 23 - PASSED')
     driver.close()
-
-
 def test_24_LogInToZingPlatform():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -607,8 +561,6 @@ def test_24_LogInToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 24 - PASSED')
     driver.close()
-
-
 def test_25_BodyToPersonalInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -629,8 +581,6 @@ def test_25_BodyToPersonalInsurance():
     time.sleep(3)
     print('SCENARIO - 25 - PASSED')
     driver.close()
-
-
 def test_26_BodyToLogIn():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -639,7 +589,8 @@ def test_26_BodyToLogIn():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
     print('Access Log in')
     driver.find_element_by_partial_link_text('Log in').click()
@@ -649,8 +600,6 @@ def test_26_BodyToLogIn():
     time.sleep(3)
     print('SCENARIO - 26 - PASSED')
     driver.close()
-
-
 def test_27_BodyToRegisterForAnOnlineAccount():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -659,7 +608,8 @@ def test_27_BodyToRegisterForAnOnlineAccount():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
     print('Access BodyToRegisterForAnOnlineAccount')
     driver.find_element_by_partial_link_text('Register for an online account').click()
@@ -670,8 +620,6 @@ def test_27_BodyToRegisterForAnOnlineAccount():
     time.sleep(3)
     print('SCENARIO - 27 - PASSED')
     driver.close()
-
-
 def test_28_BodyToAddanitemtomyPolicy():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -680,7 +628,8 @@ def test_28_BodyToAddanitemtomyPolicy():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
     print('Access Add an item to my policy')
     driver.find_element_by_partial_link_text('Add an item to my policy').click()
@@ -690,8 +639,6 @@ def test_28_BodyToAddanitemtomyPolicy():
     time.sleep(3)
     print('SCENARIO - 28 - PASSED')
     driver.close()
-
-
 def test_29_BodyTopaymybill():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -700,7 +647,8 @@ def test_29_BodyTopaymybill():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
     print('Access Pay My Bill')
     driver.find_element_by_partial_link_text('Pay My Bill').click()
@@ -710,8 +658,6 @@ def test_29_BodyTopaymybill():
     time.sleep(3)
     print('SCENARIO - 29 - PASSED')
     driver.close()
-
-# stopped here
 def test_30_BodyToStartAClaim():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -720,11 +666,17 @@ def test_30_BodyToStartAClaim():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
-    assert 'alex' == 'alex'
-
-
+    print('Start a claim')
+    driver.find_element_by_partial_link_text('Start a claim').click()
+    time.sleep(10)
+    assert str(body_startaclaim(driver)) == 'True', 'Body elements of pay my bill - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 30 - PASSED')
+    driver.close()
 def test_31_BodyToLearnaboutclaims():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -733,9 +685,19 @@ def test_31_BodyToLearnaboutclaims():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,300)")
     time.sleep(3)
-    assert 'alex' == 'alex'
+    print('Learn about claims')
+    driver.find_element_by_partial_link_text('Learn about claims').click()
+    time.sleep(10)
+    assert str(claims_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 31 - PASSED')
+    driver.close()
 def test_32_BodyToGetaquoteformultipleItems():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -744,10 +706,18 @@ def test_32_BodyToGetaquoteformultipleItems():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,400)")
     time.sleep(3)
-    assert 'alex' == 'alex'
-def test_33_BodyToEstimateMyRate():
+    print('Get a quote for multiple items')
+    driver.find_element_by_partial_link_text('Get a quote for multiple items').click()
+    time.sleep(10)
+    assert str(get_a_quote_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 32 - PASSED')
+    driver.close()
+def test_33_BodyToExplorePersonalJewelryInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
@@ -755,42 +725,21 @@ def test_33_BodyToEstimateMyRate():
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(2)
+    driver.execute_script("window.scrollTo(0,800)")
     time.sleep(3)
-    assert 'alex' == 'alex'
-def test_34_BodyToExplorePersonalJewelryInsurance():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    print('EXPLORE PERSONAL JEWELRY INSURANCE')
+    driver.find_element_by_partial_link_text('EXPLORE PERSONAL JEWELRY INSURANCE').click()
+    time.sleep(10)
+    assert str(personal_insurance_body_validation(driver)) == 'True', 'Body elements of claims - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
-def test_35_footerToPrivacyPolicy():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
+    driver.back()
     time.sleep(3)
-    assert 'alex' == 'alex'
-def test_36_footerToTermsofUse():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
+    print('SCENARIO - 33 - PASSED')
+    driver.close()
+
+# stopped here
 def test_37_footerToPersonalJewelryInsurance():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
@@ -1125,8 +1074,36 @@ def test_66_redirection_links_status():
     'stage.jewelersmutual.com/jewelry-box/tips\n')
     time.sleep(60)
     assert 'alex' == 'alex'
+def test_35_footerToPrivacyPolicy():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    assert 'alex' == 'alex'
+def test_36_footerToTermsofUse():
+    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+    driver.get(JM_url)
+    print('Access HomePage')
+    time.sleep(5)
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    assert 'alex' == 'alex'
 def test_67_FullPageScenario():
     assert 'alex' == 'alex'
+def test_95_Redirection300links():
+    assert 'alex' == 'alex'
+
+
+
+
 def test_68_Additional_link_ContactUs():
     assert 'alex' == 'alex'
 def test_69_Additional_link_ShareYourConcern():
