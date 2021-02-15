@@ -26,86 +26,80 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 def navbar_validation(driver):
     driver.execute_script("window.scrollTo(0,0)")
-    time.sleep(2)
     print('verifying Navbar containers')
     url = '/jewelry-engagement-ring-insurance-quote'
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@href="'+url+'"]')))
-    time.sleep(5)
     print('Navbar Personal')
+
     if driver.current_url == 'https://stage.jewelersmutual.com/':
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
-        time.sleep(3)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Personal Insurance').text)
         print(driver.find_element_by_link_text('Get a Quote').text)
         print(driver.find_element_by_link_text('Pay My Bill').text)
         print(driver.find_element_by_link_text('Claims').text)
         print(driver.find_element_by_link_text('Manage My Policy').text)
         print(driver.find_element_by_link_text('Blog').text)
-        time.sleep(1)
         print('Navbar Personal passed')
         print('Navbar Business')
         url = '/jewelry-business-jewelers-block-bop-insurance'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
-        time.sleep(1)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Business Insurance').text)
         print(driver.find_element_by_link_text('Claims').text)
         print(driver.find_element_by_link_text('Pay My Bill').text)
         print(driver.find_element_by_link_text('Zing Platform').text)
         print(driver.find_element_by_link_text('JM Shipping Solution').text)
         print(driver.find_element_by_link_text('JM Care Plan').text)
-        # print(driver.find_element_by_link_text('Appraisal Solution').text)
         print(driver.find_element_by_link_text('Jeweler Programs').text)
         print(driver.find_element_by_link_text('Pawnbrokers').text)
-        time.sleep(1)
         print('Navbar Business passed')
         print('Navbar Answers')
         url = '/jewelry-insurance-101'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
-        time.sleep(1)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Jewelry Insurance 101').text)
         print(driver.find_element_by_link_text('FAQ').text)
-        time.sleep(1)
         print('Navbar Answers passed')
         print('Navbar About Us')
         url = '/about-us'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
-        time.sleep(1)
+        time.sleep(2)
         print(driver.find_element_by_link_text('About Us').text)
         print(driver.find_element_by_link_text('Social Responsibility').text)
         print(driver.find_element_by_link_text('Careers').text)
         print(driver.find_element_by_link_text('Newsroom').text)
-        time.sleep(1)
         print('Navbar About Us passed')
         print('Navbar Log In')
         driver.find_element_by_xpath('//a[contains(@href,"https://my.jewelersmutual.com/PLPortal/Security/")]').click()
-        time.sleep(1)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Personal Jewelry').text)
         print(driver.find_element_by_link_text('Agent').text)
         print(driver.find_element_by_link_text('Zing Platform').text)
-        time.sleep(1)
         print('Navbar Log In passed')
     else:
+        print('Navbar Personal')
         url = '/jewelry-engagement-ring-insurance-quote'
         action = webdriver.ActionChains(driver)
-        element = driver.find_element_by_xpath('//a[@href="' + url + '"]') # or your another selector here
+        element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
         action.move_to_element(element)
         action.perform()
-        time.sleep(3)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Personal Insurance').text)
         print(driver.find_element_by_link_text('Get a Quote').text)
         print(driver.find_element_by_link_text('Pay My Bill').text)
         print(driver.find_element_by_link_text('Claims').text)
         print(driver.find_element_by_link_text('Manage My Policy').text)
         print(driver.find_element_by_link_text('Blog').text)
-        time.sleep(3)
         print('Navbar Personal passed')
+
         print('Navbar Business')
         url = '/jewelry-business-jewelers-block-bop-insurance'
         action = webdriver.ActionChains(driver)
         element = driver.find_element_by_xpath('//a[@href="' + url + '"]') # or your another selector here
         action.move_to_element(element)
         action.perform()
-        time.sleep(3)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Business Insurance').text)
         print(driver.find_element_by_link_text('Claims').text)
         print(driver.find_element_by_link_text('Pay My Bill').text)
@@ -114,41 +108,42 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('JM Care Plan').text)
         print(driver.find_element_by_link_text('Jeweler Programs').text)
         print(driver.find_element_by_link_text('Pawnbrokers').text)
-        time.sleep(1)
         print('Navbar Business passed')
+
         print('Navbar Answers')
         url = '/jewelry-insurance-101'
-        time.sleep(1)
         action = webdriver.ActionChains(driver)
         element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
         action.move_to_element(element)
         action.perform()
-        time.sleep(3)
+        time.sleep(2)
         print(driver.find_element_by_link_text('Jewelry Insurance 101').text)
         print(driver.find_element_by_link_text('FAQ').text)
-        time.sleep(1)
         print('Navbar Answers passed')
+
         print('Navbar About Us')
         url = '/about-us'
-        time.sleep(1)
         action = webdriver.ActionChains(driver)
         element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
         action.move_to_element(element)
         action.perform()
-        time.sleep(3)
+        time.sleep(2)
         print(driver.find_element_by_link_text('About Us').text)
         print(driver.find_element_by_link_text('Social Responsibility').text)
         print(driver.find_element_by_link_text('Careers').text)
         print(driver.find_element_by_link_text('Newsroom').text)
-        time.sleep(1)
         print('Navbar About Us passed')
+
         print('Navbar Log In')
-        driver.find_element_by_xpath('//a[contains(@href,"https://my.jewelersmutual.com/PLPortal/Security/")]').click()
-        time.sleep(1)
+        url = 'https://my.jewelersmutual.com/PLPortal/Security/'
+        action = webdriver.ActionChains(driver)
+        element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
+        action.move_to_element(element)
+        action.perform()
+        time.sleep(2)
         print(driver.find_element_by_link_text('Personal Jewelry').text)
         print(driver.find_element_by_link_text('Agent').text)
         print(driver.find_element_by_link_text('Zing Platform').text)
-        time.sleep(1)
         print('Navbar Log In passed')
 
     print('Navbar - verifyied')
@@ -157,12 +152,14 @@ def navbar_validation(driver):
 
 def footer_validation(driver):
     driver.execute_script("window.scrollTo(0,4000)")
+    time.sleep(2)
     print('verifying Footer containers')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'block-footerplmenu')))
     print('Footer Personal')
     element = driver.find_element_by_id('block-footerplmenu')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+    time.sleep(2)
     print(driver.find_element_by_id('block-footerplmenu').text)
     print('Footer Personal passed')
     print('Footer Business')
@@ -177,7 +174,6 @@ def footer_validation(driver):
     print('Footer BLOG')
     print(driver.find_element_by_id('block-footerrecommendedcontentlinks').text)
     print('Footer BLOG passed')
-    time.sleep(2)
     print('Footer - verifyied')
     return True
 
@@ -743,6 +739,7 @@ def login_ZingPlatform_body_validation(driver):
     print('Zing Platform_Body - verifyied')
     return True
 
+
 def body_ToRegisterForAnOnlineAccount(driver):
     print('verifying RegisterForAnOnlineAccount_Body containers')
     time.sleep(3)
@@ -775,3 +772,7 @@ def body_startaclaim(driver):
     time.sleep(3)
     print('careers_Body - verifyied')
     return True
+
+
+
+
