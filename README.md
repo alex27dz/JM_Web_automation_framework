@@ -1,11 +1,13 @@
 ![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)
-![Coverage Status](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_70.svg)
+![Coverage Status](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_90.svg)
 
-Read me.
+# Automation framework for JM website, 
+scenarios of ‘containers validation’ and ‘navigation’. 
 
-Automation framework for JM website, scenarios covering ‘containers validation’ and ‘navigation’.
+#### Supporting Chrome and IE web drivers.
+#### Supporting STAGE environment.
 
-Environment:
+## Environment setup:
 
 Python 3 - Go to https://www.python.org/downloads/    Download the latest version and install.
 
@@ -41,5 +43,4 @@ Test cases / Scenarios example
 Generic Validation / navigation functions example 
 <img src="https://usaupload.com/cache/plugins/filepreviewer/5963/371a4a956843a7700ced46401157c7d60ebfe702df492d5fc837c4db2a041d88/1100x800_cropped.jpg">
 
-
-For any questions / issues please contact - Alex Dzhoharidze, technical consultant (QAC)
+For questions please contact - Alex Dzhoharidze, technical consultant (QAC)
