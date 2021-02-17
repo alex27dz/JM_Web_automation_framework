@@ -813,4 +813,32 @@ def body_ContactUs(driver):
     return True
 
 
+def body_ShareYourConcerns(driver):
+    print('verifying ShareYourConcerns_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-2721")))
+    print(driver.find_element_by_id('text-block-2721').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+    time.sleep(3)
+    print('ShareYourConcerns_Body - verifyied')
+    return True
+
+def body_Homuchdoesitcosttoresizearing(driver):
+    print('verifying Homuchdoesitcosttoresizearing_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
+    print(driver.find_element_by_id('sidebar-2181').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'page-title__h2')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'a2a_kit a2a_kit_size_32 addtoany_list')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-blog-detail-topics-list')]").text)
+    time.sleep(3)
+    print('Homuchdoesitcosttoresizearing_Body - verifyied')
+    return True
+
+
+
 

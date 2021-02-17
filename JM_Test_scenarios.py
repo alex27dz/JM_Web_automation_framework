@@ -1146,8 +1146,7 @@ def test_55_footerToContactUs():
     time.sleep(3)
     print('SCENARIO - 55 - PASSED')
     driver.close()
-
-def test_60_footerToShareYourConcerns():
+def test_56_footerToShareYourConcerns():
     # driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
@@ -1160,26 +1159,36 @@ def test_60_footerToShareYourConcerns():
     print('Share Your Concerns')
     driver.find_element_by_link_text('Share Your Concerns').click()
     time.sleep(10)
-    assert str(body_ContactUs(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(body_ShareYourConcerns(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.back()
     time.sleep(3)
-    print('SCENARIO - 55 - PASSED')
+    print('SCENARIO - 56 - PASSED')
     driver.close()
-
-
-def test_61_footerHomuchdoesitcosttoresizearing():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
+def test_57_footerHomuchdoesitcosttoresizearing():
+    # driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
     print('Access HomePage')
-    time.sleep(5)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.execute_script("window.scrollTo(0,3200)")
     time.sleep(3)
-    assert 'alex' == 'alex'
+    print('How much does it cost to resize a ring?')
+    driver.find_element_by_link_text('How much does it cost to resize a ring?').click()
+    time.sleep(10)
+    assert str(body_Homuchdoesitcosttoresizearing(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 57 - PASSED')
+    driver.close()
+
+
+# stopped here
 def test_62_footerHowtocleangoldjewelry():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(JM_url)
