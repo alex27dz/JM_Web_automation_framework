@@ -755,7 +755,7 @@ def body_ToRegisterForAnOnlineAccount(driver):
 
 
 def body_startaclaim(driver):
-    print('verifying careers_Body containers')
+    print('verifying startaclaim_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "lookupForm")))
     print(driver.find_element_by_id('lookupForm').text)
@@ -770,9 +770,47 @@ def body_startaclaim(driver):
     # print(driver.find_element_by_xpath("//div[contains(@class, 'nav navbar-nav navbar-right jm-nav')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'container')]").text)
     time.sleep(3)
-    print('careers_Body - verifyied')
+    print('startaclaim_Body - verifyied')
     return True
 
+def body_jmuniversity(driver):
+    print('verifying jmuniversity_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-3071")))
+    print(driver.find_element_by_id('title-3071').text)
+    print(driver.find_element_by_id('info-grid-3096').text)
+    print(driver.find_element_by_id('title-3101').text)
+    print(driver.find_element_by_id('cta-group-3106').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    time.sleep(3)
+    print('jmuniversity_Body - verifyied')
+    return True
+
+
+def body_COVIDResources(driver):
+    print('verifying COVIDResources_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-6611")))
+    print(driver.find_element_by_id('title-6611').text)
+    print(driver.find_element_by_id('text-block-6616').text)
+    print(driver.find_element_by_id('cta-group-6586').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    time.sleep(3)
+    print('COVIDResources_Body - verifyied')
+    return True
+
+
+def body_ContactUs(driver):
+    print('verifying ContactUs_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "info-grid-2741")))
+    print(driver.find_element_by_id('info-grid-2741').text)
+    print(driver.find_element_by_id('feature-row-2746').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodecore-pagefield-hero')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+    time.sleep(3)
+    print('ContactUs_Body - verifyied')
+    return True
 
 
 
