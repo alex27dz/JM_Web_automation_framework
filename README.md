@@ -2,7 +2,7 @@
 ![Coverage Status](https://s3.amazonaws.com/assets.coveralls.io/badges/coveralls_100.svg)
 
 # Automation framework for JM website, 
-scenarios for ‘containers validation’ and ‘navigation’. 
+Scenarios made for ‘containers validation’ and ‘navigation’. 
 
 #### Supporting Chrome and IE web drivers.
 #### Supporting STAGE environment.
