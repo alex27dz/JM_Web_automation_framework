@@ -148,8 +148,6 @@ def navbar_validation(driver):
 
     print('Navbar - verifyied')
     return True
-
-
 def footer_validation(driver):
     driver.execute_script("window.scrollTo(0,4000)")
     time.sleep(2)
@@ -173,8 +171,6 @@ def footer_validation(driver):
     print(driver.find_element_by_id('block-footerrecommendedcontentlinks').text)
     print('Footer - verifyied')
     return True
-
-
 def personal_insurance_body_validation(driver):
     print('verifying Personal_insurance_Body containers')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
@@ -200,8 +196,6 @@ def personal_insurance_body_validation(driver):
     time.sleep(1)
     print('Personal_insurance_Body - verifyied')
     return True
-
-
 def get_a_quote_body_validation(driver):
     print('verifying Get_A_Quote_Body containers')
     time.sleep(3)
@@ -226,8 +220,6 @@ def get_a_quote_body_validation(driver):
     time.sleep(3)
     print('Get_A_Quote_Body - verifyied')
     return True
-
-
 def pay_my_bill_body_validation(driver):
     print('verifying Get_A_Quote_Body containers')
     time.sleep(3)
@@ -249,8 +241,6 @@ def pay_my_bill_body_validation(driver):
     time.sleep(3)
     print('Pay_My_Bill_Body - verifyied')
     return True
-
-
 def claims_body_validation(driver):
     print('verifying claims_Body containers')
     time.sleep(3)
@@ -286,8 +276,6 @@ def claims_body_validation(driver):
     time.sleep(3)
     print('claims_Body - verifyied')
     return True
-
-
 def manage_my_policy_body_validation(driver):
     print('verifying manage_my_policy containers')
     time.sleep(3)
@@ -306,8 +294,6 @@ def manage_my_policy_body_validation(driver):
     time.sleep(3)
     print('manage_my_policy - verifyied')
     return True
-
-
 def blog_body_validation(driver):
     print('verifying blog containers')
     time.sleep(3)
@@ -319,8 +305,6 @@ def blog_body_validation(driver):
     time.sleep(3)
     print('blog - verifyied')
     return True
-
-
 def business_insurance_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -350,8 +334,6 @@ def business_insurance_body_validation(driver):
     time.sleep(3)
     print('claims_Body - verifyied')
     return True
-
-
 def business_claims_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -372,8 +354,6 @@ def business_claims_body_validation(driver):
     time.sleep(3)
     print('claims_Body - verifyied')
     return True
-
-
 def business_paymybill_body_validation(driver):
     print('verifying paymybill containers')
     time.sleep(3)
@@ -387,8 +367,6 @@ def business_paymybill_body_validation(driver):
     time.sleep(3)
     print('paymybill - verifyied')
     return True
-
-
 def business_zingplatform_body_validation(driver):
     print('verifying zingplatform containers')
     time.sleep(3)
@@ -412,8 +390,6 @@ def business_zingplatform_body_validation(driver):
     time.sleep(3)
     print('zingplatform - verifyied')
     return True
-
-
 def business_jm_shippin_gsolution_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -433,8 +409,6 @@ def business_jm_shippin_gsolution_body_validation(driver):
     time.sleep(3)
     print('jm_shippin_gsolution_Body - verifyied')
     return True
-
-
 def business_jmcareplan_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -453,8 +427,6 @@ def business_jmcareplan_body_validation(driver):
     time.sleep(3)
     print('jmcareplan_Body - verifyied')
     return True
-
-
 def business_appraisalsolution_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -478,8 +450,6 @@ def business_appraisalsolution_body_validation(driver):
     time.sleep(3)
     print('appraisalsolution_Body - verifyied')
     return True
-
-
 def business_jewelerprograms_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -498,8 +468,6 @@ def business_jewelerprograms_body_validation(driver):
     time.sleep(3)
     print('jewelerprograms_Body - verifyied')
     return True
-
-
 def business_pawnbrokers_body_validation(driver):
     print('verifying Pawnbrokers_Body containers')
     time.sleep(3)
@@ -516,8 +484,6 @@ def business_pawnbrokers_body_validation(driver):
     time.sleep(3)
     print('Pawnbrokers_Body - verifyied')
     return True
-
-
 def answers_JewelryInsurance101_body_validation(driver):
     print('verifying JewelryInsurance101_Body containers')
     time.sleep(3)
@@ -538,8 +504,6 @@ def answers_JewelryInsurance101_body_validation(driver):
     time.sleep(3)
     print('JewelryInsurance101_Body - verifyied')
     return True
-
-
 def answers_FAQ_body_validation(driver):
     print('verifying FAQ_Body containers')
     time.sleep(3)
@@ -564,8 +528,6 @@ def answers_FAQ_body_validation(driver):
     time.sleep(3)
     print('FAQ_Body - verifyied')
     return True
-
-
 def aboutus_aboutus_body_validation(driver):
     print('verifying aboutus_Body containers')
     time.sleep(3)
@@ -595,8 +557,6 @@ def aboutus_aboutus_body_validation(driver):
     time.sleep(3)
     print('aboutus_Body - verifyied')
     return True
-
-
 def aboutus_socialresponsibility_body_validation(driver):
     print('verifying socialresponsibility_Body containers')
     time.sleep(3)
@@ -625,8 +585,6 @@ def aboutus_socialresponsibility_body_validation(driver):
     time.sleep(3)
     print('socialresponsibility_Body - verifyied')
     return True
-
-
 def aboutus_careers_body_validation(driver):
     print('verifying careers_Body containers')
     time.sleep(3)
@@ -653,8 +611,6 @@ def aboutus_careers_body_validation(driver):
     time.sleep(3)
     print('careers_Body - verifyied')
     return True
-
-
 def aboutus_newsroom_body_validation(driver):
     print('verifying newsroom_Body containers')
     time.sleep(3)
@@ -672,8 +628,6 @@ def aboutus_newsroom_body_validation(driver):
     time.sleep(3)
     print('newsroom_Body - verifyied')
     return True
-
-
 def login_Personal_Jewelry_body_validation(driver):
     print('verifying Personal_Jewelry_Body containers')
     time.sleep(3)
@@ -689,8 +643,6 @@ def login_Personal_Jewelry_body_validation(driver):
     time.sleep(3)
     print('Personal_Jewelry_Body - verifyied')
     return True
-
-
 def login_agent_body_validation(driver):
     print('verifying agent_Body containers')
     time.sleep(3)
@@ -713,8 +665,6 @@ def login_agent_body_validation(driver):
     time.sleep(3)
     print('agent_Body - verifyied')
     return True
-
-
 def login_ZingPlatform_body_validation(driver):
     print('verifying Zing Platform_Body containers')
     time.sleep(3)
@@ -736,8 +686,6 @@ def login_ZingPlatform_body_validation(driver):
     time.sleep(3)
     print('Zing Platform_Body - verifyied')
     return True
-
-
 def body_ToRegisterForAnOnlineAccount(driver):
     print('verifying RegisterForAnOnlineAccount_Body containers')
     time.sleep(3)
@@ -750,8 +698,6 @@ def body_ToRegisterForAnOnlineAccount(driver):
     time.sleep(3)
     print('RegisterForAnOnlineAccount_Body - verifyied')
     return True
-
-
 def body_startaclaim(driver):
     print('verifying startaclaim_Body containers')
     time.sleep(3)
@@ -770,7 +716,6 @@ def body_startaclaim(driver):
     time.sleep(3)
     print('startaclaim_Body - verifyied')
     return True
-
 def body_jmuniversity(driver):
     print('verifying jmuniversity_Body containers')
     time.sleep(3)
@@ -783,8 +728,6 @@ def body_jmuniversity(driver):
     time.sleep(3)
     print('jmuniversity_Body - verifyied')
     return True
-
-
 def body_COVIDResources(driver):
     print('verifying COVIDResources_Body containers')
     time.sleep(3)
@@ -796,8 +739,6 @@ def body_COVIDResources(driver):
     time.sleep(3)
     print('COVIDResources_Body - verifyied')
     return True
-
-
 def body_ContactUs(driver):
     print('verifying ContactUs_Body containers')
     time.sleep(3)
@@ -809,8 +750,6 @@ def body_ContactUs(driver):
     time.sleep(3)
     print('ContactUs_Body - verifyied')
     return True
-
-
 def body_ShareYourConcerns(driver):
     print('verifying ShareYourConcerns_Body containers')
     time.sleep(3)
@@ -821,7 +760,6 @@ def body_ShareYourConcerns(driver):
     time.sleep(3)
     print('ShareYourConcerns_Body - verifyied')
     return True
-
 def body_Homuchdoesitcosttoresizearing(driver):
     print('verifying Homuchdoesitcosttoresizearing_Body containers')
     time.sleep(3)
@@ -836,7 +774,6 @@ def body_Homuchdoesitcosttoresizearing(driver):
     time.sleep(3)
     print('Homuchdoesitcosttoresizearing_Body - verifyied')
     return True
-
 def body_Howtocleangoldjewelry(driver):
     print('verifying Howtocleangoldjewelry_Body containers')
     time.sleep(3)
@@ -852,7 +789,6 @@ def body_Howtocleangoldjewelry(driver):
     time.sleep(3)
     print('Howtocleangoldjewelry_Body - verifyied')
     return True
-
 def body_Howmuchshouldcost(driver):
     print('verifying Howmuchshouldcost_Body containers')
     time.sleep(3)
@@ -868,9 +804,6 @@ def body_Howmuchshouldcost(driver):
     time.sleep(3)
     print('Howmuchshouldcost_Body - verifyied')
     return True
-
-
-
 def body_Howtomakearing(driver):
     print('verifying Howtomakearing_Body containers')
     time.sleep(3)
@@ -890,7 +823,6 @@ def body_Howtomakearing(driver):
     time.sleep(3)
     print('Howtomakearing_Body - verifyied')
     return True
-
 def body_Moreblogarticles(driver):
     print('verifying Moreblogarticles_Body containers')
     time.sleep(3)
@@ -902,10 +834,25 @@ def body_Moreblogarticles(driver):
     time.sleep(3)
     print('Moreblogarticles_Body - verifyied')
     return True
-
-
-
-
-
+def body_PrivacyPolicy(driver):
+    print('verifying PrivacyPolicy_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-9491")))
+    print(driver.find_element_by_id('text-block-9491').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+    time.sleep(3)
+    print('PrivacyPolicy_Body - verifyied')
+    return True
+def body_TermsofUse(driver):
+    print('verifying PrivacyPolicy_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-9486")))
+    print(driver.find_element_by_id('text-block-9486').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+    time.sleep(3)
+    print('PrivacyPolicy_Body - verifyied')
+    return True
 
 
