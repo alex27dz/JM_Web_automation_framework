@@ -20,15 +20,14 @@ import urllib.request
 import pytest
 from selenium import webdriver
 from JM_Generic_functions import *
-
-
 tag = 'Chrome'  # IE
 driver_location = "/Users/alexdezho/Downloads/chromedriver"
+
 
 def test_01_HomePageToPersonalInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
-    else:  # if its IE 
+    else:  # IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
     print('Access HomePage')
@@ -269,6 +268,7 @@ def test_10_BusinessToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 10 - PASSED')
     driver.close()
+
 def test_11_BusinessToShippingSolution():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -518,6 +518,7 @@ def test_20_AboutUsToCareers():
     time.sleep(3)
     print('SCENARIO - 20 - PASSED')
     driver.close()
+
 def test_21_AboutUsToNewsroom():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -741,6 +742,7 @@ def test_30_BodyToStartAClaim():
     time.sleep(3)
     print('SCENARIO - 30 - PASSED')
     driver.close()
+
 def test_31_BodyToLearnaboutclaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -963,6 +965,7 @@ def test_40_footerToBusinessInsurance():
     time.sleep(3)
     print('SCENARIO - 40 - PASSED')
     driver.close()
+
 def test_41_footerToZingPlatform():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1191,6 +1194,7 @@ def test_50_footerToAboutUs():
     time.sleep(3)
     print('SCENARIO - 50 - PASSED')
     driver.close()
+
 def test_51_footerToCareers():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1343,9 +1347,6 @@ def test_57_footerHomuchdoesitcosttoresizearing():
     driver.execute_script("window.scrollTo(0,3200)")
     time.sleep(3)
     print('How much does it cost to resize a ring?')
-
-
-
     driver.find_element_by_link_text('How much does it cost to resize a ring?').click()
     time.sleep(10)
     assert str(body_Homuchdoesitcosttoresizearing(driver)) == 'True', 'Body elements of claims - not found'
@@ -1355,53 +1356,100 @@ def test_57_footerHomuchdoesitcosttoresizearing():
     time.sleep(3)
     print('SCENARIO - 57 - PASSED')
     driver.close()
-
+def test_58_footerHowtocleangoldjewelry():
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    print('How to clean gold jewelry the right way')
+    driver.find_element_by_link_text('How to clean gold jewelry the right way').click()
+    time.sleep(10)
+    assert str(body_Howtocleangoldjewelry(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 58 - PASSED')
+    driver.close()
+def test_59_footerHowmuchshouldcost():
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    print('How much should an appraisal cost?')
+    driver.find_element_by_link_text('How much should an appraisal cost?').click()
+    time.sleep(10)
+    assert str(body_Howmuchshouldcost(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 59 - PASSED')
+    driver.close()
+def test_60_footerHowtomakearing():
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    print('How to make a ring smaller without resizing')
+    driver.find_element_by_link_text('How to make a ring smaller without resizing').click()
+    time.sleep(10)
+    assert str(body_Howtomakearing(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 60 - PASSED')
+    driver.close()
+def test_61_footerMoreblogarticles():
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,3200)")
+    time.sleep(3)
+    print('More blog articles')
+    driver.find_element_by_link_text('More blog articles').click()
+    time.sleep(10)
+    assert str(body_Moreblogarticles(driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 61 - PASSED')
+    driver.close()
 
 # stopped here
-def test_62_footerHowtocleangoldjewelry():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
-def test_63_footerHowmuchshouldcost():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
-def test_64_footerHowtomakearing():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
-def test_65_footerMoreblogarticles():
-    driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
-    driver.get(JM_url)
-    print('Access HomePage')
-    time.sleep(5)
-    print('verify navbar and footer')
-    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
-    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
-    driver.execute_script("window.scrollTo(0,3200)")
-    time.sleep(3)
-    assert 'alex' == 'alex'
 def test_66_redirection_links_status():
     driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     driver.get(Redirect_url)
@@ -1439,10 +1487,19 @@ def test_36_footerToTermsofUse():
     driver.execute_script("window.scrollTo(0,3200)")
     time.sleep(3)
     assert 'alex' == 'alex'
+
+
+
+
 def test_67_FullPageScenario():
     assert 'alex' == 'alex'
 def test_95_Redirection300links():
     assert 'alex' == 'alex'
+
+
+
+
+
 def test_68_Additional_link_ContactUs():
     assert 'alex' == 'alex'
 def test_69_Additional_link_ShareYourConcern():

@@ -837,6 +837,75 @@ def body_Homuchdoesitcosttoresizearing(driver):
     print('Homuchdoesitcosttoresizearing_Body - verifyied')
     return True
 
+def body_Howtocleangoldjewelry(driver):
+    print('verifying Howtocleangoldjewelry_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
+    print(driver.find_element_by_id('hs-cta-wrapper-faa1df2a-d1f9-4ed1-80b1-61c73d711ed0').text)
+    print(driver.find_element_by_id('sidebar-2181').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articletitle')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'a2a_kit a2a_kit_size_32 addtoany_list')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-blog-detail-topics-list')]").text)
+    time.sleep(3)
+    print('Howtocleangoldjewelry_Body - verifyied')
+    return True
+
+def body_Howmuchshouldcost(driver):
+    print('verifying Howmuchshouldcost_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
+    print(driver.find_element_by_id('cta_button_413440_8c15d489-2ed8-41c5-a448-e7e1fa60e414').text)
+    print(driver.find_element_by_id('sidebar-2181').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'page-title__h2')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-addtoany block--type-addtoany-block')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'js-view-dom-id-5c653256dc3ba89260e1a4a4c442fc86d499467b7f20879efe999c7247689523')]").text)
+    time.sleep(3)
+    print('Howmuchshouldcost_Body - verifyied')
+    return True
+
+
+
+def body_Howtomakearing(driver):
+    print('verifying Howtomakearing_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
+    print(driver.find_element_by_id('quick-quote').text)
+    print(driver.find_element_by_id('sidebar-2181').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--first')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'page-title__h2')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'a2a_kit a2a_kit_size_32 addtoany_list')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-blog-detail-topics-list')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'quote-widget')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'comments')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'comment-comment-form comment-form')]").text)
+    time.sleep(3)
+    print('Howtomakearing_Body - verifyied')
+    return True
+
+def body_Moreblogarticles(driver):
+    print('verifying Moreblogarticles_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "block-jewelers-mutual-content")))
+    print(driver.find_element_by_id('block-jewelers-mutual-content').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-personal-popular-posts')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-jewelry-box-topics')]").text)
+    time.sleep(3)
+    print('Moreblogarticles_Body - verifyied')
+    return True
+
+
+
+
 
 
 
