@@ -3035,59 +3035,307 @@ def test_65_redirection_links_status():
 
 
 def test_66_Additional_link_engagementringinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_67_Additional_link_comparejewelryinsurancetohomeowners():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_68_Additional_link_personaljewelryinsurancecollections():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_69_Additional_link_crownandcaliber():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_70_Additional_link_adiamor():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_71_Additional_link_briangavindiamonds():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_72_Additional_link_jamesallen():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_73_Additional_link_bluenile():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_74_Additional_link_whiteflash():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_75_Additional_link_earringinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_76_Additional_link_watchinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_77_Additional_link_necklaceinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_78_Additional_link_braceletinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_79_Additional_link_smartwatchinsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_80_Additional_link_howtocleanandcareforyourdiamondring():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_81_Additional_link_weinsurejewelry():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_83_Additional_link_coronavirusBusiness():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_84_Additional_link_GuidetoJewelryInsurance():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
 
 def test_85_Additional_link_ReferaFriend():
-    assert 'alex' == 'alex'
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # if its IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    time.sleep(10)
+    assert str((driver)) == 'True', 'Body elements of claims - not found'
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - XX - PASSED')
+    driver.close()
+
+def test_86_homepage():
+    if tag == 'Chrome':
+        driver = webdriver.Chrome(driver_location)
+    else:  # IE
+        driver = webdriver.Ie("JM-machine location")
+    driver.get(JM_url)
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    assert str(body_homepage(driver)) == 'True', 'Footer elements - not found'
+    time.sleep(3)
+    print('SCENARIO - 86 - PASSED')
+    driver.close()
+
+
+
+
 
