@@ -3037,129 +3037,57 @@ def test_65_redirection_links_status():
 def test_66_Additional_link_engagementringinsurance():
     assert 'alex' == 'alex'
 
-
-
-
 def test_67_Additional_link_comparejewelryinsurancetohomeowners():
     assert 'alex' == 'alex'
-
-
-
-
 
 def test_68_Additional_link_personaljewelryinsurancecollections():
     assert 'alex' == 'alex'
 
-
-
-
-
 def test_69_Additional_link_crownandcaliber():
     assert 'alex' == 'alex'
-
-
-
-
 
 def test_70_Additional_link_adiamor():
     assert 'alex' == 'alex'
 
-
-
-
-
 def test_71_Additional_link_briangavindiamonds():
     assert 'alex' == 'alex'
-
-
-
-
 
 def test_72_Additional_link_jamesallen():
     assert 'alex' == 'alex'
 
-
-
-
-
-
 def test_73_Additional_link_bluenile():
     assert 'alex' == 'alex'
-
-
 
 def test_74_Additional_link_whiteflash():
     assert 'alex' == 'alex'
 
-
-
 def test_75_Additional_link_earringinsurance():
     assert 'alex' == 'alex'
-
-
-
 
 def test_76_Additional_link_watchinsurance():
     assert 'alex' == 'alex'
 
-
 def test_77_Additional_link_necklaceinsurance():
     assert 'alex' == 'alex'
-
-
 
 def test_78_Additional_link_braceletinsurance():
     assert 'alex' == 'alex'
 
-
-
-
-
-
 def test_79_Additional_link_smartwatchinsurance():
     assert 'alex' == 'alex'
-
-
-
 
 def test_80_Additional_link_howtocleanandcareforyourdiamondring():
     assert 'alex' == 'alex'
 
-
-
 def test_81_Additional_link_weinsurejewelry():
     assert 'alex' == 'alex'
-
 
 def test_83_Additional_link_coronavirusBusiness():
     assert 'alex' == 'alex'
 
-
-
-
-
-
-
 def test_84_Additional_link_GuidetoJewelryInsurance():
     assert 'alex' == 'alex'
 
-
-
-
-
-
-
-
 def test_85_Additional_link_ReferaFriend():
     assert 'alex' == 'alex'
-
-
-
-
-
-
-
-
-
-
 
