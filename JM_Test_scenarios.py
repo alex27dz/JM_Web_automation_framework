@@ -625,7 +625,7 @@ def test_25_BodyToPersonalInsurance():
     driver.execute_script("window.scrollTo(0,0)")
     time.sleep(3)
     print('Access Personal Insurance')
-    driver.find_element_by_partial_link_text('Explore personal jewelry insurance').click()
+    driver.find_element_by_partial_link_text('EXPLORE PERSONAL JEWELRY INSURANCE').click()
     time.sleep(10)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(personal_insurance_body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found'
@@ -1503,7 +1503,7 @@ def test_64_FullPageScenario():
     driver.execute_script("window.scrollTo(0,0)")
     print('Access Personal Insurance')
     url = '/jewelry-engagement-ring-insurance-quote'
-    driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
     time.sleep(3)
     driver.find_element_by_link_text('Personal Insurance').click()
     time.sleep(10)
@@ -1521,7 +1521,7 @@ def test_64_FullPageScenario():
     driver.execute_script("window.scrollTo(0,0)")
     print('Access GetaQuote')
     url = '/jewelry-engagement-ring-insurance-quote'
-    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
     time.sleep(3)
     driver.find_element_by_link_text('Get a Quote').click()
     time.sleep(10)
@@ -1657,6 +1657,24 @@ def test_64_FullPageScenario():
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.execute_script("window.scrollTo(0,0)")
+    print('Access PayMyBill')
+    url = '/jewelry-business-jewelers-block-bop-insurance'
+    driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
+    time.sleep(3)
+    driver.find_element_by_link_text('Pay My Bill').click()
+    time.sleep(10)
+    assert str(business_paymybill_body_validation(driver)) == 'True', 'Body elements of claims - not found'
+    # assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    # assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.back()
+    time.sleep(3)
+    print('SCENARIO - 09 - PASSED')
+    print('Access HomePage')
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
+    print('verify navbar and footer')
+    assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
+    assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
+    driver.execute_script("window.scrollTo(0,0)")
     print('Access Zing Platform')
     url = '/jewelry-business-jewelers-block-bop-insurance'
     driver.find_element_by_xpath('//a[@href="' + url + '"]').click()
@@ -1687,7 +1705,6 @@ def test_64_FullPageScenario():
     driver.back()
     time.sleep(3)
     print('SCENARIO - 11 - PASSED')
-    driver.close()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1923,7 +1940,7 @@ def test_64_FullPageScenario():
     driver.execute_script("window.scrollTo(0,0)")
     time.sleep(3)
     print('Access Personal Insurance')
-    driver.find_element_by_partial_link_text('Explore personal jewelry insurance').click()
+    driver.find_element_by_partial_link_text('EXPLORE PERSONAL JEWELRY INSURANCE').click()
     time.sleep(10)
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     assert str(personal_insurance_body_validation(driver)) == 'True', 'Body elements of Personal insurance - not found'
@@ -2522,6 +2539,43 @@ def test_64_FullPageScenario():
     print('SCENARIO - 63 - PASSED')
     driver.close()
     print('Full scenario passed')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 def test_65_redirection_links_status():
     # driver = webdriver.Chrome("/Users/alexdezho/Downloads/chromedriver")
     # driver.get(Redirect_url)
@@ -3032,7 +3086,6 @@ def test_65_redirection_links_status():
     #                     driver.back()
     #                     assert errors == '0 URLs', '404 status in redirection links'
     assert 'alex' == 'alex'
-
 
 def test_66_Additional_link_engagementringinsurance():
     if tag == 'Chrome':
