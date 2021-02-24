@@ -23,7 +23,7 @@ from JM_Elem_Config import *
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
-
+# personal
 def navbar_validation(driver):
     driver.execute_script("window.scrollTo(0,0)")
     print('verifying Navbar containers')
@@ -305,6 +305,8 @@ def blog_body_validation(driver):
     time.sleep(3)
     print('blog - verifyied')
     return True
+
+# business
 def business_insurance_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
@@ -484,6 +486,8 @@ def business_pawnbrokers_body_validation(driver):
     time.sleep(3)
     print('Pawnbrokers_Body - verifyied')
     return True
+
+# answers
 def answers_JewelryInsurance101_body_validation(driver):
     print('verifying JewelryInsurance101_Body containers')
     time.sleep(3)
@@ -528,6 +532,8 @@ def answers_FAQ_body_validation(driver):
     time.sleep(3)
     print('FAQ_Body - verifyied')
     return True
+
+# about us
 def aboutus_aboutus_body_validation(driver):
     print('verifying aboutus_Body containers')
     time.sleep(3)
@@ -628,6 +634,8 @@ def aboutus_newsroom_body_validation(driver):
     time.sleep(3)
     print('newsroom_Body - verifyied')
     return True
+
+# log in
 def login_Personal_Jewelry_body_validation(driver):
     print('verifying Personal_Jewelry_Body containers')
     time.sleep(3)
@@ -686,6 +694,10 @@ def login_ZingPlatform_body_validation(driver):
     time.sleep(3)
     print('Zing Platform_Body - verifyied')
     return True
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# body
 def body_ToRegisterForAnOnlineAccount(driver):
     print('verifying RegisterForAnOnlineAccount_Body containers')
     time.sleep(3)
@@ -869,6 +881,8 @@ def body_homepage(driver):
     time.sleep(3)
     print('homepage_Body - verifyied')
     return True
+
+# external links
 def body_engagementringinsurance(driver):
     print('verifying engagementringinsurance_Body containers')
     time.sleep(3)
@@ -878,7 +892,7 @@ def body_engagementringinsurance(driver):
     print(driver.find_element_by_id('info-grid-3466').text)
     print(driver.find_element_by_id('info-grid-3491').text)
     print(driver.find_element_by_id('basic-code-block-what-our-policyholders-say').text)
-    print(driver.find_element_by_id('5b44dfa50db9da00019946fc').text)
+    # print(driver.find_element_by_id('5b44dfa50db9da00019946fc').text)
     print(driver.find_element_by_id('accordion-3516').text)
     print(driver.find_element_by_id('feature-row-5201').text)
     print(driver.find_element_by_id('feature-row-3521').text)
@@ -903,13 +917,33 @@ def body_comparejewelryinsurancetohomeowners(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__tout hero__tout--grey no-flex')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table__center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockinfo-grid block--info-grid background-color-gray')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'ctitle-bar content-lg spacing clearfix')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'basic-code-block-what-our-policyholders-say')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'ctitle-bar content-lg spacing clearfix')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'basic-code-block-what-our-policyholders-say')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockinfo-grid block--info-grid background-color-')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockaccordion')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'feature-row-3721')]").text)
+    # print(driver.find_element_by_xpath("//div[contains(@class, 'feature-row-3721')]").text)
     time.sleep(3)
     print('comparejewelryinsurancetohomeowners_Body - verifyied')
+    return True
+def body_personaljewelryinsurancecollections(driver):
+    print('verifying personaljewelryinsurancecollections_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3361")))
+    print(driver.find_element_by_id('text-image-row-3361').text)
+    print(driver.find_element_by_id('title-3366').text)
+    print(driver.find_element_by_id('info-grid-3391').text)
+    print(driver.find_element_by_id('feature-row-3396').text)
+    print(driver.find_element_by_id('feature-row-3401').text)
+    print(driver.find_element_by_id('title-8326').text)
+    print(driver.find_element_by_id('timeline-row-3406').text)
+    print(driver.find_element_by_id('timeline-row-3411').text)
+    print(driver.find_element_by_id('timeline-row-3416').text)
+    print(driver.find_element_by_id('timeline-row-3421').text)
+    # print(driver.find_element_by_id('block-layout-builder block--type-inline-blockfeature').text)
+    print(driver.find_element_by_id('basic-code-block-trustpilot-horizontal---no-tags').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    time.sleep(3)
+    print('personaljewelryinsurancecollections_Body - verifyied')
     return True
 def body_crownandcaliber(driver):
     print('verifying crownandcaliber_Body containers')
@@ -1179,6 +1213,17 @@ def body_ReferaFriend(driver):
     print('ReferaFriend_Body - verifyied')
     return True
 
-
-
+def embedded_quote_Estimatemyrate(driver):
+    print('verifying Estimatemyrate_Body containers')
+    time.sleep(3)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "")))
+    print(driver.find_element_by_id('').text)
+    # scrolling to the box
+    # clicking on the fields
+    # filling the fields
+    # clicking estimate
+    # verifying the output in the box
+    time.sleep(3)
+    print('Estimatemyrate_Body - verifyied')
+    return True
 
