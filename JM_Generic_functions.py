@@ -695,7 +695,6 @@ def login_ZingPlatform_body_validation(driver):
     print('Zing Platform_Body - verifyied')
     return True
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # body
 def body_ToRegisterForAnOnlineAccount(driver):
@@ -1214,16 +1213,15 @@ def body_ReferaFriend(driver):
     return True
 
 def embedded_quote_Estimatemyrate(driver):
-    print('verifying Estimatemyrate_Body containers')
+    print('verifying embedded_quote_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "")))
-    print(driver.find_element_by_id('').text)
-    # scrolling to the box
-    # clicking on the fields
-    # filling the fields
-    # clicking estimate
-    # verifying the output in the box
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "step2")))
+    print(driver.find_element_by_id('step2').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'estimate content-container--margin-bottom')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'quote-cards-container quote-flex-wrapper')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'summary-total content-container row-quote')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'premium-warning content-container row-quote')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'button-container row-buttons')]").text)
     time.sleep(3)
-    print('Estimatemyrate_Body - verifyied')
+    print('embedded_quote_Body - verifyied')
     return True
-
