@@ -38,9 +38,4 @@ https://docs.pytest.org/en/reorganize-docs/new-docs/user/assert_statements.html
 
 Pytests structure  example 
 <img src="https://usaupload.com/cache/plugins/filepreviewer/6554/7a01e47ea9b6ad052e4db31176fc9cd5386325b5bd621414fdd10fe9b87a93cb/1100x800_cropped.jpg">
-Test cases / Scenarios example 
-<img src="https://usaupload.com/cache/plugins/filepreviewer/5961/b7964374bb96297ff24a8fff3cb814effcb6c4ab4646c18836a77bf16410d720/1100x800_cropped.jpg">
-Generic Validation / navigation functions example 
-<img src="https://usaupload.com/cache/plugins/filepreviewer/5963/371a4a956843a7700ced46401157c7d60ebfe702df492d5fc837c4db2a041d88/1100x800_cropped.jpg">
-
-For questions please contact - Alex Dzhoharidze, technical consultant (QAC)
+tact - Alex Dzhoharidze, technical consultant (QAC)
