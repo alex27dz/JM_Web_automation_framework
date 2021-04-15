@@ -2294,7 +2294,7 @@ def test_85_embedded_quote():
     # assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
     # assert str(footer_validation(driver)) == 'True', 'Footer elements - not found'
     driver.execute_script("window.scrollTo(0,1000)")
-    time.sleep(2)
+    time.sleep(15)
     driver.find_element_by_id('itemType').click()
     time.sleep(2)
     driver.find_element_by_xpath('//*[@id="itemType"]/option[2]').click()
