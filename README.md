@@ -38,4 +38,4 @@ https://docs.pytest.org/en/reorganize-docs/new-docs/user/assert_statements.html
 
 Pytests structure  example 
 <img src="https://usaupload.com/cache/plugins/filepreviewer/6554/7a01e47ea9b6ad052e4db31176fc9cd5386325b5bd621414fdd10fe9b87a93cb/1100x800_cropped.jpg">
-tact - Alex Dzhoharidze, technical consultant (QAC)
+contact - Alex Dzhoharidze, technical consultant (QAC)
