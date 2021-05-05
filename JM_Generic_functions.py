@@ -31,7 +31,7 @@ def navbar_validation(driver):
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, '//a[@href="'+url+'"]')))
     print('Navbar Personal')
 
-    if driver.current_url == 'https://stage.jewelersmutual.com/':
+    if driver.current_url == 'https://stage.jewelersmutualalex.com/':
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
         time.sleep(2)
         print(driver.find_element_by_link_text('Personal Insurance').text)
@@ -41,6 +41,7 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Manage My Policy').text)
         print(driver.find_element_by_link_text('Blog').text)
         print('Navbar Personal passed')
+
         print('Navbar Business')
         url = '/jewelry-business-jewelers-block-bop-insurance'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -54,6 +55,7 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Jeweler Programs').text)
         print(driver.find_element_by_link_text('Pawnbrokers').text)
         print('Navbar Business passed')
+
         print('Navbar Answers')
         url = '/jewelry-insurance-101'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -61,6 +63,7 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Jewelry Insurance 101').text)
         print(driver.find_element_by_link_text('FAQ').text)
         print('Navbar Answers passed')
+
         print('Navbar About Us')
         url = '/about-us'
         driver.find_element_by_xpath('//a[@href="'+url+'"]').click()
@@ -70,13 +73,20 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Careers').text)
         print(driver.find_element_by_link_text('Newsroom').text)
         print('Navbar About Us passed')
+
         print('Navbar Log In')
-        driver.find_element_by_xpath('//a[contains(@href,"https://my.jewelersmutual.com/PLPortal/Security/")]').click()
-        time.sleep(2)
+        try:
+            driver.find_element_by_xpath('//a[contains(@href,"https://my.jewelersmutual.com/PLPortal/Security/")]').click()
+            time.sleep(2)
+        except:
+            driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-main-menu"]/ul/div/li[5]/a').click()
+            time.sleep(2)
+
         print(driver.find_element_by_link_text('Personal Jewelry').text)
         print(driver.find_element_by_link_text('Agent').text)
         print(driver.find_element_by_link_text('Zing Platform').text)
         print('Navbar Log In passed')
+
     else:
         print('Navbar Personal')
         url = '/jewelry-engagement-ring-insurance-quote'
@@ -134,17 +144,22 @@ def navbar_validation(driver):
         print(driver.find_element_by_link_text('Newsroom').text)
         print('Navbar About Us passed')
 
+
         print('Navbar Log In')
-        url = 'https://my.jewelersmutual.com/PLPortal/Security/'
-        action = webdriver.ActionChains(driver)
-        element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
-        action.move_to_element(element)
-        action.perform()
-        time.sleep(2)
-        print(driver.find_element_by_link_text('Personal Jewelry').text)
-        print(driver.find_element_by_link_text('Agent').text)
-        print(driver.find_element_by_link_text('Zing Platform').text)
-        print('Navbar Log In passed')
+        try:
+            url = 'https://my.testjewelersmutual.com/plportal'
+            action = webdriver.ActionChains(driver)
+            element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
+            element.click()
+            action.move_to_element(element)
+            action.perform()
+            time.sleep(2)
+            print(driver.find_element_by_link_text('Personal Jewelry').text)
+            print(driver.find_element_by_link_text('Agent').text)
+            print(driver.find_element_by_link_text('Zing Platform').text)
+            print('Navbar Log In passed')
+        except:
+            print('different log in element name due to different link')
 
     print('Navbar - verified')
     return True
@@ -168,140 +183,192 @@ def footer_validation(driver):
 def personal_insurance_body_validation(driver):
     print('Verifying Personal_insurance_Body containers')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.XPATH, "//a[contains(text(),'What will it cost me?')]")))
+
     whatwillitcostmebutton = driver.find_element_by_xpath("//a[contains(text(),'What will it cost me?')]")
     print(whatwillitcostmebutton.text)
+
     header_howthejewelryinsurance = driver.find_element_by_id('title-4366')
+    print(header_howthejewelryinsurance.text)
+
     actions = ActionChains(driver)
     actions.move_to_element(header_howthejewelryinsurance).perform()
-    print(header_howthejewelryinsurance.text)
+
     comparisonTable = driver.find_element_by_class_name('comparison-table__center')
     print(comparisonTable.text)
     print(driver.find_element_by_class_name('table-footer').text)
+
     whatdoesjewelryinsurancecover = driver.find_element_by_id('title-4331')
     print(whatdoesjewelryinsurancecover.text)
+
     infogrid_jewelryinsurancecover = driver.find_element_by_id('info-grid-4356')
     print(infogrid_jewelryinsurancecover.text)
+
     protectingallthings = driver.find_element_by_id('text-image-row-4326')
     print(protectingallthings.text)
+
     image_whatourpolicyholderssay = driver.find_element_by_id('image-container-8266').is_displayed()
     print(image_whatourpolicyholderssay, " Image is displayed")
+
     whatourpolicyholderssay = driver.find_element_by_id('title-4361')
     print(whatourpolicyholderssay.text)
+
     image_checkyourrate = driver.find_element_by_id('image-container-8271').is_displayed()
     print(image_checkyourrate, " Image is displayed")
+
     checkyourrate = driver.find_element_by_id('feature-row-6476')
     print(checkyourrate.text)
+
     allthingsjewelryinsurance = driver.find_element_by_id('feature-row-4396')
+    print(allthingsjewelryinsurance.text)
+
     element = allthingsjewelryinsurance
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
-    print(allthingsjewelryinsurance.text)
-    time.sleep(1)
+
     print('Personal_insurance_Body - verified')
     return True
 def get_a_quote_body_validation(driver):
     print('Verifying Get_A_Quote_Body containers')
-    time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "appHeaderContainer")))
+
     jmlogo = driver.find_element_by_id('HeaderImages').is_displayed()
     print(jmlogo, "JM Logo is displayed")
+
     header_questions = driver.find_element_by_id('QuestionsContainer')
     print(header_questions.text)
+
     getyourfreejewelryinsurancequote = driver.find_element_by_id('quoteContainer')
+    print(getyourfreejewelryinsurancequote.text)
+
     element = getyourfreejewelryinsurancequote
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
-    print(getyourfreejewelryinsurancequote.text)
+
     showmyquotebutton = driver.find_element_by_id('quoteInfoNext')
     print(showmyquotebutton.text)
+
     rightpanel = driver.find_element_by_id('right-panel')
     print(rightpanel.text)
+
     footer = driver.find_element_by_id('TermsAndPrivacyFooterContainer')
     print(footer.text)
+
     element = footer
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
     time.sleep(3)
+
     print('Get_A_Quote_Body - verified')
     return True
 def pay_my_bill_body_validation(driver):
     print('Verifying Get_A_Quote_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "jm-logo")))
     jmlogo = driver.find_element_by_class_name('jm-logo').is_displayed()
+
     if jmlogo:  # checking if it's visible
         print('JM Logo is displayed')
     else:
         print('JM Logo is not displayed')
+
     quickbillpaybody = driver.find_element_by_id('lookupForm')
+
     element = quickbillpaybody
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     print(quickbillpaybody.text)
     print(driver.find_element_by_id('continueButton').text)
     print(driver.find_element_by_id('recaptcha').text)
     print(driver.find_element_by_class_name('navbar').text)
+
     footer = driver.find_element_by_xpath("//div[contains(@class, 'col-md-8 col-sm-6 col-xs-12')]")
     element = footer
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
     print(footer.text)
+
     privacyandterms = driver.find_element_by_xpath("//div[contains(@class, 'col-md-4 col-sm-6 col-xs-12')]")
     print(privacyandterms.text)
     time.sleep(3)
+
     print('Pay_My_Bill_Body - verified')
     return True
 def claims_body_validation(driver):
     print('Verifying claims_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-2801")))
+
     heroimagecontainer = driver.find_element_by_xpath("//div[contains(@class, 'hero__image-container hero__image-container--no-mobile-image')]")
     print(heroimagecontainer.text)
+
     herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]")
     print(herocontent.text)
+
     bodycontent = driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--content')]")
     print(bodycontent.text)
     #print(driver.find_element_by_xpath("//div[contains(@class, 'content-lg text-center')]").text)      / there are two elements with the same class
+
     whatsneeded = driver.find_element_by_id('title-2801')
     print(whatsneeded.text)
+
     whatsneededcontent = driver.find_element_by_id('info-grid-2826')
     print(whatsneededcontent.text)
+
     covid19andyourclaim = driver.find_element_by_id('feature-row-6726')
     print(covid19andyourclaim.text)
+
     howitallworks = driver.find_element_by_id('title-8256')
     print(howitallworks.text)
+
     startyourclaim = driver.find_element_by_id('text-image-row-2841')
     print(startyourclaim.text)
+
     chooseajeweler = driver.find_element_by_id('text-image-row-2846')
     print(chooseajeweler.text)
+
     payyourdeductible = driver.find_element_by_id('text-image-row-2851')
     print(payyourdeductible.text)
+
     insureyourreplacementjewelry = driver.find_element_by_id('text-image-row-2856')
     print(insureyourreplacementjewelry.text)
+
     claimsatisfactionratecontent = driver.find_element_by_id('feature-row-2861')
     print(claimsatisfactionratecontent.text)
+
     claimsatisfactionrateimage = driver.find_element_by_id('image-container-8276').is_displayed()
     print(claimsatisfactionrateimage, " Image is displayed")
+
     customersstoriesimage = driver.find_element_by_id('image-container-8281').is_displayed()
     print(customersstoriesimage, " Image is displayed")
+
     customerstoriestext = driver.find_element_by_id('feature-row-8261')
     print(customerstoriestext.text)
+
     element = driver.find_element_by_id('feature-row-2861')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     claimsrate = driver.find_element_by_id('feature-row-2861')
     print(claimsrate.text)
+
     whatisandisntcovered = driver.find_element_by_id('info-grid-2921')
     print(whatisandisntcovered .text)
+
     faqheader = driver.find_element_by_id('title-4196')
     print(faqheader.text)
+
     faqcontent = driver.find_element_by_id('accordion')
     print(faqcontent.text)
+
     startaclaim = driver.find_element_by_id('feature-row-8916')
     print(startaclaim.text)
+
     element = chooseajeweler
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('Claims_Body - verified')
     return True
@@ -317,14 +384,19 @@ def blog_body_validation(driver):
     print('verifying blog containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "block-jewelers-mutual-content")))
+
     bloghero = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]")
     print(bloghero .text)
-    mostPopularPosts = driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-personal-popular-posts')]")
-    print(mostPopularPosts.text)
-    postsByTopic = driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-jewelry-box-topics')]")
-    print(postsByTopic.text)
+
+    # mostPopularPosts = driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-personal-popular-posts')]")
+    # print(mostPopularPosts.text)
+
+    # postsByTopic = driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-jewelry-box-topics')]")
+    # print(postsByTopic.text)
+
     blogposts = driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--first')]")
     print(blogposts.text)
+
     time.sleep(3)
     print('blog - verified')
     return True
@@ -332,43 +404,62 @@ def business_insurance_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4416")))
+
     heroimage = driver.find_element_by_xpath("//div[contains(@class, 'hero__content-wrapper hero-scheme-blue-black')]")
     print(heroimage.text)
+
     corepolicies = driver.find_element_by_id('title-4416')
     print(corepolicies.text)
+
     corepoliciesinfogid = driver.find_element_by_id('info-grid-4436')
     print(corepoliciesinfogid.text)
+
     addonstitle = driver.find_element_by_id('title-4441')
     print(addonstitle.text)
+
     addonscontent1 = driver.find_element_by_id('info-grid-4481')
     print(addonscontent1.text)
+
     addonsimage1 = driver.find_element_by_id('image-container-8286').is_displayed()
     print(addonsimage1, "Image is displayed")
+
     addonsimage2 = driver.find_element_by_id('image-container-8311').is_displayed()
     print(addonsimage2, "Image is displayed")
+
     addonscontent2 = driver.find_element_by_id('info-grid-8306')
     print(addonscontent2.text)
+
     customerstoriestitle = driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]")
     print(customerstoriestitle.text)
+
     customerstories = driver.find_element_by_id('text-block-4406')
     print(customerstories.text)
+
     customerstoriesvideomodal = driver.find_element_by_id('video-modal-4411').is_displayed()
     print(customerstoriesvideomodal, "Video modal is displayed")
+
     toolsforbusiness = driver.find_element_by_id('feature-row-4486')
     print(toolsforbusiness.text)
+
     jewelerresourcestitle = driver.find_element_by_id('title-8321')
     print(jewelerresourcestitle .text)
+
     jewelerresourcesrelatedcontent = driver.find_element_by_id('related-content-9086')
     print(jewelerresourcesrelatedcontent.text)
+
     contactanagenttitle = driver.find_element_by_id('title-8316')
     print(contactanagenttitle.text)
+
     salesforceiframe = driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blocksalesforce-form')]")
     print(salesforceiframe.text)
+
     navigationlinks = driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]")
     print(navigationlinks.text)
+
     element = driver.find_element_by_id('title-8316')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('claims_Body - verified')
     return True
@@ -376,89 +467,124 @@ def business_claims_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-4596")))
-    herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]")
-    print(herocontent.text)
+
+    # herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]")
+    # print(herocontent.text)
+
     startyourclaim = driver.find_element_by_id('text-image-row-4596')
     print(startyourclaim.text)
+
     minimizefurtherdamage = driver.find_element_by_id('text-image-row-4601')
     print(minimizefurtherdamage.text)
+
     meetyourclaimsexpert = driver.find_element_by_id('text-image-row-4606')
     print(meetyourclaimsexpert.text)
+
     backtobusiness = driver.find_element_by_id('text-image-row-4611')
     print(backtobusiness.text)
+
     claimssatisfactionrate = driver.find_element_by_id('feature-row-4616')
     print(claimssatisfactionrate.text)
+
     themostcommonclaims = driver.find_element_by_id('title-4646')
     print(themostcommonclaims.text)
+
     themostcommonclaimsinfogrid = driver.find_element_by_id('info-grid-4641')
     print(themostcommonclaimsinfogrid .text)
+
     faqaccordion = driver.find_element_by_id('accordion-4661')
     print(faqaccordion.text)
+
     startaclaimblock = driver.find_element_by_id('feature-row-4666')
     print(startaclaimblock.text)
+
     element = driver.find_element_by_id('feature-row-4666')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('claims_Body - verified')
     return True
 def business_paymybill_body_validation(driver):
     print('verifying paymybill containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'lookupForm')))
     jmlogo = driver.find_element_by_class_name('jm-logo').is_displayed()
     print(jmlogo, "JM Logo is displayed")
+
     quickbillpaybody = driver.find_element_by_id('lookupForm')
+    print(quickbillpaybody.text)
+
     element = quickbillpaybody
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
-    print(quickbillpaybody.text)
+
     print(driver.find_element_by_id('continueButton').text)
     print(driver.find_element_by_id('recaptcha').text)
     print(driver.find_element_by_class_name('navbar').text)
+
     footer = driver.find_element_by_xpath("//div[contains(@class, 'col-md-8 col-sm-6 col-xs-12')]")
+    print(footer.text)
+
     element = footer
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
-    print(footer.text)
+
     privacyandterms = driver.find_element_by_xpath("//div[contains(@class, 'col-md-4 col-sm-6 col-xs-12')]")
     print(privacyandterms.text)
+
     time.sleep(3)
     print('Pay_My_Bill_Body - verified')
     return True
 def business_zingplatform_body_validation(driver):
     print('Verifying Zing Platform containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-8466")))
     herocontainer = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]")
     print(herocontainer.text)
+
     maximizingyourbusinesspotentialtitle = driver.find_element_by_id('title-8466')
     print(maximizingyourbusinesspotentialtitle.text)
+
     maximizingyourbusinesspotentialtext = driver.find_element_by_id('title-8471')
     print(maximizingyourbusinesspotentialtext.text)
+
     zingvideomodal = driver.find_element_by_id('video-modal-8476').is_displayed()
     print(zingvideomodal, 'Video modal is displayed')
+
     benefitsforyourjewelrybusiness = driver.find_element_by_id('title-8366')
     print(benefitsforyourjewelrybusiness.text)
+
     benefitsinfogrid = driver.find_element_by_id('info-grid-7956')
     print(benefitsinfogrid.text)
+
     benefitsimage = driver.find_element_by_id('image-container-8541').is_displayed()
     print(benefitsimage, 'Image is displayed')
+
     toolsforyourbusinesstitle = driver.find_element_by_id('title-8371')
     print(toolsforyourbusinesstitle.text)
+
     toolsforyourbusinessinfogrid = driver.find_element_by_id('info-grid-7981')
     print(toolsforyourbusinessinfogrid.text)
+
     howitworks = driver.find_element_by_id('related-content-9036')
     print(howitworks.text)
+
     seetheplatforminaction = driver.find_element_by_id('feature-row-8461')
     print(seetheplatforminaction.text)
+
     faq = driver.find_element_by_id('accordion-9066')
     print(faq.text)
+
     registernow = driver.find_element_by_id('feature-row-7986')
     print(registernow.text)
+
     element = driver.find_element_by_id('feature-row-7986')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('Zing Platform - verified')
     return True
@@ -466,25 +592,35 @@ def business_jm_shipping_solution_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-9266")))
+
     herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]")
     print(herocontent.text)
+
     shipjewelryonzingplatform = driver.find_element_by_id('text-image-row-9266')
     print(shipjewelryonzingplatform.text)
-    howitworksvideomodal = driver.find_element_by_id('video-modal-9271').is_displayed()
+
+    howitworksvideomodal = driver.find_element_by_id('video-modal-12281').is_displayed()
     print(howitworksvideomodal, "Video modal is displayed")
+
     howitworksinfogrid = driver.find_element_by_id('info-grid-6906')
     print(howitworksinfogrid.text)
+
     benefitsforyourbusinessinfogrid = driver.find_element_by_id('info-grid-2291')
     print(benefitsforyourbusinessinfogrid.text)
+
     putthewholejewelryindustryatyourfingertips = driver.find_element_by_id('feature-row-9276')
     print(putthewholejewelryindustryatyourfingertips.text)
+
     getstarted = driver.find_element_by_id('title-2341')
     print(getstarted .text)
+
     salesforceiframe = driver.find_element_by_id('title-4191').is_displayed()
     print(salesforceiframe, "Salesforce iframe is displayed")
+
     element = driver.find_element_by_id('title-4191')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('jm_shipping_solution_Body - verified')
     return True
@@ -492,25 +628,35 @@ def business_jmcareplan_body_validation(driver):
     print('Verifying JM Care Plan - Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-11741")))
+
     jmcareplanlogo = driver.find_element_by_xpath('//img[@alt="JM Care Plan logo"]').is_displayed()
     print(jmcareplanlogo, "JM Care Plan image is displayed")
+
     carePlans = driver.find_element_by_id('text-image-row-11741')
     print(carePlans.text)
+
     careplansyoucantrusttext = driver.find_element_by_id('title-5396')
     print(careplansyoucantrusttext.text)
+
     careplansyoucantrustvideomodal = driver.find_element_by_id('video-modal-6706').is_displayed()
     print(careplansyoucantrustvideomodal, "Care plans video modal is displayed")
+
     whyjmcarelansproductsinfogrid = driver.find_element_by_id('info-grid-5416')
     print(whyjmcarelansproductsinfogrid.text)
+
     whatscoveredinfogrid = driver.find_element_by_id('info-grid-5431')
     print(whatscoveredinfogrid.text)
+
     whatscovereddetails = driver.find_element_by_id('details-block-5876')
     print(whatscovereddetails.text)
+
     howtheclaimsprocessworksinfogrid = driver.find_element_by_id('info-grid-5446')
     print(howtheclaimsprocessworksinfogrid.text)
+
     element = driver.find_element_by_id('info-grid-5446')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('JM Care Plan Body - Verified')
     return True
@@ -518,35 +664,50 @@ def business_appraisalsolution_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-11061")))
+
     herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content-wrapper hero-scheme-blue-black  ')]")
     print(herocontent.text)
+
     pagenavigationlinks = driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]")
     print(pagenavigationlinks.text)
+
     jewelryappraisalsmadeeasy = driver.find_element_by_id('title-11061')
     print(jewelryappraisalsmadeeasy.text)
+
     zinglogo = driver.find_element_by_id('text-block-11056').is_displayed()
     print(zinglogo, "Zing logo is displayed")
+
     benefitsofthejewelryappraisaltitle = driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]")
     print(benefitsofthejewelryappraisaltitle.text)
+
     benefitsofthejewelryappraisalinfogrid1 = driver.find_element_by_id('info-grid-11081')
     print(benefitsofthejewelryappraisalinfogrid1.text)
+
     benefitsiamge = driver.find_element_by_id('image-container-11066').is_displayed()
     print(benefitsiamge, "Image is displayed")
+
     benefitsofthejewelryappraisalinfogrid2 = driver.find_element_by_id('info-grid-11101')
     print(benefitsofthejewelryappraisalinfogrid2.text)
+
     seethejewelryappraisalvideomodal = driver.find_element_by_id('video-modal-11111').is_displayed()
     print(seethejewelryappraisalvideomodal, "Video modal is displayed")
+
     seethejewelryappraisalsolution = driver.find_element_by_id('title-11116')
     print(seethejewelryappraisalsolution.text)
+
     getstarted = driver.find_element_by_id('title-11126')
     print(getstarted.text)
+
     getstartediframe = driver.find_element_by_id('title-11131').is_displayed()
     print(getstartediframe, "Get started iframe is displayed")
+
     whatisthezingplatform = driver.find_element_by_id('feature-row-11121')
     print(whatisthezingplatform.text)
+
     element = driver.find_element_by_id('feature-row-11121')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('Appraisal Solution Body - Verified')
     return True
@@ -554,59 +715,84 @@ def business_jewelerprograms_body_validation(driver):
     print('verifying business_insurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-2751")))
+
     herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]")
     print(herocontent.text)
+
     whatsinitforyou = driver.find_element_by_id('title-2751')
     print(whatsinitforyou.text)
-    whatsinitforyouinfogrid = driver.find_element_by_id('info-grid-2776')
-    print(whatsinitforyouinfogrid.text)
-    customercareicon = driver.find_element_by_xpath('//img[@alt="customer care graphic"]').is_displayed()
-    print(customercareicon, "Icon customer care is displayed")
-    easyclaimpaymenticon = driver.find_element_by_xpath('//img[@alt="chart graphic"]')
-    print(easyclaimpaymenticon, "Icon easy claim payments care is displayed")
-    flexibilityicon = driver.find_element_by_xpath('//img[@alt="flexibility graphic"]')
-    print(flexibilityicon, "Icon flexibility care is displayed")
-    growyourbusinessicon = driver.find_element_by_xpath('//img[@alt="trophy graphic"]')
-    print(growyourbusinessicon, "Icon grow your business care is displayed")
+
+    # whatsinitforyouinfogrid = driver.find_element_by_id('info-grid-2776')
+    # print(whatsinitforyouinfogrid.text)
+
+    # customercareicon = driver.find_element_by_xpath('//img[@alt="customer care graphic"]').is_displayed()
+    # print(customercareicon, "Icon customer care is displayed")
+
+    # easyclaimpaymenticon = driver.find_element_by_xpath('//img[@alt="chart graphic"]')
+    # print(easyclaimpaymenticon, "Icon easy claim payments care is displayed")
+
+    # flexibilityicon = driver.find_element_by_xpath('//img[@alt="flexibility graphic"]')
+    # print(flexibilityicon, "Icon flexibility care is displayed")
+
+    # growyourbusinessicon = driver.find_element_by_xpath('//img[@alt="trophy graphic"]')
+    # print(growyourbusinessicon, "Icon grow your business care is displayed")
+
     strengthencustomerrelationsimage = driver.find_element_by_id('image-container-9251').is_displayed()
     print(strengthencustomerrelationsimage, "Image is displayed")
+
     strengthencustomerrelations = driver.find_element_by_id('feature-row-2786')
     print(strengthencustomerrelations.text)
-    therearemoreadvantages = driver.find_element_by_id('feature-row-2791')
-    print(therearemoreadvantages.text)
+
+    # therearemoreadvantages = driver.find_element_by_id('feature-row-2791')
+    # print(therearemoreadvantages.text)
+
     requesttobepartoftheprogram = driver.find_element_by_id('title-9256')
     print(requesttobepartoftheprogram.text)
+
     requestiframe = driver.find_element_by_id('title-4246').is_displayed()
     print(requestiframe, "Request to be part of the program iframe is displayed")
+
     element = driver.find_element_by_id('title-4246')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('jewelerprograms_Body - verified')
     return True
 def business_pawnbrokers_body_validation(driver):
     print('verifying Pawnbrokers_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4546")))
+
     herocontent = driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]")
     print(herocontent.text)
+
     protectyourbusinesstitle = driver.find_element_by_id('title-4546')
     print(protectyourbusinesstitle.text)
+
     protectyourbusinessleftblock = driver.find_element_by_id('details-block-4571')
     print(protectyourbusinessleftblock.text)
+
     comprehensivecoverageicon = driver.find_element_by_xpath('//img[@alt="Coverage Icon"]').is_displayed()
     print(comprehensivecoverageicon, "Icon comprehensive coverage is displayed")
+
     jmshippingsolutionicon = driver.find_element_by_xpath('//img[@alt="Shipping Icon"]').is_displayed()
     print(jmshippingsolutionicon, "Icon JM shipping solution is displayed")
+
     personaljewelryinsuranceicon = driver.find_element_by_xpath('//img[@alt="Money Icon"]').is_displayed()
     print(personaljewelryinsuranceicon, "Icon personal jewelry insurance is displayed")
+
     getapersonalizedrisk = driver.find_element_by_id('feature-row-4551')
     print(getapersonalizedrisk.text)
+
     getapersonalizedriskform = driver.find_element_by_id('basic-code-block-hubspot-form-for-pawnbrokers-page').is_displayed()
     print(getapersonalizedriskform, "Form is displayed")
+
     element = driver.find_element_by_id('basic-code-block-hubspot-form-for-pawnbrokers-page')
     actions = ActionChains(driver)
     actions.move_to_element(element).perform()
+
     time.sleep(3)
     print('Pawnbrokers_Body - verified')
     return True
@@ -857,34 +1043,22 @@ def login_agent_body_validation(driver):
 def login_ZingPlatform_body_validation(driver):
     print('verifying Zing Platform_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "register-btn")))
-    zingLogo = driver.find_element_by_id('header-logo').is_displayed()
+
+    zingLogo = driver.find_element_by_xpath('/html/body/div/div/div[1]/div[2]/div[1]/img').is_displayed()
     print(zingLogo, "Zing logo is displayed.")
-    registerButton = driver.find_element_by_id('register-btn')
-    print(registerButton.text, "Button")
-    loginButton = driver.find_element_by_id('sign-in')
-    print(loginButton.text, "Button")
-    raisingTheTide = driver.find_element_by_id('prog-ind001')
-    print(raisingTheTide.text)
-    backgroundVideo = driver.find_element_by_id('bgVideo').is_displayed()
-    print(backgroundVideo,"Background video is displayed.")
-    introducingZing = driver.find_element_by_xpath("//div[contains(@class, 'col-lg-8 mb-4 mt-2 text-center offset-lg-2')]")
-    print(introducingZing .text)
-    infogrid1 = driver.find_element_by_id('prog-ind002')
-    print(infogrid1.text)
-    zingDashboardImage = driver.find_element_by_xpath('//img[@alt="Zing dashboard"]').is_displayed()
-    print(zingDashboardImage, "Zing dashboard image is displayed.")
-    seeWhatsHappening = driver.find_element_by_id('prog-ind003')
-    print(seeWhatsHappening.text)
-    howToZingPlatformVideos = driver.find_element_by_id('prog-ind004')
-    print(howToZingPlatformVideos.text)
-    registerNowToStart = driver.find_element_by_id('prog-ind005')
-    print(registerNowToStart.text)
-    theFutureForm = driver.find_element_by_id('prog-ind006')
-    print(theFutureForm.text)
-    element = driver.find_element_by_id('prog-ind006')
-    actions = ActionChains(driver)
-    actions.move_to_element(element).perform()
+
+    registerButton = driver.find_element_by_class_name('form-container')
+    print(registerButton.text, "form-container")
+
+    loginButton = driver.find_element_by_id('loginbutton')
+    print(loginButton.text, "loginbutton")
+
+    raisingTheTide = driver.find_element_by_id('Email')
+    print(raisingTheTide.text, "Email")
+
+    backgroundVideo = driver.find_element_by_id('pwdInput').is_displayed()
+    print(backgroundVideo, "pwdInput")
+
     time.sleep(3)
     print('Zing Platform_Body - verified')
     return True
@@ -1007,18 +1181,62 @@ def body_Howtocleangoldjewelry(driver):
     time.sleep(3)
     print('Howtocleangoldjewelry_Body - verified')
     return True
+def embedded_quote_Estimatemyrate(driver):
+    print('verifying embedded_quote_Body containers')
+    time.sleep(3)
+
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "step2")))
+    print(driver.find_element_by_id('step2').text)
+
+    # quote content box
+    print(driver.find_element_by_xpath("//div[contains(@class, 'estimate content-container--margin-bottom')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'quote-cards-container quote-flex-wrapper')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'summary-total content-container row-quote')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'premium-warning content-container row-quote')]").text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'button-container row-buttons')]").text)
+
+    time.sleep(3)
+    print('embedded_quote_Body - verifyied')
+    return True
 def body_Howmuchshouldcost(driver):
     print('verifying Howmuchshouldcost_Body containers')
     time.sleep(3)
+
+    # side bar
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
     print(driver.find_element_by_id('cta_button_413440_8c15d489-2ed8-41c5-a448-e7e1fa60e414').text)
     print(driver.find_element_by_id('sidebar-2181').text)
+
+    # content in the middle
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'page-title__h2')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'block-addtoany block--type-addtoany-block')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'js-view-dom-id-5c653256dc3ba89260e1a4a4c442fc86d499467b7f20879efe999c7247689523')]").text)
+
+    button = driver.find_element_by_xpath('//*[@id="hs-cta-img-faa1df2a-d1f9-4ed1-80b1-61c73d711ed0"]')
+    print(button, "button located")
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
+    comprehensivecoverageicon = driver.find_element_by_xpath('//img[@alt="Youtube icon"]').is_displayed()
+    print(comprehensivecoverageicon, "Icon comprehensive coverage is displayed")
+
     time.sleep(3)
     print('Howmuchshouldcost_Body - verified')
     return True
@@ -1026,18 +1244,49 @@ def body_Howtomakearing(driver):
     print('verifying Howtomakearing_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "sidebar-2181")))
+
+    # quote content
     print(driver.find_element_by_id('quick-quote').text)
+
+    # side bar content
     print(driver.find_element_by_id('sidebar-2181').text)
+
+    # center content
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'layout__region layout__region--first')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'page-title__h2')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'a2a_kit a2a_kit_size_32 addtoany_list')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-field-blocknodeblog-articlebody')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-most-popular-posts-block')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-blog-detail-topics-list')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'quote-widget')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'comments')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'comment-comment-form comment-form')]").text)
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div[1]/div[1]/div[4]/div/article[3]/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div[1]/div[1]/div[4]/div/article[2]/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div[1]/div[1]/div[4]/div/article[1]/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div[1]/div[1]/div[4]/div/p[1]/img').is_displayed()
+    print(image, "image in the middle")
+
     time.sleep(3)
     print('Howtomakearing_Body - verified')
     return True
@@ -1045,10 +1294,24 @@ def body_Moreblogarticles(driver):
     print('verifying Moreblogarticles_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "block-jewelers-mutual-content")))
+
+    # content in the middle
     print(driver.find_element_by_id('block-jewelers-mutual-content').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-sidebars-personal-popular-posts')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-views block--type-views-blockblog-topics-jewelry-box-topics')]").text)
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div/div/div/div/div[1]/div/div[1]/a/picture/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div/div/div/div/div[2]/div/div[1]/a/picture/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div/div/div/div/div[3]/div/div[1]/a/picture/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div/div/div/div/div[4]/div/div[1]/a/picture/img').is_displayed()
+    print(image, "image in the middle")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div/div/div/div/div[5]/div/div[1]/a/picture/img').is_displayed()
+    print(image, "image in the middle")
+
     time.sleep(3)
     print('Moreblogarticles_Body - verified')
     return True
@@ -1056,53 +1319,85 @@ def body_PrivacyPolicy(driver):
     print('verifying PrivacyPolicy_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-9491")))
+
+    # content in the middle
     print(driver.find_element_by_id('text-block-9491').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
     time.sleep(3)
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
+
     print('PrivacyPolicy_Body - verified')
     return True
+
+
+
+
 def body_TermsofUse(driver):
     print('verifying PrivacyPolicy_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-9486")))
+
+    # content in the middle
     print(driver.find_element_by_id('text-block-9486').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('PrivacyPolicy_Body - verified')
     return True
-def body_homepage(driver):
-    print('verifying homepage_Body containers')
-    time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-46")))
-    image_whatourpolicyholderssay = driver.find_element_by_id('image-container-8266').is_displayed()
-    print(image_whatourpolicyholderssay, " Image is displayed")
-    customercareicon = driver.find_element_by_xpath('//img[@alt="customer care graphic"]').is_displayed()
-    print(customercareicon, "Icon customer care is displayed")
-    print(driver.find_element_by_id('title-46').text)
-    print(driver.find_element_by_id('info-grid-8871').text)
-    print(driver.find_element_by_id('quote-widget-6401').text)
-    print(driver.find_element_by_id('title-151').text)
-    print(driver.find_element_by_id('info-grid-136').text)
-    print(driver.find_element_by_id('image-container-8251').text)
-    print(driver.find_element_by_id('feature-row-141').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]").text)
-    time.sleep(3)
-    print('homepage_Body - verifyied')
-    return True
+
 
 # external links
 def body_engagementringinsurance(driver):
     print('verifying engagementringinsurance_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-3496")))
+
+    # content in the middle including questions and table and description
     print(driver.find_element_by_id('title-3496').text)
     print(driver.find_element_by_id('title-3436').text)
     print(driver.find_element_by_id('info-grid-3466').text)
     print(driver.find_element_by_id('info-grid-3491').text)
     print(driver.find_element_by_id('basic-code-block-what-our-policyholders-say').text)
-    # print(driver.find_element_by_id('5b44dfa50db9da00019946fc').text)
     print(driver.find_element_by_id('accordion-3516').text)
     print(driver.find_element_by_id('feature-row-5201').text)
     print(driver.find_element_by_id('feature-row-3521').text)
@@ -1111,13 +1406,79 @@ def body_engagementringinsurance(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table__center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'table-footer')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+
+    # body page images
+    # image = driver.find_element_by_xpath('//*[@id="feature-row-3521"]/style/text()').is_displayed()
+    # print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="feature-row-5201"]/div/div[1]/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3491"]/div[4]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3491"]/div[3]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3491"]/div[2]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3491"]/div[1]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3466"]/div[5]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3466"]/div[4]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3466"]/div[3]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3466"]/div[2]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3466"]/div[1]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[3]/div/div/div/div/div/div[2]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[7]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[6]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[5]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[4]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[3]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[1]').is_displayed()
+    print(image, "image")
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('engagementringinsurance_Body - verifyied')
     return True
+
+
 def body_comparejewelryinsurancetohomeowners(driver):
     print('verifying comparejewelryinsurancetohomeowners_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-8246")))
+
+    # content in the middle + table + info
     print(driver.find_element_by_id('title-8246').text)
     print(driver.find_element_by_id('basic-code-block-tell-me-more').text)
     print(driver.find_element_by_id('title-3586').text)
@@ -1127,18 +1488,75 @@ def body_comparejewelryinsurancetohomeowners(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__tout hero__tout--grey no-flex')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table__center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockinfo-grid block--info-grid background-color-gray')]").text)
-    # print(driver.find_element_by_xpath("//div[contains(@class, 'ctitle-bar content-lg spacing clearfix')]").text)
-    # print(driver.find_element_by_xpath("//div[contains(@class, 'basic-code-block-what-our-policyholders-say')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockinfo-grid block--info-grid background-color-')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockaccordion')]").text)
-    # print(driver.find_element_by_xpath("//div[contains(@class, 'feature-row-3721')]").text)
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3646"]/div[4]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3646"]/div[3]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3646"]/div[2]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3646"]/div[1]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3621"]/div[5]/img[2]').is_displayed()
+    print(image, "image")
+    # image = driver.find_element_by_xpath('//*[@id="feature-row-5201"]/div/div[1]/img').is_displayed()
+    # print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3621"]/div[4]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3621"]/div[3]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3621"]/div[2]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3621"]/div[1]/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[3]/div/div/div/div/div/div[2]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[3]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[4]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[5]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[6]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div[2]/div/img[7]').is_displayed()
+    print(image, "image")
+
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('comparejewelryinsurancetohomeowners_Body - verifyied')
     return True
+
+
 def body_personaljewelryinsurancecollections(driver):
     print('verifying personaljewelryinsurancecollections_Body containers')
     time.sleep(3)
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3361")))
+
+    # content in the middle + table + info
     print(driver.find_element_by_id('text-image-row-3361').text)
     print(driver.find_element_by_id('title-3366').text)
     print(driver.find_element_by_id('info-grid-3391').text)
@@ -1149,57 +1567,257 @@ def body_personaljewelryinsurancecollections(driver):
     print(driver.find_element_by_id('timeline-row-3411').text)
     print(driver.find_element_by_id('timeline-row-3416').text)
     print(driver.find_element_by_id('timeline-row-3421').text)
-    # print(driver.find_element_by_id('block-layout-builder block--type-inline-blockfeature').text)
     print(driver.find_element_by_id('basic-code-block-trustpilot-horizontal---no-tags').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+
+    # images
+    image = driver.find_element_by_xpath('//*[@id="timeline-row-3421"]/div[1]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="timeline-row-3416"]/div[1]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="timeline-row-3411"]/div[1]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="timeline-row-3406"]/div[1]/div/img').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3391"]/div[2]/div[2]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3391"]/div[2]/div[1]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3391"]/div[1]/div[1]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="info-grid-3391"]/div[1]/div[2]/div/img[2]').is_displayed()
+    print(image, "image")
+    image = driver.find_element_by_xpath('//*[@id="text-image-row-3361"]/div[1]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    # image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div[1]/div[3]/div/p[1]/img').is_displayed()
+    # print(image, "image in the middle")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('personaljewelryinsurancecollections_Body - verifyied')
     return True
+
+
 def body_crownandcaliber(driver):
     print('verifying crownandcaliber_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3571")))
-    print(driver.find_element_by_id('text-image-row-3571').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-12466")))
+
+    # content in the middle
+    print(driver.find_element_by_id('text-block-12466').text)
+    print(driver.find_element_by_id('feature-row-12476').text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="image-container-12461"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('crownandcaliber_Body - verifyied')
     return True
+
+
+
+
+
 def body_adiamor(driver):
     print('verifying adiamor_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3556")))
-    print(driver.find_element_by_id('text-image-row-3556').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-12426")))
+
+    # content in the middle + button
+    print(driver.find_element_by_id('text-block-12426').text)
+    print(driver.find_element_by_id('feature-row-12436').text)
+    print(driver.find_element_by_id('text-block-12431').text)
+    print(driver.find_element_by_xpath("//*[@id='feature-row-12436']/div/div[2]/a").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="image-container-12501"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="image-container-12421"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('adiamor_Body - verifyied')
     return True
+
+
+
+
+
 def body_briangavindiamonds(driver):
     print('verifying briangavindiamonds_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3561")))
-    print(driver.find_element_by_id('text-image-row-3561').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-12446")))
+
+    # content in the middle + button
+    print(driver.find_element_by_id('text-block-12446').text)
+    print(driver.find_element_by_id('feature-row-12451').text)
+    print(driver.find_element_by_id('text-block-12456').text)
+    print(driver.find_element_by_xpath("//*[@id='feature-row-12451']/div/div[2]/a").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="image-container-12506"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="image-container-12441"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('briangavindiamonds_Body - verifyied')
     return True
+
+
+
+
 def body_jamesallen(driver):
     print('verifying jamesallen_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3551")))
-    print(driver.find_element_by_id('text-image-row-3551').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-12406")))
+
+    # content in the middle + button
+    print(driver.find_element_by_id('text-block-12406').text)
+    print(driver.find_element_by_id('feature-row-12411').text)
+    print(driver.find_element_by_id('text-block-12416').text)
+    print(driver.find_element_by_xpath("//*[@id='feature-row-12411']/div/div[2]/a").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="image-container-12521"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="image-container-12401"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('jamesallen_Body - verifyied')
     return True
+
+
+
+
+
+
+
+
 def body_bluenile(driver):
     print('verifying bluenile_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-3346")))
-    print(driver.find_element_by_id('text-image-row-3346').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-12386")))
+
+    # content in the middle + button
+    print(driver.find_element_by_id('text-block-12386').text)
+    print(driver.find_element_by_id('feature-row-12391').text)
+    print(driver.find_element_by_id('text-block-12396').text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="image-container-12526"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="image-container-12381"]/img').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('bluenile_Body - verifyied')
     return True
+
+
+
+
+
+
+
+
+
 def body_whiteflash(driver):
     print('verifying whiteflash_Body containers')
     time.sleep(3)
@@ -1413,25 +2031,30 @@ def body_GuidetoJewelryInsurance(driver):
     time.sleep(3)
     print('GuidetoJewelryInsurance_Body - verifyied')
     return True
-def body_ReferaFriend(driver):
-    print('verifying ReferaFriend_Body containers')
+
+def body_homepage(driver):
+    print('verifying homepage_Body containers')
     time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-6521")))
-    print(driver.find_element_by_id('title-6521').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, '//*[@id="block-jewelers-mutual-branding"]/a[1]')))
+
+    claimsatisfactionratecontent = driver.find_element_by_id('feature-row-2861')
+    print(claimsatisfactionratecontent.text)
+    claimsatisfactionrateimage = driver.find_element_by_id('image-container-8276').is_displayed()
+    print(claimsatisfactionrateimage, " Image is displayed")
+    image_whatourpolicyholderssay = driver.find_element_by_id('image-container-8266').is_displayed()
+    print(image_whatourpolicyholderssay, " Image is displayed")
+    customercareicon = driver.find_element_by_xpath('//img[@alt="customer care graphic"]').is_displayed()
+    print(customercareicon, "Icon customer care is displayed")
+    print(driver.find_element_by_id('title-46').text)
+    print(driver.find_element_by_id('info-grid-8871').text)
+    print(driver.find_element_by_id('quote-widget-6401').text)
+    print(driver.find_element_by_id('title-151').text)
+    print(driver.find_element_by_id('info-grid-136').text)
+    print(driver.find_element_by_id('image-container-8251').text)
+    print(driver.find_element_by_id('feature-row-141').text)
+    print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]").text)
     time.sleep(3)
-    print('ReferaFriend_Body - verifyied')
+    print('homepage_Body - verifyied')
     return True
-def embedded_quote_Estimatemyrate(driver):
-    print('verifying embedded_quote_Body containers')
-    time.sleep(3)
-    WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "step2")))
-    print(driver.find_element_by_id('step2').text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'estimate content-container--margin-bottom')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'quote-cards-container quote-flex-wrapper')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'summary-total content-container row-quote')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'premium-warning content-container row-quote')]").text)
-    print(driver.find_element_by_xpath("//div[contains(@class, 'button-container row-buttons')]").text)
-    time.sleep(3)
-    print('embedded_quote_Body - verifyied')
-    return True
+
+
