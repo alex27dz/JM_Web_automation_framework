@@ -22,11 +22,11 @@ from selenium import webdriver
 from JM_Generic_functions import *
 
 # Drivers location
-crome_location = "/Users/alexdezho/Downloads/chromedriver"
+chrome_location = "/Users/alexdezho/Downloads/chromedriver"
 ie_location = ""
 edge_location = ""
 firefox_location = ""
-driver_location = crome_location
+driver_location = chrome_location
 tag = 'Chrome'
 # driver_location = ie_location
 # tag = 'IE'
@@ -34,6 +34,10 @@ tag = 'Chrome'
 # tag = 'Edge'
 # driver_location = firefox_location
 # tag = 'Firefox'
+
+# urls
+JM_url = "https://stage.jewelersmutual.com/"
+Redirect_url = "https://httpstatus.io/"
 
 def test_01_HomePageToPersonalInsurance():
     if tag == 'Chrome':
@@ -60,6 +64,8 @@ def test_01_HomePageToPersonalInsurance():
     time.sleep(3)
     print('SCENARIO - 01 - PASSED')
     driver.close()
+
+
 def test_02_HomePageToGetaQuote():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -83,6 +89,8 @@ def test_02_HomePageToGetaQuote():
     time.sleep(3)
     print('SCENARIO - 02 - PASSED')
     driver.close()
+
+
 def test_03_HomePageToPayMyBill():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -106,6 +114,8 @@ def test_03_HomePageToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 03 - PASSED')
     driver.close()
+
+
 def test_04_HomePageToClaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -131,6 +141,8 @@ def test_04_HomePageToClaims():
     time.sleep(3)
     print('SCENARIO - 04 - PASSED')
     driver.close()
+
+
 def test_05_HomePageToManagePolicy():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -154,6 +166,8 @@ def test_05_HomePageToManagePolicy():
     time.sleep(3)
     print('SCENARIO - 05 - PASSED')
     driver.close()
+
+
 def test_06_HomePageToBlog():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -179,6 +193,8 @@ def test_06_HomePageToBlog():
     time.sleep(3)
     print('SCENARIO - 06 - PASSED')
     driver.close()
+
+
 def test_07_BusinessToBusinessInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -204,6 +220,8 @@ def test_07_BusinessToBusinessInsurance():
     time.sleep(3)
     print('SCENARIO - 07 - PASSED')
     driver.close()
+
+
 def test_08_BusinessToClaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -229,6 +247,8 @@ def test_08_BusinessToClaims():
     time.sleep(3)
     print('SCENARIO - 08 - PASSED')
     driver.close()
+
+
 def test_09_BusinessToPayMyBill():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -254,6 +274,8 @@ def test_09_BusinessToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 09 - PASSED')
     driver.close()
+
+
 def test_10_BusinessToZingPlatform():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -279,6 +301,8 @@ def test_10_BusinessToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 10 - PASSED')
     driver.close()
+
+
 def test_11_BusinessToShippingSolution():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -304,6 +328,8 @@ def test_11_BusinessToShippingSolution():
     time.sleep(3)
     print('SCENARIO - 11 - PASSED')
     driver.close()
+
+
 def test_12_BusinessToJmCarePlan():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -329,6 +355,8 @@ def test_12_BusinessToJmCarePlan():
     time.sleep(3)
     print('SCENARIO - 12 - PASSED')
     driver.close()
+
+
 def test_13_BusinessToAppraisalSolution():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -354,6 +382,8 @@ def test_13_BusinessToAppraisalSolution():
     time.sleep(3)
     print('SCENARIO - 13 - PASSED')
     driver.close()
+
+
 def test_14_BusinessToJewelerPrograms():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -379,6 +409,8 @@ def test_14_BusinessToJewelerPrograms():
     time.sleep(3)
     print('SCENARIO - 14 - PASSED')
     driver.close()
+
+
 def test_15_BusinessToPawnbrokers():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -403,6 +435,8 @@ def test_15_BusinessToPawnbrokers():
     time.sleep(3)
     print('SCENARIO - 15 - PASSED')
     driver.close()
+
+
 def test_16_AnswersToJewelryInsurance101():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -428,6 +462,8 @@ def test_16_AnswersToJewelryInsurance101():
     time.sleep(3)
     print('SCENARIO - 16 - PASSED')
     driver.close()
+
+
 def test_17_AnswersToFAQ():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -453,6 +489,8 @@ def test_17_AnswersToFAQ():
     time.sleep(3)
     print('SCENARIO - 17 - PASSED')
     driver.close()
+
+
 def test_18_AboutUsToAboutUs():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -478,6 +516,8 @@ def test_18_AboutUsToAboutUs():
     time.sleep(3)
     print('SCENARIO - 18 - PASSED')
     driver.close()
+
+
 def test_19_AboutUsToSocialResponsibility():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -503,6 +543,8 @@ def test_19_AboutUsToSocialResponsibility():
     time.sleep(3)
     print('SCENARIO - 19 - PASSED')
     driver.close()
+
+
 def test_20_AboutUsToCareers():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -528,6 +570,8 @@ def test_20_AboutUsToCareers():
     time.sleep(3)
     print('SCENARIO - 20 - PASSED')
     driver.close()
+
+
 def test_21_AboutUsToNewsroom():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -553,6 +597,8 @@ def test_21_AboutUsToNewsroom():
     time.sleep(3)
     print('SCENARIO - 21 - PASSED')
     driver.close()
+
+
 def test_22_LogInToPersonalJewelry():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -577,6 +623,8 @@ def test_22_LogInToPersonalJewelry():
     time.sleep(3)
     print('SCENARIO - 22 - PASSED')
     driver.close()
+
+
 def test_22_LogInToPersonalJewelry():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -601,6 +649,8 @@ def test_22_LogInToPersonalJewelry():
     time.sleep(3)
     print('SCENARIO - 22 - PASSED')
     driver.close()
+
+
 def test_23_LogInToAgent():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -625,6 +675,8 @@ def test_23_LogInToAgent():
     time.sleep(3)
     print('SCENARIO - 23 - PASSED')
     driver.close()
+
+
 def test_24_LogInToZingPlatform():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -649,6 +701,8 @@ def test_24_LogInToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 24 - PASSED')
     driver.close()
+
+
 def test_25_BodyToPersonalInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -672,6 +726,8 @@ def test_25_BodyToPersonalInsurance():
     time.sleep(3)
     print('SCENARIO - 25 - PASSED')
     driver.close()
+
+
 def test_26_BodyToLogIn():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -693,6 +749,8 @@ def test_26_BodyToLogIn():
     time.sleep(3)
     print('SCENARIO - 26 - PASSED')
     driver.close()
+
+
 def test_27_BodyToRegisterForAnOnlineAccount():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -715,6 +773,8 @@ def test_27_BodyToRegisterForAnOnlineAccount():
     time.sleep(3)
     print('SCENARIO - 27 - PASSED')
     driver.close()
+
+
 def test_28_BodyToAddanitemtomyPolicy():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -736,6 +796,8 @@ def test_28_BodyToAddanitemtomyPolicy():
     time.sleep(3)
     print('SCENARIO - 28 - PASSED')
     driver.close()
+
+
 def test_29_BodyTopaymybill():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -757,6 +819,8 @@ def test_29_BodyTopaymybill():
     time.sleep(3)
     print('SCENARIO - 29 - PASSED')
     driver.close()
+
+
 def test_30_BodyToStartAClaim():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -778,6 +842,8 @@ def test_30_BodyToStartAClaim():
     time.sleep(3)
     print('SCENARIO - 30 - PASSED')
     driver.close()
+
+
 def test_31_BodyToLearnaboutclaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -801,6 +867,8 @@ def test_31_BodyToLearnaboutclaims():
     time.sleep(3)
     print('SCENARIO - 31 - PASSED')
     driver.close()
+
+
 def test_32_BodyToGetaquoteformultipleItems():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -822,6 +890,8 @@ def test_32_BodyToGetaquoteformultipleItems():
     time.sleep(3)
     print('SCENARIO - 32 - PASSED')
     driver.close()
+
+
 def test_33_BodyToExplorePersonalJewelryInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -845,6 +915,8 @@ def test_33_BodyToExplorePersonalJewelryInsurance():
     time.sleep(3)
     print('SCENARIO - 33 - PASSED')
     driver.close()
+
+
 def test_34_footerToPersonalJewelryInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -868,6 +940,8 @@ def test_34_footerToPersonalJewelryInsurance():
     time.sleep(3)
     print('SCENARIO - 34 - PASSED')
     driver.close()
+
+
 def test_35_footerToGetaQuote():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -889,6 +963,8 @@ def test_35_footerToGetaQuote():
     time.sleep(3)
     print('SCENARIO - 35 - PASSED')
     driver.close()
+
+
 def test_36_footerToFAQ():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -912,6 +988,8 @@ def test_36_footerToFAQ():
     time.sleep(3)
     print('SCENARIO - 36 - PASSED')
     driver.close()
+
+
 def test_37_footerToManageMyPolicy():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -933,6 +1011,8 @@ def test_37_footerToManageMyPolicy():
     time.sleep(3)
     print('SCENARIO - 37 - PASSED')
     driver.close()
+
+
 def test_38_footerToClaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -956,6 +1036,8 @@ def test_38_footerToClaims():
     time.sleep(3)
     print('SCENARIO - 38 - PASSED')
     driver.close()
+
+
 def test_39_footerToPayMyBill():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -977,6 +1059,8 @@ def test_39_footerToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 39 - PASSED')
     driver.close()
+
+
 def test_40_footerToBusinessInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1000,6 +1084,8 @@ def test_40_footerToBusinessInsurance():
     time.sleep(3)
     print('SCENARIO - 40 - PASSED')
     driver.close()
+
+
 def test_41_footerToZingPlatform():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1023,6 +1109,8 @@ def test_41_footerToZingPlatform():
     time.sleep(3)
     print('SCENARIO - 41 - PASSED')
     driver.close()
+
+
 def test_42_footerToJMShippingSolution():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1046,6 +1134,8 @@ def test_42_footerToJMShippingSolution():
     time.sleep(3)
     print('SCENARIO - 42 - PASSED')
     driver.close()
+
+
 def test_43_footerToJMCarePlan():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1069,6 +1159,8 @@ def test_43_footerToJMCarePlan():
     time.sleep(3)
     print('SCENARIO - 43 - PASSED')
     driver.close()
+
+
 def test_44_footerToJewelryAppraisalSolution():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1092,6 +1184,8 @@ def test_44_footerToJewelryAppraisalSolution():
     time.sleep(3)
     print('SCENARIO - 44 - PASSED')
     driver.close()
+
+
 def test_45_footerToJMUniversity():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1115,6 +1209,8 @@ def test_45_footerToJMUniversity():
     time.sleep(3)
     print('SCENARIO - 45 - PASSED')
     driver.close()
+
+
 def test_46_footerToJewelerPrograms():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1138,6 +1234,8 @@ def test_46_footerToJewelerPrograms():
     time.sleep(3)
     print('SCENARIO - 46 - PASSED')
     driver.close()
+
+
 def test_47_footerToPayMyBill():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1159,6 +1257,8 @@ def test_47_footerToPayMyBill():
     time.sleep(3)
     print('SCENARIO - 47 - PASSED')
     driver.close()
+
+
 def test_48_footerToBusinessClaims():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1182,6 +1282,8 @@ def test_48_footerToBusinessClaims():
     time.sleep(3)
     print('SCENARIO - 48 - PASSED')
     driver.close()
+
+
 def test_49_footerToBlog():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1205,6 +1307,8 @@ def test_49_footerToBlog():
     time.sleep(3)
     print('SCENARIO - 49 - PASSED')
     driver.close()
+
+
 def test_50_footerToAboutUs():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1228,6 +1332,8 @@ def test_50_footerToAboutUs():
     time.sleep(3)
     print('SCENARIO - 50 - PASSED')
     driver.close()
+
+
 def test_51_footerToCareers():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1251,6 +1357,8 @@ def test_51_footerToCareers():
     time.sleep(3)
     print('SCENARIO - 51 - PASSED')
     driver.close()
+
+
 def test_52_footerToNewsroom():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1274,6 +1382,8 @@ def test_52_footerToNewsroom():
     time.sleep(3)
     print('SCENARIO - 52 - PASSED')
     driver.close()
+
+
 def test_53_footerToSocialResponsibility():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1297,6 +1407,8 @@ def test_53_footerToSocialResponsibility():
     time.sleep(3)
     print('SCENARIO - 53 - PASSED')
     driver.close()
+
+
 def test_54_footerToCOVIDResources():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1320,6 +1432,8 @@ def test_54_footerToCOVIDResources():
     time.sleep(3)
     print('SCENARIO - 54 - PASSED')
     driver.close()
+
+
 def test_55_footerToContactUs():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1343,6 +1457,8 @@ def test_55_footerToContactUs():
     time.sleep(3)
     print('SCENARIO - 55 - PASSED')
     driver.close()
+
+
 def test_56_footerToShareYourConcerns():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1366,6 +1482,8 @@ def test_56_footerToShareYourConcerns():
     time.sleep(3)
     print('SCENARIO - 56 - PASSED')
     driver.close()
+
+
 def test_57_footerHomuchdoesitcosttoresizearing():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1389,6 +1507,8 @@ def test_57_footerHomuchdoesitcosttoresizearing():
     time.sleep(3)
     print('SCENARIO - 57 - PASSED')
     driver.close()
+
+
 def test_58_footerHowtocleangoldjewelry():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1412,6 +1532,8 @@ def test_58_footerHowtocleangoldjewelry():
     time.sleep(3)
     print('SCENARIO - 58 - PASSED')
     driver.close()
+
+
 def test_59_footerHowmuchshouldcost():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1435,6 +1557,8 @@ def test_59_footerHowmuchshouldcost():
     time.sleep(3)
     print('SCENARIO - 59 - PASSED')
     driver.close()
+
+
 def test_60_footerHowtomakearing():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1458,6 +1582,8 @@ def test_60_footerHowtomakearing():
     time.sleep(3)
     print('SCENARIO - 60 - PASSED')
     driver.close()
+
+
 def test_61_footerMoreblogarticles():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1481,6 +1607,8 @@ def test_61_footerMoreblogarticles():
     time.sleep(3)
     print('SCENARIO - 61 - PASSED')
     driver.close()
+
+
 def test_62_footerToPrivacyPolicy():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1504,6 +1632,8 @@ def test_62_footerToPrivacyPolicy():
     time.sleep(3)
     print('SCENARIO - 62 - PASSED')
     driver.close()
+
+
 def test_63_footerToTermsofUse():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1527,6 +1657,8 @@ def test_63_footerToTermsofUse():
     time.sleep(3)
     print('SCENARIO - 63 - PASSED')
     driver.close()
+
+
 def test_66_Additional_link_engagementringinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1541,6 +1673,8 @@ def test_66_Additional_link_engagementringinsurance():
     time.sleep(3)
     print('SCENARIO - 66 - PASSED')
     driver.close()
+
+
 def test_67_Additional_link_comparejewelryinsurancetohomeowners():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1555,6 +1689,8 @@ def test_67_Additional_link_comparejewelryinsurancetohomeowners():
     time.sleep(3)
     print('SCENARIO - 67 - PASSED')
     driver.close()
+
+
 def test_68_Additional_link_personaljewelryinsurancecollections():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1569,6 +1705,8 @@ def test_68_Additional_link_personaljewelryinsurancecollections():
     time.sleep(3)
     print('SCENARIO - 68 - PASSED')
     driver.close()
+
+
 def test_69_Additional_link_crownandcaliber():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1583,6 +1721,8 @@ def test_69_Additional_link_crownandcaliber():
     time.sleep(3)
     print('SCENARIO - 69 - PASSED')
     driver.close()
+
+
 def test_70_Additional_link_adiamor():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1597,6 +1737,8 @@ def test_70_Additional_link_adiamor():
     time.sleep(3)
     print('SCENARIO - 70 - PASSED')
     driver.close()
+
+
 def test_71_Additional_link_briangavindiamonds():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1611,6 +1753,8 @@ def test_71_Additional_link_briangavindiamonds():
     time.sleep(3)
     print('SCENARIO - 71 - PASSED')
     driver.close()
+
+
 def test_72_Additional_link_jamesallen():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1625,6 +1769,8 @@ def test_72_Additional_link_jamesallen():
     time.sleep(3)
     print('SCENARIO - 72 - PASSED')
     driver.close()
+
+
 def test_73_Additional_link_bluenile():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1639,6 +1785,8 @@ def test_73_Additional_link_bluenile():
     time.sleep(3)
     print('SCENARIO - 73 - PASSED')
     driver.close()
+
+
 def test_74_Additional_link_whiteflash():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1653,6 +1801,8 @@ def test_74_Additional_link_whiteflash():
     time.sleep(3)
     print('SCENARIO - 74 - PASSED')
     driver.close()
+
+
 def test_75_Additional_link_earringinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1667,6 +1817,8 @@ def test_75_Additional_link_earringinsurance():
     time.sleep(3)
     print('SCENARIO - 75 - PASSED')
     driver.close()
+
+
 def test_76_Additional_link_watchinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1681,6 +1833,8 @@ def test_76_Additional_link_watchinsurance():
     time.sleep(3)
     print('SCENARIO - 76 - PASSED')
     driver.close()
+
+
 def test_77_Additional_link_necklaceinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1695,6 +1849,8 @@ def test_77_Additional_link_necklaceinsurance():
     time.sleep(3)
     print('SCENARIO - 77 - PASSED')
     driver.close()
+
+
 def test_78_Additional_link_braceletinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1709,6 +1865,8 @@ def test_78_Additional_link_braceletinsurance():
     time.sleep(3)
     print('SCENARIO - 78 - PASSED')
     driver.close()
+
+
 def test_79_Additional_link_smartwatchinsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1723,6 +1881,8 @@ def test_79_Additional_link_smartwatchinsurance():
     time.sleep(3)
     print('SCENARIO - 79 - PASSED')
     driver.close()
+
+
 def test_80_Additional_link_howtocleanandcareforyourdiamondring():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1737,6 +1897,8 @@ def test_80_Additional_link_howtocleanandcareforyourdiamondring():
     time.sleep(3)
     print('SCENARIO - 80 - PASSED')
     driver.close()
+
+
 def test_81_Additional_link_weinsurejewelry():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1751,6 +1913,8 @@ def test_81_Additional_link_weinsurejewelry():
     time.sleep(3)
     print('SCENARIO - 81 - PASSED')
     driver.close()
+
+
 def test_82_Additional_link_coronavirusBusiness():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1765,6 +1929,8 @@ def test_82_Additional_link_coronavirusBusiness():
     time.sleep(3)
     print('SCENARIO - 82 - PASSED')
     driver.close()
+
+
 def test_83_Additional_link_GuidetoJewelryInsurance():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
@@ -1779,6 +1945,8 @@ def test_83_Additional_link_GuidetoJewelryInsurance():
     time.sleep(3)
     print('SCENARIO - 83 - PASSED')
     driver.close()
+
+
 def test_84_embedded_quote():
     if tag == 'Chrome':
         driver = webdriver.Chrome(driver_location)
