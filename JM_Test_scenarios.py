@@ -3,7 +3,7 @@ import json
 import time
 import pprint
 import logging
-import mysql.connector
+# import mysql.connector
 import datetime
 import openpyxl
 from selenium import webdriver
@@ -22,7 +22,7 @@ from selenium import webdriver
 from JM_Generic_functions import *
 
 # Drivers location
-chrome_location = "/Users/alexdezho/Downloads/chromedriver"
+chrome_location = 'C:/ChromeDriver/chromedriver'
 ie_location = ""
 edge_location = ""
 firefox_location = ""
@@ -45,6 +45,7 @@ def test_01_HomePageToPersonalInsurance():
     else:  # IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -72,6 +73,7 @@ def test_02_HomePageToGetaQuote():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -97,6 +99,7 @@ def test_03_HomePageToPayMyBill():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -122,6 +125,7 @@ def test_04_HomePageToClaims():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -149,6 +153,7 @@ def test_05_HomePageToManagePolicy():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -174,6 +179,7 @@ def test_06_HomePageToBlog():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -201,6 +207,7 @@ def test_07_BusinessToBusinessInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -228,6 +235,7 @@ def test_08_BusinessToClaims():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -255,6 +263,7 @@ def test_09_BusinessToPayMyBill():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -282,6 +291,7 @@ def test_10_BusinessToZingPlatform():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -309,6 +319,7 @@ def test_11_BusinessToShippingSolution():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -336,6 +347,7 @@ def test_12_BusinessToJmCarePlan():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -363,6 +375,7 @@ def test_13_BusinessToAppraisalSolution():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -390,6 +403,7 @@ def test_14_BusinessToJewelerPrograms():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -417,6 +431,7 @@ def test_15_BusinessToPawnbrokers():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -443,6 +458,7 @@ def test_16_AnswersToJewelryInsurance101():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -470,6 +486,7 @@ def test_17_AnswersToFAQ():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -497,6 +514,7 @@ def test_18_AboutUsToAboutUs():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -524,6 +542,7 @@ def test_19_AboutUsToSocialResponsibility():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -551,6 +570,7 @@ def test_20_AboutUsToCareers():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -578,6 +598,7 @@ def test_21_AboutUsToNewsroom():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -605,6 +626,7 @@ def test_22_LogInToPersonalJewelry():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -631,6 +653,7 @@ def test_22_LogInToPersonalJewelry():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -657,6 +680,7 @@ def test_23_LogInToAgent():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -683,6 +707,7 @@ def test_24_LogInToZingPlatform():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -709,6 +734,7 @@ def test_25_BodyToPersonalInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -734,6 +760,7 @@ def test_26_BodyToLogIn():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -757,6 +784,7 @@ def test_27_BodyToRegisterForAnOnlineAccount():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -781,6 +809,7 @@ def test_28_BodyToAddanitemtomyPolicy():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -804,6 +833,7 @@ def test_29_BodyTopaymybill():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -827,6 +857,7 @@ def test_30_BodyToStartAClaim():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -850,6 +881,7 @@ def test_31_BodyToLearnaboutclaims():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -875,6 +907,7 @@ def test_32_BodyToGetaquoteformultipleItems():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -898,6 +931,7 @@ def test_33_BodyToExplorePersonalJewelryInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -923,6 +957,7 @@ def test_34_footerToPersonalJewelryInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -948,6 +983,7 @@ def test_35_footerToGetaQuote():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -971,6 +1007,7 @@ def test_36_footerToFAQ():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -996,6 +1033,7 @@ def test_37_footerToManageMyPolicy():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1019,6 +1057,7 @@ def test_38_footerToClaims():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1044,6 +1083,7 @@ def test_39_footerToPayMyBill():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1067,6 +1107,7 @@ def test_40_footerToBusinessInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1092,6 +1133,7 @@ def test_41_footerToZingPlatform():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1117,6 +1159,7 @@ def test_42_footerToJMShippingSolution():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1142,6 +1185,7 @@ def test_43_footerToJMCarePlan():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1167,6 +1211,7 @@ def test_44_footerToJewelryAppraisalSolution():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1192,6 +1237,7 @@ def test_45_footerToJMUniversity():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1217,6 +1263,7 @@ def test_46_footerToJewelerPrograms():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1242,6 +1289,7 @@ def test_47_footerToPayMyBill():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1265,6 +1313,7 @@ def test_48_footerToBusinessClaims():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1290,6 +1339,7 @@ def test_49_footerToBlog():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1315,6 +1365,7 @@ def test_50_footerToAboutUs():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1340,6 +1391,7 @@ def test_51_footerToCareers():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1365,6 +1417,7 @@ def test_52_footerToNewsroom():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1390,6 +1443,7 @@ def test_53_footerToSocialResponsibility():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1415,6 +1469,7 @@ def test_54_footerToCOVIDResources():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1440,6 +1495,7 @@ def test_55_footerToContactUs():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1465,6 +1521,7 @@ def test_56_footerToShareYourConcerns():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1490,6 +1547,7 @@ def test_57_footerHomuchdoesitcosttoresizearing():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1515,6 +1573,7 @@ def test_58_footerHowtocleangoldjewelry():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1540,6 +1599,7 @@ def test_59_footerHowmuchshouldcost():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1565,6 +1625,7 @@ def test_60_footerHowtomakearing():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1590,6 +1651,7 @@ def test_61_footerMoreblogarticles():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1615,6 +1677,7 @@ def test_62_footerToPrivacyPolicy():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1640,6 +1703,7 @@ def test_63_footerToTermsofUse():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1665,6 +1729,7 @@ def test_66_Additional_link_engagementringinsurance():
     else:  # if its IE
         driver = webdriver.Ie("")
     driver.get('https://www.jewelersmutual.com/engagement-ring-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_engagementringinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1681,6 +1746,7 @@ def test_67_Additional_link_comparejewelryinsurancetohomeowners():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/compare-jewelry-insurance-to-homeowners')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_comparejewelryinsurancetohomeowners(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1697,6 +1763,7 @@ def test_68_Additional_link_personaljewelryinsurancecollections():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/personal-jewelry-insurance-collections')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_personaljewelryinsurancecollections(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1713,6 +1780,7 @@ def test_69_Additional_link_crownandcaliber():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/crownandcaliber')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_crownandcaliber(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1729,6 +1797,7 @@ def test_70_Additional_link_adiamor():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/adiamor')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_adiamor(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1745,6 +1814,7 @@ def test_71_Additional_link_briangavindiamonds():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/briangavindiamonds')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_briangavindiamonds(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1761,6 +1831,7 @@ def test_72_Additional_link_jamesallen():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/jamesallen')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_jamesallen(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1777,6 +1848,7 @@ def test_73_Additional_link_bluenile():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/bluenile')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_bluenile(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1793,6 +1865,7 @@ def test_74_Additional_link_whiteflash():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/whiteflash')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_whiteflash(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1809,6 +1882,7 @@ def test_75_Additional_link_earringinsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/earring-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_earringinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1825,6 +1899,7 @@ def test_76_Additional_link_watchinsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/watch-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_watchinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1841,6 +1916,7 @@ def test_77_Additional_link_necklaceinsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/necklace-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_necklaceinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1857,6 +1933,7 @@ def test_78_Additional_link_braceletinsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/bracelet-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_braceletinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1873,6 +1950,7 @@ def test_79_Additional_link_smartwatchinsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/smartwatch-insurance')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_smartwatchinsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1889,6 +1967,7 @@ def test_80_Additional_link_howtocleanandcareforyourdiamondring():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/how-to-clean-and-care-for-your-diamond-ring')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_howtocleanandcareforyourdiamondring(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1905,6 +1984,7 @@ def test_81_Additional_link_weinsurejewelry():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/we-insure-jewelry')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_weinsurejewelry(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1921,6 +2001,7 @@ def test_82_Additional_link_coronavirusBusiness():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/coronavirus-businesses')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_coronavirusBusiness(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1937,6 +2018,7 @@ def test_83_Additional_link_GuidetoJewelryInsurance():
     else:  # if its IE
         driver = webdriver.Ie("JM-machine location")
     driver.get('https://www.jewelersmutual.com/jewelry-insurance-guide')
+    driver.fullscreen_window()
     time.sleep(10)
     assert str(body_GuidetoJewelryInsurance(driver)) == 'True', 'Body elements of claims - not found'
     assert str(navbar_validation(driver)) == 'True', 'Navbar elements - not found'
@@ -1953,6 +2035,7 @@ def test_84_embedded_quote():
     else:  # IE
         driver = webdriver.Ie("JM-machine location")
     driver.get(JM_url)
+    driver.fullscreen_window()
     print('Access HomePage')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
     print('verify navbar and footer')
@@ -1977,7 +2060,6 @@ def test_84_embedded_quote():
     time.sleep(5)
     assert str(embedded_quote_Estimatemyrate(driver)) == 'True', 'Navbar elements - not found'
     time.sleep(2)
-    driver.back()
     print('SCENARIO - 85 - PASSED')
     driver.close()
 
@@ -1988,6 +2070,7 @@ def test_84_embedded_quote():
 #     else:  # IE
 #         driver = webdriver.Ie("JM-machine location")
 #     driver.get(JM_url)
+#     driver.fullscreen_window()
 #     print('Access HomePage')
 #     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "header")))
 #     print('verify navbar and footer')

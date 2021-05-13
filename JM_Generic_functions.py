@@ -3,7 +3,7 @@ import json
 import time
 import pprint
 import logging
-import mysql.connector
+# import mysql.connector
 import datetime
 import openpyxl
 from selenium import webdriver
