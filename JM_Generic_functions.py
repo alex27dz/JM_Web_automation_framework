@@ -19,7 +19,6 @@ from openpyxl.styles import Alignment
 import urllib.request
 import pytest
 from selenium import webdriver
-from JM_Elem_Config import *
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
 
