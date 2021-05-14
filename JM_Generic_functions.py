@@ -2041,6 +2041,7 @@ def body_watchinsurance(driver):
 def body_necklaceinsurance(driver):
     print('verifying necklaceinsurance_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "info-grid-3881")))
     print(driver.find_element_by_id('info-grid-3881').text)
     print(driver.find_element_by_id('info-grid-3996').text)
@@ -2054,6 +2055,26 @@ def body_necklaceinsurance(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table etb spacing')]").text)
     # print(driver.find_element_by_xpath("//div[contains(@class, 'title-3751')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('necklaceinsurance_Body - verifyied')
     return True
@@ -2062,6 +2083,7 @@ def body_necklaceinsurance(driver):
 def body_braceletinsurance(driver):
     print('verifying braceletinsurance_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4061")))
     print(driver.find_element_by_id('title-4061').text)
     print(driver.find_element_by_id('info-grid-3821').text)
@@ -2072,6 +2094,26 @@ def body_braceletinsurance(driver):
     print(driver.find_element_by_id('feature-row-4186').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-left')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table__center')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('braceletinsurance_Body - verifyied')
     return True
@@ -2080,6 +2122,7 @@ def body_braceletinsurance(driver):
 def body_smartwatchinsurance(driver):
     print('verifying smartwatchinsurance_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "title-4031")))
     print(driver.find_element_by_id('title-4031').text)
     print(driver.find_element_by_id('title-3761').text)
@@ -2093,6 +2136,26 @@ def body_smartwatchinsurance(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-block-content block--type-block-content13310d8b-6ea7-46ff-8378-d84a47f524f9')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockaccordion')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'content-lg text-left')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('smartwatchinsurance_Body - verifyied')
     return True
@@ -2117,6 +2180,26 @@ def body_howtocleanandcareforyourdiamondring(driver):
     print(driver.find_element_by_id('title-9161').text)
     print(driver.find_element_by_id('related-content-9181').text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('howtocleanandcareforyourdiamondring_Body - verifyied')
     return True
@@ -2140,6 +2223,26 @@ def body_weinsurejewelry(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table-wrapper')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('weinsurejewelry_Body - verifyied')
     return True
@@ -2148,6 +2251,7 @@ def body_weinsurejewelry(driver):
 def body_coronavirusBusiness(driver):
     print('verifying coronavirusBusiness_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-block-6626")))
     print(driver.find_element_by_id('text-block-6626').text)
     print(driver.find_element_by_id('text-block-6631').text)
@@ -2163,6 +2267,26 @@ def body_coronavirusBusiness(driver):
     print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('coronavirusBusiness_Body - verifyied')
     return True
@@ -2171,6 +2295,7 @@ def body_coronavirusBusiness(driver):
 def body_GuidetoJewelryInsurance(driver):
     print('verifying GuidetoJewelryInsurance_Body containers')
     time.sleep(3)
+
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, "text-image-row-6926")))
     print(driver.find_element_by_id('text-image-row-6926').text)
     print(driver.find_element_by_id('title-6931').text)
@@ -2178,44 +2303,48 @@ def body_GuidetoJewelryInsurance(driver):
     print(driver.find_element_by_id('title-7011').text)
     print(driver.find_element_by_id('title-7021').text)
     print(driver.find_element_by_id('quote-widget-6401').text)
-    # print(driver.find_element_by_id('feature-row-7031').text)
     print(driver.find_element_by_id('title-7036').text)
     print(driver.find_element_by_id('title-7066').text)
-    # print(driver.find_element_by_id('text-block-7151').text)
     print(driver.find_element_by_id('info-grid-7061').text)
     print(driver.find_element_by_id('title-7136').text)
-    # print(driver.find_element_by_id('title-7131').text)
     print(driver.find_element_by_id('feature-row-7126').text)
     print(driver.find_element_by_id('title-7141').text)
-    # print(driver.find_element_by_id('text-block-7146').text)
     print(driver.find_element_by_id('info-grid-4886').text)
-    # print(driver.find_element_by_id('text-block-7166').text)
-    # print(driver.find_element_by_id('text-block-7841').text)
-    # print(driver.find_element_by_id('feature-row-7171').text)
     print(driver.find_element_by_id('title-7176').text)
-    # print(driver.find_element_by_id('text-block-7181').text)
-    # print(driver.find_element_by_id('text-block-7191').text)
     print(driver.find_element_by_id('text-image-row-7186').text)
     print(driver.find_element_by_id('text-image-row-7196').text)
     print(driver.find_element_by_id('text-image-row-7201').text)
     print(driver.find_element_by_id('text-image-row-7206').text)
     print(driver.find_element_by_id('title-7211').text)
-    # print(driver.find_element_by_id('text-block-7216').text)
     print(driver.find_element_by_id('info-grid-7236').text)
     print(driver.find_element_by_id('feature-row-7246').text)
-    # print(driver.find_element_by_id('text-block-7251').text)
-    # print(driver.find_element_by_id('text-block-7256').text)
     print(driver.find_element_by_id('basic-code-block-what-our-policyholders-say').text)
-    # print(driver.find_element_by_id('feature-row-7266').text)
-    # print(driver.find_element_by_id('feature-row-7311').text)
     print(driver.find_element_by_id('info-grid-7306').text)
     print(driver.find_element_by_id('feature-row-7316').text)
-    # print(driver.find_element_by_xpath("//div[contains(@class, 'hero__content hero__content-align-center')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'navigation__secondary-sticky--links text-center')]").text)
-    # print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockinfo-grid block--info-grid background-color-gray')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'block-layout-builder block--type-inline-blockfeature')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'comparison-table etb spacing')]").text)
     print(driver.find_element_by_xpath("//div[contains(@class, 'title-bar content-lg spacing clearfix')]").text)
+
+    # Images
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-content"]/div/article/div/div/div/div[1]/div/div/div[1]/picture/source[5]').is_displayed()
+    print(image, "image")
+
+    image = driver.find_element_by_xpath('//*[@id="block-jewelers-mutual-branding"]/a[1]').is_displayed()
+    print(image, "site-log")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Facebook"]').is_displayed()
+    print(image, "facebook")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Instagram"]').is_displayed()
+    print(image, "instagram")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on Twitter"]').is_displayed()
+    print(image, "twitter")
+
+    image = driver.find_element_by_xpath('//*[@title="Visit us on LinkedIn"]').is_displayed()
+    print(image, "linked-in")
+
     time.sleep(3)
     print('GuidetoJewelryInsurance_Body - verifyied')
     return True
