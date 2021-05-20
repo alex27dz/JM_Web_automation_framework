@@ -93,7 +93,7 @@ def navbar_validation(driver):
         element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
         action.move_to_element(element)
         action.perform()
-        time.sleep(2)
+        time.sleep(3)
         print(driver.find_element_by_link_text('Personal Insurance').text)
         print(driver.find_element_by_link_text('Get a Quote').text)
         print(driver.find_element_by_link_text('Pay My Bill').text)
@@ -149,7 +149,6 @@ def navbar_validation(driver):
             url = 'https://my.testjewelersmutual.com/plportal'
             action = webdriver.ActionChains(driver)
             element = driver.find_element_by_xpath('//a[@href="' + url + '"]')  # or your another selector here
-            element.click()
             action.move_to_element(element)
             action.perform()
             time.sleep(2)
@@ -166,7 +165,7 @@ def navbar_validation(driver):
 
 def footer_validation(driver):
     driver.execute_script("window.scrollTo(0,4000)")
-    time.sleep(2)
+    time.sleep(5)
 
     print('verifying Footer containers')
     WebDriverWait(driver, 10).until(EC.presence_of_element_located((By.ID, 'block-footerplmenu')))
